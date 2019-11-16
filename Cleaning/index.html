@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Химчистка мебели</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/tiny-slider.css">
+<!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <section class="promo">
+        <div class="container">
+            <header class="header">
+                <div class="header__logo">
+                    <img src="icons/logo.svg" alt="Logo">
+                </div>
+                <div class="header__info">
+                    <a href="tel:+79048279656" class="header__phone">+7 (904) 827-96-56</a>
+                    <div class="header__descr">с 09:00 до 19:00 без выходных</div>
+                </div>
+                <button data-modal="callback" class="button button_mini button_ml46">Заказать звонок</button>
+            </header>
+            <div class="promo__wrapper">
+                <h1 class="promo__header">Химчистка мебели<br>в Новосибирске</h1>
+                <div class="promo__discount">со скидкой 17%</div>
+                <div class="promo__advantages">
+                    <div class="promo-advantages">
+                        <img src="icons/promo/calendar.svg" alt="Calendar" class="promo-advantages__img">
+                        <div class="promo-advantages__subtitle">Отчистим сегодня</div>
+                    </div>
+                    <div class="promo-advantages">
+                        <img src="icons/promo/money.svg" alt="Money" class="promo-advantages__img">
+                        <div class="promo-advantages__subtitle">Работаем без предоплаты</div>
+                    </div>
+                </div>
+                <button data-modal="calculator" class="button button_main button_mt63">Расчитать стоимость</button>
+                <img src="icons/promo/arrow.svg" alt="Arrow" class="promo__arrow">
+                <img src="img/promo/sofa_promo.png" alt="Sofa" class="promo__sofa">
+            </div>
+        </div>
+    </section>
+
+    <section class="cost">
+        <div class="container container__cost-carousel">
+            <h2 class="title"><span>Стоимость</span> чистки</h2>
+            <div class="subtitle">Приблизительные цены на химчистку мягкой мебели</div>
+            <div class="cost__wrapper">
+                <div class="cost__carousel">
+                    <div class="cost-item">
+                        <div class="cost-item__title">Двухместный диван</div>
+                        <img src="img/cards/sofa1.png" alt="Product" class="cost-item__img">
+                        <div class="cost-item__cost">1300 РУБ.</div>
+                    </div>
+
+                    <div class="cost-item">
+                        <div class="cost-item__title">Трехместный диван</div>
+                        <img src="img/cards/sofa2.png" alt="Product" class="cost-item__img">
+                        <div class="cost-item__cost">1700 РУБ.</div>
+                    </div>
+
+                    <div class="cost-item">
+                        <div class="cost-item__title">Угловой большой диван</div>
+                        <img src="img/cards/sofa3.png" alt="Product" class="cost-item__img">
+                        <div class="cost-item__cost">1950 РУБ.</div>
+                    </div>
+
+                    <div class="cost-item">
+                        <div class="cost-item__title">Двухместный диван</div>
+                        <img src="img/cards/sofa1.png" alt="Product" class="cost-item__img">
+                        <div class="cost-item__cost">1300 РУБ.</div>
+                    </div>
+
+                    <div class="cost-item">
+                        <div class="cost-item__title">Трехместный диван</div>
+                        <img src="img/cards/sofa2.png" alt="Product" class="cost-item__img">
+                        <div class="cost-item__cost">1700 РУБ.</div>
+                    </div>
+
+                    <div class="cost-item">
+                        <div class="cost-item__title">Угловой большой диван</div>
+                        <img src="img/cards/sofa3.png" alt="Product" class="cost-item__img">
+                        <div class="cost-item__cost">1950 РУБ.</div>
+                    </div>
+                </div>
+                <button class="prev prev__cost"><img src="icons/carousel-arrow_prev.svg" alt="Prev"></button>
+                <button class="next next__cost"><img src="icons/carousel-arrow_next.svg" alt="Next"></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="discount">
+        <div class="container">
+            <h2 class="title"><span>Получите</span> скидку на первую чистку</h2>
+            <div class="subtitle">Заполните форму и получите скидочный купон на первую химчистку мягкой мебели</div>
+            <div class="discount__wrapper">
+                <img src="img/discount/book.png" alt="Book" class="discount__book-img">
+                <div class="discount__charter">
+                    <img src="img/discount/letter.png" alt="Letter" class="discount__letter-img">
+                    <div class="discount__descr">Работаем строго по договору оказания клининговых услуг</div>
+                </div>
+                <div class="modal-form modal-form_mt50" id="discount">
+                    <div class="modal-form__title">Заполните форму</div>
+                    <div class="modal-form__subtitle">И менеджер отправит скидочный купон вам по SMS</div>
+                    <form action="#" class="modal-form__form">
+                        <input name="name" placeholder="Имя" type="text">
+                        <input name="phone" placeholder="Телефон">
+                        <button class="button button_form">Получить скидку</button>
+                    </form>
+                    <div class="modal-form__descr">Или свяжитесь с нами через любой удобный для вас мессенджер</div>
+                    <div class="modal-form__social">
+                        <a href="whatsapp://send?text=Hello world!" target="_blank" rel="noopener noreferrer" class="modal-form__whatsapp"><img src="icons/social/whatsapp.svg" alt="whatsapp"></a>
+                        <a href="viber://chats" target="_blank" rel="noopener noreferrer" class="modal-form__viber"><img src="icons/social/viber.svg" alt="viber"></a>
+                        <a href="tg://resolve?domain=testName" target="_blank" rel="noopener noreferrer" class="modal-form__telegram"><img src="icons/social/telegram.svg" alt="telegram"></a>
+                        <a href="https://www.vk.com" target="_blank" rel="noopener noreferrer" class="modal-form__vkontakte"><img src="icons/social/vk.svg" alt="vkontakte"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="result">
+        <div class="container container__result-carousel">
+            <h2 class="title"><span>До </span>и после</h2>
+            <div class="subtitle subtitle_mt36">Результаты наших работ говорят сами за себя</div>
+            <div class="result__wrapper">
+                <div class="result__carousel">
+                    <div class="result__item"><img src="img/result/before.png" alt="Before"></div>
+                    <div class="result__item"><img src="img/result/after.png" alt="After"></div>
+                    <div class="result__item"><img src="img/result/before.png" alt="Before"></div>
+                    <div class="result__item"><img src="img/result/after.png" alt="After"></div>
+                    <div class="result__item"><img src="img/result/before.png" alt="Before"></div>
+                    <div class="result__item"><img src="img/result/after.png" alt="After"></div>
+                    <div class="result__item"><img src="img/result/before.png" alt="Before"></div>
+                    <div class="result__item"><img src="img/result/after.png" alt="After"></div>
+                    <div class="result__item"><img src="img/result/before.png" alt="Before"></div>
+                    <div class="result__item"><img src="img/result/after.png" alt="After"></div>
+                    <div class="result__item"><img src="img/result/before.png" alt="Before"></div>
+                    <div class="result__item"><img src="img/result/after.png" alt="After"></div>
+                </div>
+
+                <div class="result__carousel-h">
+                    <div class="result__item"><img src="img/result/before.png" alt="Before"></div>
+                    <div class="result__item"><img src="img/result/after.png" alt="After"></div>
+                    <div class="result__item"><img src="img/result/before.png" alt="Before"></div>
+                    <div class="result__item"><img src="img/result/after.png" alt="After"></div>
+                    <div class="result__item"><img src="img/result/before.png" alt="Before"></div>
+                    <div class="result__item"><img src="img/result/after.png" alt="After"></div>
+                    <div class="result__item"><img src="img/result/before.png" alt="Before"></div>
+                    <div class="result__item"><img src="img/result/after.png" alt="After"></div>
+                    <div class="result__item"><img src="img/result/before.png" alt="Before"></div>
+                    <div class="result__item"><img src="img/result/after.png" alt="After"></div>
+                    <div class="result__item"><img src="img/result/before.png" alt="Before"></div>
+                    <div class="result__item"><img src="img/result/after.png" alt="After"></div>
+                </div>
+                <button class="prev prev__result"><img src="icons/carousel-arrow_prev.svg" alt="Prev"></button>
+                <button class="next next__result"><img src="icons/carousel-arrow_next.svg" alt="Next"></button>
+                <button class="prev prev__result prev__result-h"><img src="icons/carousel-arrow_prev.svg" alt="Prev"></button>
+                <button class="next next__result next__result-h"><img src="icons/carousel-arrow_next.svg" alt="Next"></button>
+                <img src="icons/arrow_big.svg" alt="Arrow" class="result__arrow">
+            </div>
+            <div class="result__descr">Полный список наших работ мы можем<br>бесплатно отправить на ваш мессенджер по запросу</div>
+        </div>
+    </section>
+
+    <section class="calculate">
+        <div class="container">
+            <h2 class="title"><span>Расчитайте</span> стоимость химчистки</h2>
+            <div class="subtitle subtitle_mt36">Заполните все поля и менеджер пришлет вам расчет через 15-20 минут</div>
+            <div class="calculator calculator_mt105">
+                <div class="calculator_yellow"></div>
+                <div class="calculator__wrapper">
+                    <div class="calculator__discount">
+                        <div class="calculator__descr">Скидка за экономию времени нашего работника</div>
+                        <div class="calculator__number">+17%</div>
+                        <img src="img/calculate/sofa_bg.png" alt="Sofa" class="calculator__img">
+                    </div>
+                    <div class="calculator__main">
+                        <div class="calculator__progress-wrapper">
+                            <div class="calculator__progress"></div>
+                            <div class="calculator__progress-label">Вопрос <span>1</span> из 4</div>
+                        </div>
+
+                        <div id="items" class="modal-item-block">
+                            <div class="calculator__header">Какую мебель нужно чистить?</div>
+                            <div class="calculator__blocks">
+                                <div class="calculator__block">
+                                    <div class="calculator__block-header">Диван</div>
+                                    <img src="img/calculate/sofa.png" alt="Sofa" class="calculator__block-img">
+                                </div>
+                                <div class="calculator__block">
+                                    <div class="calculator__block-header">Кровать</div>
+                                    <img src="img/calculate/bed.png" alt="Bed" class="calculator__block-img">
+                                </div>
+                                <div class="calculator__block">
+                                    <div class="calculator__block-header">Кресло</div>
+                                    <img src="img/calculate/armchair.png" alt="Armchair" class="calculator__block-img">
+                                </div>
+                                <div class="calculator__block">
+                                    <div class="calculator__block-header">Другое</div>
+                                    <img src="img/calculate/other.png" alt="Other" class="calculator__block-img">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="sizes">
+                            <div id="modal-sizes-header" class="calculator__header">Размер мебели (приблизительно)</div>
+                            <form id="modal-sizes-block" action="#" class="modal-form__form modal-sizes__form">
+                                <input name="length" placeholder="Длина" type="number">
+                                <input name="width" placeholder="Ширина" type="number">
+                                <input name="height" placeholder="Высота" type="number">
+                                <button id="sizes-button" class="button button_calculator">Продолжить</button>
+                            </form>
+                        </div>
+
+                        <div id="calendar" class="modal-item-block">
+                            <div id="calendar-header" class="calculator__header">Выберите желаемую дату чистки</div>
+                            <div id="calendar-block" class="calculator__date">
+                                <form id="modal-calendar-block" action="#" class="calendar">
+                                    <input name="calendar" type="date">
+                                </form>
+                            </div>
+                        </div>
+
+                        <div id="date">
+                            <div id="modal-date-header" class="calculator__header">Укажите контактные данные</div>
+                            <div id="modal-date-subheader" class="calculator__subheader">Заполните форму контактов и наш менеджер свяжется с вами в ближайшее время</div>
+                            <form id="modal-date-form" action="#" class="modal-form__form modal-sizes__form">
+                                <input name="name" placeholder="Имя" type="text">
+                                <input name="phone" placeholder="Телефон">
+                                <button class="button button_form">Заказать чистку</button>
+                            </form>
+                            <div id="modal-date-descr" class="date__descr">Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности. Мы не передаем ваши данные.</div>
+                        </div>
+                    </div>
+                    <button id="calculator-button" class="button button_calculator">Продолжить</button>
+                    <button id="calendar-button" class="button button_calculator">Продолжить</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feedback">
+        <div class="container">
+            <h2 class="title"><span>Реальные отзывы</span> клиентов</h2>
+            <div class="subtitle subtitle_mt36">Уже более 1000 клиентов довольны нашей работой</div>
+            <div class="feedback__wrapper">
+                <img src="img/feedback/feedback1.jpg" alt="Document" class="feedback__img">
+                <img src="img/feedback/feedback2.jpg" alt="Document" class="feedback__img">
+                <img src="img/feedback/feedback3.jpg" alt="Document" class="feedback__img">
+            </div>
+
+            <div class="feedback__wrapper-carousel">
+                <div class="feedback__wrapper-item">
+                    <img src="img/feedback/feedback1.jpg" alt="Document" class="feedback__img">
+                </div>
+                <div class="feedback__wrapper-item">
+                    <img src="img/feedback/feedback2.jpg" alt="Document" class="feedback__img">
+                </div>
+                <div class="feedback__wrapper-item">
+                    <img src="img/feedback/feedback3.jpg" alt="Document" class="feedback__img">
+                </div>
+            </div>
+
+            <button class="prev prev__feedback"><img src="icons/carousel-arrow_prev.svg" alt="Prev"></button>
+            <button class="next next__feedback"><img src="icons/carousel-arrow_next.svg" alt="Next"></button>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <h2 class="title"><span>Контактная</span> информация</h2>
+            <div class="subtitle subtitle_mt36">По любым вопросам можем проконсультировать вас по телефону, через мессенджер<br>или непосредственно в офисе</div>
+            <div class="footer__map">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ace63bd5844649e2c7cc849dbb272d493bb1927950672583a0af98b9f3985321c&amp;source=constructor" width="1000" height="700" frameborder="0" scroll="false"></iframe>
+            </div>
+            <div class="footer__info">
+                <div class="footer__header">Ответим на любой<br>ваш вопрос</div>
+                <div class="footer__links">
+                    <div class="footer__phone">Телефон: +7 (904) 827-96-56</div>
+                    <div class="footer__address">Адрес: Осоавиахимовская улица, дом 82</div>
+                    <div class="footer__mail"> Mail: shpakovich_nik@mail.ru</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay">
+        <div class="modal-form modal-form_overlay" id="callback-form">
+            <div class="modal-form__close">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="modal-form__title">Обратный звонок</div>
+            <div class="modal-form__subtitle">Заполните форму контактов и наш менеджер свяжется с вами в ближайшее время</div>
+            <form action="#" class="modal-form__form">
+                <input name="name" placeholder="Имя" type="text">
+                <input name="phone" placeholder="Телефон">
+                <button class="button button_form">Заказать звонок</button>
+            </form>
+            <div class="modal-form__descr">Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности. Мы не передаем ваши данные.</div>
+        </div>
+
+
+    
+        <div class="calculator_modal-wrapper" id="calculator-modal">
+            <div class="modal-form__close">
+                    <span></span>
+                    <span></span>
+            </div>
+            <div class="calculator calculator-modal">
+                <div class="calculator_yellow"></div>
+                <div class="calculator__wrapper">
+                    <div class="calculator__discount">
+                        <div class="calculator__descr">Скидка за экономию времени нашего работника</div>
+                        <div class="calculator__number">+17%</div>
+                        <img src="img/calculate/sofa_bg.png" alt="Sofa" class="calculator__img">
+                    </div>
+                    <div class="calculator__main">
+                        <div class="calculator__progress-wrapper">
+                            <div class="calculator__progress"></div>
+                            <div class="calculator__progress-label">Вопрос <span>1</span> из 4</div>
+                        </div>
+
+                        <div id="modal-items" class="modal-item-block">
+                            <div class="calculator__header">Какую мебель нужно чистить?</div>
+                            <div class="calculator__blocks">
+                                <div class="calculator__block">
+                                    <div class="calculator__block-header">Диван</div>
+                                    <img src="img/calculate/sofa.png" alt="Sofa" class="calculator__block-img">
+                                </div>
+                                <div class="calculator__block">
+                                    <div class="calculator__block-header">Кровать</div>
+                                    <img src="img/calculate/bed.png" alt="Bed" class="calculator__block-img">
+                                </div>
+                                <div class="calculator__block">
+                                    <div class="calculator__block-header">Кресло</div>
+                                    <img src="img/calculate/armchair.png" alt="Armchair" class="calculator__block-img">
+                                </div>
+                                <div class="calculator__block">
+                                    <div class="calculator__block-header">Другое</div>
+                                    <img src="img/calculate/other.png" alt="Other" class="calculator__block-img">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="modal-sizes">
+                            <div id="modal-sizes-header" class="calculator__header">Размер мебели (приблизительно)</div>
+                            <form id="modal-sizes-block" action="#" class="modal-form__form modal-sizes__form">
+                                <input name="length" placeholder="Длина" type="number">
+                                <input name="width" placeholder="Ширина" type="number">
+                                <input name="height" placeholder="Высота" type="number">
+                                <button id="modal-sizes-button" class="button button_calculator">Продолжить</button>
+                            </form>
+                        </div>
+
+                        <div id="modal-calendar" class="modal-item-block">
+                            <div id="modal-calendar-header" class="calculator__header">Выберите желаемую дату чистки</div>
+                            <div id="modal-calendar-block" class="calculator__date">
+                                <form action="#" class="calendar">
+                                    <input name="calendar" type="date">
+                                </form>
+                            </div>
+                        </div>
+
+                        <div id="modal-date">
+                            <div id="modal-date-header" class="calculator__header">Укажите контактные данные</div>
+                            <div id="modal-date-subheader" class="calculator__subheader">Заполните форму контактов и наш менеджер свяжется с вами в ближайшее время</div>
+                            <form id="modal-date-form" action="#" class="modal-form__form modal-sizes__form">
+                                <input name="name" placeholder="Имя" type="text">
+                                <input name="phone" placeholder="Телефон">
+                                <button class="button button_form">Заказать чистку</button>
+                            </form>
+                            <div id="modal-date-descr" class="date__descr">Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности. Мы не передаем ваши данные.</div>
+                        </div>
+                    </div>
+                    <button id="modal-calculator-button" class="button button_calculator">Продолжить</button>
+                    <button id="modal-calendar-button" class="button button_calculator">Продолжить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

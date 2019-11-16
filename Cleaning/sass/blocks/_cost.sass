@@ -1,0 +1,96 @@
+.cost
+    width: 100%
+    min-height: 866px
+    padding: 111px 0 160px 0
+    &__wrapper
+        position: relative
+        width: 100%
+        margin-top: 69px
+    &__carousel
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        > div
+            width: 350px
+            min-height: 400px
+            border-radius: 20px
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+            background-image: linear-gradient(to top, #ffda59, #f4b12d)
+            &:nth-child(n)
+                margin: 0 45px
+    &-item
+        position: relative
+        overflow: hidden
+        padding: 25px 38px 20px 38px
+        &__title
+            width: 245px
+            font-size: 25px
+            font-weight: bold
+            line-height: normal
+            color: #49494b
+        &__img
+            position: absolute
+            display: block
+            width: 400px
+            top: 50%
+            transform: translateY(-50%)
+            left: 50px
+        &__cost
+            position: absolute
+            bottom: 21px
+            width: calc(100% - 74px)
+            opacity: 0.9
+            font-size: 45px
+            font-weight: bold
+            line-height: 45px
+            color: #ffffff
+            text-align: center
+
+@media only screen and (max-width: 1390px)
+    .cost
+        &__carousel
+            > div:nth-child(n)
+                margin: 0 30px
+
+@media only screen and (max-width: 1199px)
+    .cost
+        &-item
+            padding: 10px
+            &__cost
+                width: calc(100% - 18px)
+
+@media only screen and (max-width: 768px)
+    .cost
+        min-height: 959px
+        position: relative
+        padding-top: 100px
+        &__wrapper
+            margin-top: 40px
+        &__carousel
+            > div:nth-child(n)
+                margin: 0 15px
+        &:after
+            content: 'Назад/Вперед'
+            display: block
+            position: absolute
+            bottom: 139px
+            left: 50%
+            transform: translateX(-50%)
+            font-size: 25px
+            font-weight: normal
+            line-height: 25px
+            color: #49494b
+        &-item
+            padding: 30px
+            &__img
+                left: 200px
+            &__title
+                width: 70%
+
+@media only screen and (max-width: 425px)
+    .cost
+        &:after
+            bottom: 179px
+
+

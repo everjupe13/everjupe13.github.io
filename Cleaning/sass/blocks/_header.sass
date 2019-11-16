@@ -1,0 +1,43 @@
+.header
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    &__logo
+        max-width: 52px
+    &__info
+        margin-left: 420px
+    &__phone
+        display: block
+        font-size: 25px
+        font-weight: 800
+        line-height: 24px
+        color: #423c3d
+        text-align: right
+        &:hover
+            text-decoration: none
+            color: #423c3d
+    &__descr
+        font-size: 20px
+        font-weight: normal
+        line-height: normal
+        color: rgba(66, 60, 61, 0.7)
+
+@media only screen and (max-width: 1199px)
+    .header
+        &__logo
+            margin-left: 20px
+        &__info
+            margin-left: 270px
+
+
+
+@media only screen and (max-width: 768px)
+    .header
+        &__logo
+            width: 180px
+            transform: translateX(-30px)
+            img
+                display: block
+                width: 180px
+        &__info
+            margin-left: 57px        
