@@ -1,0 +1,44 @@
+.feedback
+    padding: 120px 0 165px 0
+    width: 100%
+    min-height: 1050px
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        margin-top: 120px
+        width: 100%
+        &-carousel
+            display: none
+        &-item
+            img
+                display: block
+                margin: 0 auto
+    &__img
+        max-width: 361px
+
+@media only screen and (max-width: 1199px)
+    .feedback__img
+        max-width: 300px
+
+@media only screen and (max-width: 768px)
+    .feedback
+        padding: 90px 0 100px
+        position: relative
+        &:after
+            content: 'Назад/Вперед'
+            display: block
+            position: absolute
+            bottom: 87px
+            left: 50%
+            transform: translateX(-50%)
+            font-size: 25px
+            font-weight: normal
+            line-height: 25px
+            color: #49494b
+        &__img
+            max-width: 340px
+        &__wrapper
+            display: none
+            &-carousel
+                margin-top: 51px
+                display: block
