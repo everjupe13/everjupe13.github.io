@@ -17,6 +17,10 @@ const slider1 = tns({
         769: {
             items: 1,
             nav: false,
+        },
+        1024: {
+            items: 3,
+            nav: false,
         }
     }
 });
