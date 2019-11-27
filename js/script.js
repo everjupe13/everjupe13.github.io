@@ -1,30 +1,19 @@
-// const slider1 = tns({
-//     container: '.calculator__slider',
-//     items: 1,
-//     slideBy: 1,
-//     nav: true,
-//     navPosition: 'top',
-//     autoplay: false,
-//     controls: false,
-//     // responsive: {
-//     //     310: {
-//     //         items: 1,
-//     //         nav: false,
-//     //     },
-//     //     576: {
-//     //         items: 1,
-//     //         nav: false,
-//     //     },
-//     //     769: {
-//     //         items: 1,
-//     //         nav: false,
-//     //     },
-//     //     1025: {
-//     //         items: 3,
-//     //         nav: false,
-//     //     }
-//     // }
-// });
+const slider1 = tns({
+    container: '.services__wrapper-carousel',
+    items: 1,
+    slideBy: 1,
+    nav: false,
+    autoplay: false,
+    controls: false,
+});
+
+document.querySelector('.prev_services').onclick = function () {
+    slider1.goTo('prev');
+};
+
+document.querySelector('.next_services').onclick = function () {
+    slider1.goTo('next');
+};
 
 
 const slider2 = tns({
@@ -38,101 +27,123 @@ const slider2 = tns({
 });
 
 
-document.querySelector('.prev').onclick = function () {
+document.querySelector('.prev_license').onclick = function () {
     slider2.goTo('prev');
 };
 
-document.querySelector('.next').onclick = function () {
+document.querySelector('.next_license').onclick = function () {
     slider2.goTo('next');
 };
 
 
 
-// function stopDefAction(evt) {
-//     evt.preventDefault();
-// }
+function stopDefAction(evt) {
+    evt.preventDefault();
+}
     
-// document.getElementById('calculator__form').addEventListener(
-//     'click', stopDefAction, false
-// );
-
-
-
-function jumpOne(h){
-    let top = document.getElementById(h).offsetTop;
-    window.scrollTo(0, top);
-};
-
-
+document.getElementById('clc').addEventListener(
+    'click', stopDefAction, false
+);
 
 
 $(document).ready(function() {
 
 
+    //Progress bar1 in Computation block
+    $('#d1 label').on('click', function() {
+        $('.clc-form__documents-wrapper__progress__green').css('width', '0%');
+        $('#d1-progress, #d2-progress, #d3-progress, #d4-progress, #d5-progress').css('background-color', '#f5f6f8');
+    });
+
+    $('#d2 label').on('click', function() {
+        $('.clc-form__documents-wrapper__progress__green').css('width', '25%');
+        $('#d1-progress').css('background-color', '#7bb63c');
+        $('#d2-progress, #d3-progress, #d4-progress, #d5-progress').css('background-color', '#f5f6f8');
+    });
+
+    $('#d3 label').on('click', function() {
+        $('.clc-form__documents-wrapper__progress__green').css('width', '50%');
+        $('#d1-progress, #d2-progress').css('background-color', '#7bb63c');
+        $('#d3-progress, #d4-progress, #d5-progress').css('background-color', '#f5f6f8');
+    });
+
+    $('#d4 label').on('click', function() {
+        $('.clc-form__documents-wrapper__progress__green').css('width', 'calc(75% - 10px)');
+        $('#d1-progress, #d2-progress, #d3-progress').css('background-color', '#7bb63c');
+        $('#d4-progress, #d5-progress').css('background-color', '#f5f6f8');
+    });
+
+    $('#d5 label').on('click', function() {
+        $('.clc-form__documents-wrapper__progress__green').css('width', '100%');
+        $('#d1-progress, #d2-progress, #d3-progress, #d4-progress').css('background-color', '#7bb63c');
+        $('#d5-progress').css('background-color', '#f5f6f8');
+    });
 
 
 
 
 
 
+    //Progress bar2 in Computation block
+    $('#q1 label').on('click', function() {
+        $('.clc-form__quantity-wrapper__progress__green').css('width', '0%');
+        $('#q1-progress, #q2-progress, #q3-progress, #q4-progress, #q5-progress').css('background-color', '#f5f6f8');
+    });
 
-    function validateFormsMain(form) {
-        $(form).validate({
-            rules: {
-                fromCity: "required",
-                fromStreet: "required",
-                fromHouse: "required",
-                whereCity: "required",
-                whereStreet: "required",
-                whereHouse: "required",
-                phone: "required",
-                fromCityMobile: "required",
-                whereCityMobile: "required",
-                fromStreetMobile: "required",
-                whereStreetMobile:"required",
-            },
-            messages: {
-                fromCity: "Пожалуйста, заполните поле",
-                fromStreet: "Пожалуйста, заполните поле",
-                fromHouse: "Пожалуйста, заполните поле",
-                whereCity: "Пожалуйста, заполните поле",
-                whereStreet: "Пожалуйста, заполните поле",
-                whereHouse: "Пожалуйста, заполните поле",
-                fromCityMobile: "Пожалуйста, заполните поле",
-                whereCityMobile: "Пожалуйста, заполните поле",
-                fromStreetMobile: "Пожалуйста, заполните поле",
-                whereStreetMobile:"Пожалуйста, заполните поле",
-                phone: "Пожалуйста, введите свой номер телефона",
-            }
-        });
-    }
+    $('#q2 label').on('click', function() {
+        $('.clc-form__quantity-wrapper__progress__green').css('width', '25%');
+        $('#q1-progress').css('background-color', '#7bb63c');
+        $('#q2-progress, #q3-progress, #q4-progress, #q5-progress').css('background-color', '#f5f6f8');
+    });
+
+    $('#q3 label').on('click', function() {
+        $('.clc-form__quantity-wrapper__progress__green').css('width', 'calc(50% - 15px)');
+        $('#q1-progress, #q2-progress').css('background-color', '#7bb63c');
+        $('#q3-progress, #q4-progress, #q5-progress').css('background-color', '#f5f6f8');
+    });
+
+    $('#q4 label').on('click', function() {
+        $('.clc-form__quantity-wrapper__progress__green').css('width', 'calc(75% - 11px)');
+        $('#q1-progress, #q2-progress, #q3-progress').css('background-color', '#7bb63c');
+        $('#q4-progress, #q5-progress').css('background-color', '#f5f6f8');
+    });
+
+    $('#q5 label').on('click', function() {
+        $('.clc-form__quantity-wrapper__progress__green').css('width', '100%');
+        $('#q1-progress, #q2-progress, #q3-progress, #q4-progress').css('background-color', '#7bb63c');
+        $('#q5-progress').css('background-color', '#f5f6f8');
+    });
+
 
     function validateForms(form) {
         $(form).validate({
             rules: {
+                name: "required",
                 phone: "required",
             },
             messages: {
+                name: "Пожалуйста, введите своё имя",
                 phone: "Пожалуйста, введите свой номер телефона",
             }
         });
     }
 
-    validateForms('#promo__form');
-    validateFormsMain('#calculator__form');
+    // validateForms('#discount-form');
+    // validateFormsMain('#modal-form');
 
     $('input[name=phone]').mask("+7 (999)-999-9999");
 
 
 
-    $('form').submit(function(e) {
+    $('#discount-form, #modal-form').submit(function(e) {
         e.preventDefault();
         $.ajax({
-            type: "POST",
-            url: "mailer/smart.php",
-            data: $(this).serialize()
+            // type: "POST",
+            // url: "mailer/smart.php",
+            // data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");
+            $('#callback').fadeOut('slow')
             $('.overlay, #thanks').fadeIn('slow')
             $('form').trigger('reset');
         });
@@ -140,7 +151,11 @@ $(document).ready(function() {
     })
 
     $('.modal__close').on('click', function() {
-        $('.overlay, #thanks').fadeOut('slow');
+        $('.overlay, #thanks, #callback').fadeOut('slow');
+    });
+
+    $('#callback__call1, #callback__call2, #callback__call3').on('click', function() {
+        $('.overlay, #callback').fadeIn('slow');
     });
 
 })

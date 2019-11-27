@@ -20,9 +20,9 @@
                 </div>
                 <div class="header__info">
                     <a href="tel:+79048279656" class="header__phone">+7 (904) 827-96-56</a>
-                    <div class="header__descr">Звонок по России бесплатный</div>
+                    <div class="header__descr">Звонок <span>по России </span>бесплатный</div>
                 </div>
-                <button onclick="jumpOne('discount-form')" class="header__btn">Заказать звонок</button>
+                <button id="callback__call1" class="header__btn">Заказать звонок</button>
             </div>
         </div>
     </header>
@@ -30,6 +30,7 @@
     <section class="promo">
         <div class="container">
             <h1 class="promo__header">Сократите <span>налоговые расходы до 75%</span><br>за счет качественного<br>ведения бухгалтерского учета</h1>
+            <h2 class="promo__header promo__header-mobile">Сократите <span>налоговые расходы до 75%</span> за счет качественного ведения бухгалтерского учета</h2>
             <div class="promo__descr">Бухгалтер в штате - зачастую дорого и невыгодно.<br>Мы будем вести вашу бухгалтерию на аутсорсинге 24/7.</div>
             <div class="promo__plates">
                 <div class="promo__plate">
@@ -44,17 +45,18 @@
             <div class="promo__score">
                 <img src="img/promo/contacts.png" alt="Phones" class="promo__score-img">
                 <div class="promo__score-descr">Оставьте ваши контакты, и мы рассчитаем<br>стоимость обслуживания вашей компании</div>
+                <div class="promo__score-descr promo__score-descr-mobile">Оставьте ваши контакты, и мы рассчитаем стоимость обслуживания вашей компании</div>
             </div>
-            <button onclick="jumpOne('computation')" class="btn promo__btn">Рассчитать стоимость</button>
+            <button id="callback__call2" class="btn promo__btn">Рассчитать стоимость</button>
             <div class="promo__policy">Нажимая кнопку вы соглашаетесь с политикой<br>конфиденциальности. Мы не передаем ваши.</div>
         </div>
     </section>
 
     <section class="services">
         <div class="container">
-            <h2 class="title"><span class="laptop">Услуги</span> <span class="mobile">бухгалтерии</span></h2>
+            <h2 class="title"><span>Услуги</span> бухгалтерии</h2>
             <div class="subtitle">Цены на основные направления ведения бухгалтерского учета</div>
-            <div class="services__wrapper">
+            <div id="services__wrapper" class="services__wrapper">
                 <div class="card">
                     <div class="card__number">01</div>
                     <div class="card__title">Обслуживание на ОСНО</div>
@@ -86,15 +88,65 @@
                     <div class="card__cost">от <span>1200</span> руб./мес.</div>
                 </div>
             </div>
+
+            <div class="services__carousel">
+                <div class="services__wrapper services__wrapper-carousel">
+                    <div>
+                        <div class="card">
+                            <div class="card__number">01</div>
+                            <div class="card__title">Обслуживание на ОСНО</div>
+                            <div class="card__cost">от <span>1500</span> руб./мес.</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card">
+                            <div class="card__number">02</div>
+                            <div class="card__title">Обслуживание на УСНО</div>
+                            <div class="card__cost">от <span>1200</span> руб./мес.</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card">
+                            <div class="card__number">03</div>
+                            <div class="card__title">Обслуживание на ЕНВД</div>
+                            <div class="card__cost">от <span>700</span> руб./мес.</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card">
+                            <div class="card__number">04</div>
+                            <div class="card__title">Нулевая отчетность</div>
+                            <div class="card__cost">от <span>900</span> руб./мес.</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card">
+                            <div class="card__number">05</div>
+                            <div class="card__title">Подготовка и сдача отчетов</div>
+                            <div class="card__cost">от <span>150</span> руб./мес.</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card">
+                            <div class="card__number">06</div>
+                            <div class="card__title">Зарплата<br>и кадры</div>
+                            <div class="card__cost">от <span>1200</span> руб./мес.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="prev prev_services"><img src="icons/prev.svg" alt="Prev"></button>
+                <button class="next next_services"><img src="icons/next.svg" alt="Next"></button>
+            </div>
         </div>
     </section>
 
     <section id="computation" class="computation">
         <div class="container">
-            <h2 class="title"><span class="all">Рассчитайте</span> стоимость обслуживания</h2>
+            <h2 class="title"><span>Рассчитайте</span> стоимость обслуживания</h2>
             <div class="subtitle">Заполните все поля, и менеджер рассчитает стоимость ведения вашей бухгалтерии за 20 минут</div>
             <div class="clc">
-                <form class="clc-form">
+                <form id="clc" class="clc-form">
                     <div class="clc-form__select">
                         <div class="clc-form__title">Выберите систему налогооблажения:</div>
                         <div class="clc-form__select-wrapper">
@@ -116,75 +168,105 @@
                             <div>
                                 <input name="raios1" id="radio4__select" type="radio">
                                 <label for="radio4__select" class="clc-form__select-wrapper__radio"></label>
-                                <label for="radio4__select">Налоговые каникулы</label>
+                                <label for="radio4__select"><span class="laptop">Налоговые каникулы</span><span class="mobile">ЕНВД</span></label>
                             </div>
                         </div>
                     </div>
                     <div class="clc-form__documents">
                         <div class="clc-form__title">Документов в месяц:</div>
                         <div class="clc-form__documents-wrapper">
-                            <div>
+                            <div id="d1">
                                 <input name="raios2" id="radio1__documents" type="radio" checked>
+                                <label id="d1-progress" for="radio1__documents" class="clc-form__documents-wrapper__radio"></label>
                                 <label for="radio1__documents">20</label>
                             </div>
-                            <div>
+                            <div id="d2">
                                 <input name="raios2" id="radio2__documents" type="radio">
+                                <label id="d2-progress" for="radio2__documents" class="clc-form__documents-wrapper__radio"></label>
                                 <label for="radio2__documents">50</label>
                             </div>
-                            <div>
+                            <div id="d3">
                                 <input name="raios2" id="radio3__documents" type="radio">
+                                <label id="d3-progress" for="radio3__documents" class="clc-form__documents-wrapper__radio"></label>
                                 <label for="radio3__documents">150</label>
                             </div>
-                            <div>
+                            <div id="d4">
                                 <input name="raios2" id="radio4__documents" type="radio">
+                                <label id="d4-progress" for="radio4__documents" class="clc-form__documents-wrapper__radio"></label>
                                 <label for="radio4__documents">250</label>
                             </div>
-                            <div>
+                            <div id="d5">
                                 <input name="raios2" id="radio5__documents" type="radio">
+                                <label id="d5-progress" for="radio5__documents" class="clc-form__documents-wrapper__radio"></label>
                                 <label for="radio5__documents">Более</label>
+                            </div>
+                            <div class="clc-form__documents-wrapper__progress">
+                                <!-- <span class="grey"></span> -->
+                                <span class="clc-form__documents-wrapper__progress__green"></span>
                             </div>
                         </div>
                     </div>
                     <div class="clc-form__quantity">
-                        <div class="clc-form__title">Количество сотрудников в организации</div>
+                        <div class="clc-form__title">Количество сотрудников<span class="laptop"> в организации</span></div>
                         <div class="clc-form__quantity-wrapper">
-                            <div>
+                            <div id="q1">
                                 <input name="raios3" id="radio1__quantity" type="radio" checked>
+                                <label for="radio1__quantity" id="q1-progress" class="clc-form__quantity-wrapper__radio"></label>
                                 <label for="radio1__quantity">1-5</label>
                             </div>
-                            <div>
+                            <div id="q2">
                                 <input name="raios3" id="radio2__quantity" type="radio">
+                                <label for="radio2__quantity" id="q2-progress" class="clc-form__quantity-wrapper__radio"></label>
                                 <label for="radio2__quantity">5-10</label>
                             </div>
-                            <div>
+                            <div id="q3">
                                 <input name="raios3" id="radio3__quantity" type="radio">
+                                <label for="radio3__quantity" id="q3-progress" class="clc-form__quantity-wrapper__radio"></label>
                                 <label for="radio3__quantity">10-50</label>
                             </div>
-                            <div>
+                            <div id="q4">
                                 <input name="raios3" id="radio4__quantity" type="radio">
+                                <label for="radio4__quantity" id="q4-progress" class="clc-form__quantity-wrapper__radio"></label>
                                 <label for="radio4__quantity">50-100</label>
                             </div>
-                            <div>
+                            <div id="q5">
                                 <input name="raios3" id="radio5__quantity" type="radio">
+                                <label for="radio5__quantity" id="q5-progress" class="clc-form__quantity-wrapper__radio"></label>
                                 <label for="radio5__quantity">Более</label>
+                            </div>
+                            <div class="clc-form__quantity-wrapper__progress">
+                                <!-- <span class="grey"></span> -->
+                                <span class="clc-form__quantity-wrapper__progress__green"></span>
                             </div>
                         </div>
                     </div>
                     <div class="clc-form__type">
                         <div class="clc-form__title">Наценка по виду деятельности:</div>
                         <div class="clc-form__type-wrapper">
-                            <input name="raios4" id="radio1__type" type="radio" checked>
-                            <label for="radio1__type">Производство</label>
-                            <input name="raios4" id="radio2__type" type="radio">
-                            <label for="radio2__type">Строительство</label>
-                            <input name="raios4" id="radio3__type" type="radio">
-                            <label for="radio3__type">Валютный счет</label>
-                            <input name="raios4" id="radio4__type" type="radio">
-                            <label for="radio4__type">Другое</label>
+                            <div>
+                                <input name="raios4" id="radio1__type" type="radio" checked>
+                                <label for="radio1__type" class="clc-form__type-wrapper__radio"></label>
+                                <label for="radio1__type">Производство</label>
+                            </div>
+                            <div>
+                                <input name="raios4" id="radio2__type" type="radio">
+                                <label for="radio2__type" class="clc-form__type-wrapper__radio"></label>
+                                <label for="radio2__type">Строительство</label>
+                            </div>
+                            <div>
+                                <input name="raios4" id="radio3__type" type="radio">
+                                <label for="radio3__type" class="clc-form__type-wrapper__radio"></label>
+                                <label for="radio3__type">Валютный счет</label>
+                            </div>
+                            <div>
+                                <input name="raios4" id="radio4__type" type="radio">
+                                <label for="radio4__type" class="clc-form__type-wrapper__radio"></label>
+                                <label for="radio4__type">Другое</label>
+                            </div>
                         </div>
                     </div>
                     <div class="clc-form__submit">
-                        <button class="btn clc-form__btn">Рассчитать стоимость</button>
+                        <button id="callback__call3" class="btn clc-form__btn">Рассчитать стоимость</button>
                         <div class="clc-form__policy">Нажимая кнопку вы соглашаетесь с политикой конфиденциальности. Мы не передаем ваши данные третьим лицам.</div>
                     </div>
                 </form>
@@ -194,7 +276,7 @@
 
     <section class="pluses">
         <div class="container">
-            <h2 class="title"><span class="laptop">Что вы получите</span> <span class="mobile">при работе</span> с нами?</h2>
+            <h2 class="title"><span>Что вы получите</span> при работе с нами?</h2>
             <div class="subtitle">При грамотном ведении бухгалтерии можно сократить налоговые расходы до 75%</div>
             <div class="pluses__wrapper">
                 <div class="pluses__item">
@@ -206,7 +288,7 @@
                     <div class="pluses__descr">Экономии бюджета на списании налогов</div>
                 </div>
                 <div class="pluses__item">
-                    <div class="pluses__main">0 РУБ.</div>
+                    <div class="pluses__main">0 Р<span class="laptop">УБ</span>.</div>
                     <div class="pluses__descr">За возмещение НДС и разблокировку счетов</div>
                 </div>
                 <div class="pluses__item">
@@ -219,7 +301,7 @@
 
     <section id="discount-form" class="discount">
         <div class="container">
-            <h2 class="title"><span class="laptop">Получите бесплатно</span> месяц ведения <span class="mobile">бухгалтерии</span></h2>
+            <h2 class="title"><span>Получите бесплатно</span> месяц ведения бухгалтерии</h2>
             <div class="subtitle">Заполните форму, и наш менеджер отправит вам подарочный купон</div>
             <div class="discount__wrapper">
                 <img src="img/discount/book.png" alt="Book" class="discount__book-img">
@@ -232,7 +314,7 @@
                     <div class="discount-form__subtitle">И менеджер отправит скидочный купон вам по SMS</div>
                     <form id="discount-form" action="#" class="discount-form__form">
                         <input name="name" placeholder="Имя" type="text">
-                        <input name="phone" placeholder="Телефон">
+                        <input name="phone" placeholder="+7 (___)-___-__-__">
                         <button class="btn discount-form__btn">Получить купон</button>
                     </form>
                     <div class="discount-form__descr">Или свяжитесь с нами через любой удобный для вас мессенджер</div>
@@ -249,7 +331,7 @@
 
     <section id="license" class="license">
         <div class="container">
-            <h2 class="title"><span class="laptop" >Благодарственные</span> <span class="mobile">письма</span></h2>
+            <h2 class="title"><span>Благодарственные</span> письма</h2>
             <div class="subtitle">Уже более 400 компаний доверили нам ведение бухгалтерии</div>
             <div class="license__wrapper">
                 <img src="img/license/license1.jpg" alt="Document" class="license__item">
@@ -278,7 +360,7 @@
 
     <footer class="footer">
         <div class="container">
-            <h2 class="title"><span class="laptop" >Контактная</span> <span class="mobile">информация</span></h2>
+            <h2 class="title"><span>Контактная</span> информация</h2>
             <div class="subtitle footer__subtitle">По любым вопросам можем проконсультировать вас по телефону, через мессенджер<br>или непосредственно в офисе</div>
             <div class="footer__map">
                 <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ace63bd5844649e2c7cc849dbb272d493bb1927950672583a0af98b9f3985321c&amp;source=constructor" width="1130" height="700" frameborder="0" scroll="false"></iframe>
@@ -297,8 +379,32 @@
 
     <div class="overlay">
         <div class="modal" id="thanks">
-            <div class="modal__close">&times;</div>
+            <div class="modal__close">
+                <span></span>
+                <span></span>
+            </div>
             <div class="modal__subtitle">Спасибо за вашу заявку!</div>
+        </div>
+
+        <div class="discount-form modal__callback" id="callback">
+            <div class="modal__close">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="discount-form__title">Обратный звонок</div>
+            <div class="discount-form__subtitle">Заполните форму и менеджер свяжется с вами уже сегодня</div>
+            <form id="modal-form" action="#" class="discount-form__form">
+                <input name="name" placeholder="Имя" type="text">
+                <input name="phone" placeholder="+7 (___)-___-__-__">
+                <button class="btn discount-form__btn">Заказать звонок</button>
+            </form>
+            <div class="discount-form__descr">Или свяжитесь с нами через любой удобный для вас мессенджер</div>
+            <div class="discount-form__social">
+                <a href="whatsapp://send?text=Hello world!" target="_blank" rel="noopener noreferrer" class="discount-form__whatsapp"><img src="icons/social/whatsapp.svg" alt="whatsapp"></a>
+                <a href="viber://chats" target="_blank" rel="noopener noreferrer" class="discount-form__viber"><img src="icons/social/viber.svg" alt="viber"></a>
+                <a href="tg://resolve?domain=testName" target="_blank" rel="noopener noreferrer" class="discount-form__telegram"><img src="icons/social/telegram.svg" alt="telegram"></a>
+                <a href="https://www.vk.com" target="_blank" rel="noopener noreferrer" class="discount-form__vkontakte"><img src="icons/social/vk.svg" alt="vkontakte"></a>
+            </div>
         </div>
     </div>
 
