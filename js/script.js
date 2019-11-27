@@ -41,9 +41,9 @@ function stopDefAction(evt) {
     evt.preventDefault();
 }
     
-document.getElementById('clc').addEventListener(
-    'click', stopDefAction, false
-);
+// document.getElementById('clc').addEventListener(
+//     'click', stopDefAction, false
+// );
 
 
 $(document).ready(function() {
@@ -143,8 +143,22 @@ $(document).ready(function() {
             // data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");
-            $('#callback').fadeOut('slow')
-            $('.overlay, #thanks').fadeIn('slow')
+            $('#callback').fadeOut('slow');
+            $('.overlay, #thanks').fadeIn('slow');
+            $('form').trigger('reset');
+        });
+        return false;
+    })
+
+    $('#clc').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            // type: "POST",
+            // url: "mailer/smart.php",
+            // data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            $('.overlay, #callback').fadeIn('slow');
             $('form').trigger('reset');
         });
         return false;
