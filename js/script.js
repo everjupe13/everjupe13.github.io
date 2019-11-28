@@ -129,13 +129,13 @@ $(document).ready(function() {
     }
 
     // validateForms('#discount-form');
-    // validateFormsMain('#modal-form');
+    // validateForms('#modal-form');
 
     $('input[name=phone]').mask("+7 (999)-999-9999");
 
 
 
-    $('#discount-form, #modal-form').submit(function(e) {
+    $('#discount-form, #modal-form, #cost-form').submit(function(e) {
         e.preventDefault();
         $.ajax({
             // type: "POST",
@@ -143,7 +143,7 @@ $(document).ready(function() {
             // data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");
-            $('#callback').fadeOut('slow');
+            $('#callback, #cost').fadeOut('slow');
             $('.overlay, #thanks').fadeIn('slow');
             $('form').trigger('reset');
         });
@@ -158,18 +158,23 @@ $(document).ready(function() {
             // data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");
-            $('.overlay, #callback').fadeIn('slow');
+            $('.overlay, #cost').fadeIn('slow');
             $('form').trigger('reset');
         });
         return false;
     })
 
     $('.modal__close').on('click', function() {
-        $('.overlay, #thanks, #callback').fadeOut('slow');
+        $('.overlay, #thanks, #callback, #cost').fadeOut('slow');
     });
 
-    $('#callback__call1, #callback__call2, #callback__call3').on('click', function() {
+    $('#callback__call').on('click', function() {
         $('.overlay, #callback').fadeIn('slow');
     });
+
+    $('#cost__call1, #cost__call2').on('click', function() {
+        $('.overlay, #cost').fadeIn('slow');
+    });
+
 
 })
