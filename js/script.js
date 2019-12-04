@@ -119,42 +119,21 @@ $(document).ready(function() {
 
 
 
-    $('#discount-form, #modal-form, #cost-form').submit(function(e) {
+    $('.form').submit(function(e) {
         e.preventDefault();
         $.ajax({
-            // type: "POST",
-            // url: "mailer/smart.php",
-            // data: $(this).serialize()
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");
-            $('#callback, #cost').fadeOut('slow');
+            $('#callback, #cost').fadeOut('');
             $('.overlay, #thanks').fadeIn('slow');
-            $('form').trigger('reset');
+            $('.form').trigger('reset');
         });
         return false;
-    })
+    });
 
-    // $('#cost-form').submit(function(e) {
-    //     e.preventDefault();
-    //     $.ajax().done(function() {
-    //         $(this).find("input").val("");
-    //         $('#cost').fadeOut();
-    //         $('#thanks').fadeIn('slow')
-    //         $('#cost-form').trigger('reset');
-    //     });
-    //     return false;
-    // })
-
-    // $('#callback-form_form').submit(function(e) {
-    //     e.preventDefault();
-    //     $.ajax().done(function() {
-    //         $(this).find("input").val("");
-    //         $('#callback-form').fadeOut();
-    //         $('#thanks').fadeIn('slow')
-    //         $('#callback-form_form').trigger('reset');
-    //     });
-    //     return false;
-    // })
 
 
 
@@ -170,7 +149,7 @@ $(document).ready(function() {
             $('form').trigger('reset');
         });
         return false;
-    })
+    });
 
 
     // $('form').submit(function(e) {
@@ -202,7 +181,7 @@ $(document).ready(function() {
     });
 
 
-    function validateForms(form) {
+    function validForms(form) {
         $(form).validate({
             rules: {
                 name: "required",
@@ -215,8 +194,8 @@ $(document).ready(function() {
         });
     }
 
-    validateForms('#cost form');
-    validateForms('#discount-form');
-    validateForms('#modal-form');
+    validForms('#cost form');
+    validForms('#discount-form');
+    validForms('#modal-form');
 
 })
