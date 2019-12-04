@@ -1,0 +1,162 @@
+.promo
+    padding: 120px 0 150px 0
+    width: 100%
+    min-height: 900px
+    background: url('../img/main_bg.jpg') center center/cover no-repeat
+    &__header
+        font-size: 30px
+        font-weight: 900
+        line-height: normal
+        color: #333231
+        text-transform: uppercase
+        span
+            color: #6daf27
+        &-mobile
+            display: none
+            font-size: 28px 
+    &__plates
+        display: flex
+        justify-content: space-between
+        margin-top: 45px
+        width: 626px
+    &__plate
+        display: flex
+        padding: 13px 18px 13px 20px
+        justify-content: space-between
+        align-items: center
+        width: 303px
+        height: 110px
+        border-radius: 10px
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25)
+        background-color: #ffffff
+        &-img
+            max-width: 85px
+        &-descr
+            width: 170px
+            font-size: 18px
+            font-weight: bold
+            line-height: 25px
+            color: #000000
+    &__score
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 40px
+        padding: 0 45px 0 20px
+        width: 626px
+        &-img
+            max-width: 82px
+        &-descr
+            font-size: 20px
+            font-weight: normal
+            line-height: normal
+            color: #000000
+            &-mobile
+                display: none
+                padding-left: 30px
+    &__btn
+        margin-top: 40px
+        width: 404px
+        height: 95px
+    &__policy
+        margin-top: 30px
+        padding: 0 45px 0 55px
+        width: 404px
+        font-size: 12px
+        font-weight: 500
+        line-height: normal
+        color: #484645
+        text-align: center
+
+@media only screen and (min-width: 768px) and (max-width: 1199px)
+    .promo
+        &__header
+            font-size: 25px
+        &__descr
+            font-size: 14px
+        &__plates
+            justify-content: flex-start
+        &__plate
+            width: 250px
+            &:last-child
+                margin-left: 20px
+            &-descr
+                width: 140px
+                font-size: 15px 
+        &__score
+            padding-right: 115px
+            &-descr
+                font-size: 17px
+
+@media only screen and (max-width: 767px)
+    .promo
+        padding: 115px 0 70px 0  
+        background: url('../img/mobile_bg.jpg') center center/cover no-repeat
+        &__header
+            display: none
+            &-mobile
+                display: block
+        &__descr
+            margin-top: 40px
+            font-size: 18px
+            font-weight: normal
+            line-height: normal
+            color: #000000
+        &__plates
+            flex-direction: column
+            margin-top: 45px
+        &__plate
+            margin-bottom: 40px
+        &__score
+            margin-top: -7px
+            width: 100%
+            padding-right: 0
+            &-descr
+                display: none
+                &-mobile
+                    display: block
+        &__btn
+            width: 510px
+            height: 120px
+            font-size: 35px
+                    
+@media only screen and (max-width: 575px)
+    .promo
+        padding-top: 45px
+        padding-bottom: 55px
+        min-height: 300px
+        &__header-mobile
+            font-size: 17px
+        &__descr
+            margin-top: 25px
+            font-size: 12px
+        &__plates
+            justify-content: flex-start
+            margin-top: 25px
+            width: 100%
+        &__plate
+            margin-bottom: 20px
+            width: 250px
+            height: 70px
+            &-descr
+                width: 140px
+                font-size: 12px
+                line-height: 12px 
+            &-img
+                max-height: 68px
+        &__score
+            margin-top: 0
+            padding-left: 0
+            &-descr-mobile
+                padding-left: 13px
+                font-size: 10px
+        &__btn
+            width: 100%
+            height: 73px
+            font-size: 17px
+        &__policy
+            margin-top: 17px
+            padding: 0 10px
+            width: 100%
+            font-size: 7px
+                              

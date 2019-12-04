@@ -1,0 +1,97 @@
+.overlay
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    background-color: rgba(0, 0, 0, .56)
+    z-index: 25
+
+.modal
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 480px
+    min-height: 100px
+    padding: 38px 40px 40px 40px
+    border-radius: 30px
+    border: 5px solid $main-color
+    background-color: #ffffff
+    z-index: 30
+    &__close 
+        position: absolute
+        top: -40px
+        right: -40px
+        width: 90px
+        height: 90px
+        border: 4px solid #49494B
+        border-radius: 100%
+        background-color: #fff
+        cursor: pointer
+        span
+            position: absolute
+            display: block
+            width: 45px
+            height: 4px
+            top: 50%
+            left: 50%
+            background-color: #49494B
+            transform: translate(-50%, -50%) rotate(45deg)
+            &:last-child
+                transform: translate(-50%, -50%) rotate(-45deg)
+    &__subtitle 
+        font-family: 'Open Sans'
+        text-align: center
+        font-size: 25px
+        font-weight: 700
+        color: #0d0d0d
+
+.modal__callback
+    padding: 30px
+    margin-top: 0
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border: 5px solid $main-color
+    z-index: 30
+    min-height: 100px
+    height: auto
+    .discount-form
+        &__subtitle
+            margin-top: 5px
+        &__form
+            margin-top: 20px
+            input
+                margin-bottom: 20px
+        &__btn
+            margin-top: 10px
+        &__descr
+            margin-top: 15px
+
+#callback, #cost, #thanks, .overlay
+    display: none
+
+
+
+@media only screen and (max-width: 400px)
+    .modal
+        width: 250px
+        &__subtitle
+            font-size: 20px
+        &__close
+            top: -30px
+            right: -20px
+            width: 60px
+            height: 60px
+            span
+                width: 30px
+
+
+@media only screen and (max-width: 575px)
+    .modal__callback
+            width: calc(100% - 40px)
+            
+            
+
+    

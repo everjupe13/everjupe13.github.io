@@ -1,0 +1,106 @@
+.footer
+    padding: 125px 0 215px 0
+    width: 100%
+    min-height: 600px
+    background: url('../img/second_bg.jpg') center center/cover no-repeat
+    &__map
+        margin: 0 auto
+        margin-top: 140px
+        width: 100%
+        height: 700px
+        border-radius: 20px
+        background-color: #ffffff
+        overflow: hidden
+    &__info
+        position: absolute
+        bottom: 134px
+        left: 0
+        padding: 50px 40px 90px 40px
+        width: 431px
+        height: 426px
+        border-radius: 20px
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25)
+        background-color: #ffffff
+    &__header
+        font-family: 'Open Sans'
+        font-size: 25px
+        font-weight: 600
+        line-height: normal
+        color: #49494b
+        text-align: center
+    &__links
+        margin-left: 40px
+        margin-top: 34px
+        div
+            margin-bottom: 30px
+            font-family: 'Open Sans'
+            font-size: 22px
+            font-weight: normal
+            line-height: normal
+            color: #49494b
+            &:last-child
+                margin-bottom: 0
+    &__phone
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            display: block
+            left: -56px
+            top: -5px
+            width: 40px
+            height: 40px
+            background: url('../icons/footer/smartphone.svg') center center/cover no-repeat
+    &__address
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            display: block
+            left: -56px
+            top: -5px
+            width: 40px
+            height: 40px
+            background: url('../icons/footer/home.svg') center center/cover no-repeat
+    &__mail
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            display: block
+            left: -56px
+            top: -5px
+            width: 40px
+            height: 40px
+            background: url('../icons/footer/mail.svg') center center/cover no-repeat
+
+@media only screen and (max-width: 1199px)
+    .footer
+        padding: 90px 0 140px 0
+        min-height: 400px
+
+@media only screen and (max-width: 991px)
+    .footer
+        &__map
+            display: none
+        &__info
+            position: static
+            margin: 0 auto
+            margin-top: 60px
+
+@media only screen and (max-width: 575px)
+    .footer
+        padding: 60px 0 100px 0
+        background: url('../img/mobile_bg.jpg') center center/cover no-repeat
+        &__info
+            padding: 36px 43px 60px 50px
+            width: 100%
+            height: auto
+        &__subtitle
+            margin-top: 85px
+        &__header
+            text-align: left
+            font-size: 15px
+        &__links
+            div
+                font-size: 11px

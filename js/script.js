@@ -41,7 +41,7 @@ function stopDefAction(evt) {
     evt.preventDefault();
 }
     
-// document.getElementById('clc').addEventListener(
+// document.getElementById('cost-form').addEventListener(
 //     'click', stopDefAction, false
 // );
 
@@ -113,23 +113,7 @@ $(document).ready(function() {
         $('#q1-progress, #q2-progress, #q3-progress, #q4-progress').css('background-color', '#7bb63c');
         $('#q5-progress').css('background-color', '#f5f6f8');
     });
-
-
-    function validateForms(form) {
-        $(form).validate({
-            rules: {
-                name: "required",
-                phone: "required",
-            },
-            messages: {
-                name: "Пожалуйста, введите своё имя",
-                phone: "Пожалуйста, введите свой номер телефона",
-            }
-        });
-    }
-
-    // validateForms('#discount-form');
-    // validateForms('#modal-form');
+    
 
     $('input[name=phone]').mask("+7 (999)-999-9999");
 
@@ -148,7 +132,31 @@ $(document).ready(function() {
             $('form').trigger('reset');
         });
         return false;
-    })
+    });
+
+    // $('#cost-form').submit(function(e) {
+    //     e.preventDefault();
+    //     $.ajax().done(function() {
+    //         $(this).find("input").val("");
+    //         $('#cost').fadeOut();
+    //         $('#thanks').fadeIn('slow')
+    //         $('#cost-form').trigger('reset');
+    //     });
+    //     return false;
+    // })
+
+    // $('#callback-form_form').submit(function(e) {
+    //     e.preventDefault();
+    //     $.ajax().done(function() {
+    //         $(this).find("input").val("");
+    //         $('#callback-form').fadeOut();
+    //         $('#thanks').fadeIn('slow')
+    //         $('#callback-form_form').trigger('reset');
+    //     });
+    //     return false;
+    // })
+
+
 
     $('#clc').submit(function(e) {
         e.preventDefault();
@@ -162,7 +170,24 @@ $(document).ready(function() {
             $('form').trigger('reset');
         });
         return false;
-    })
+    });
+
+
+    // $('form').submit(function(e) {
+    //     e.preventDefault();
+    //     $.ajax({
+    //         // type: "POST",
+    //         // url: "mailer/smart.php",
+    //         // data: $(this).serialize()
+    //     }).done(function() {
+    //         $(this).find("input").val("");
+    //         $('.overlay, #thanks').fadeIn('slow');
+    //         $('form').trigger('reset');
+    //     });
+    //     return false;
+    // })
+
+
 
     $('.modal__close').on('click', function() {
         $('.overlay, #thanks, #callback, #cost').fadeOut('slow');
@@ -176,5 +201,22 @@ $(document).ready(function() {
         $('.overlay, #cost').fadeIn('slow');
     });
 
+
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                name: "required",
+                phone: "required",
+            },
+            messages: {
+                name: "Пожалуйста, введите своё имя",
+                phone: "Пожалуйста, введите свой номер телефона",
+            }
+        });
+    }
+
+    validateForms('#cost form');
+    validateForms('#discount-form');
+    validateForms('#modal-form');
 
 })

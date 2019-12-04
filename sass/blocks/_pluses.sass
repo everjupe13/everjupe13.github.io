@@ -1,0 +1,70 @@
+.pluses
+    padding: 100px 0 135px 0
+    min-height: 500px
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        margin-top: 93px
+    &__item
+        width: 25%
+    &__main
+        font-size: 83px
+        font-weight: bold
+        line-height: normal
+        color: #7bb63c
+        text-align: center
+    &__descr
+        margin-top: 25px
+        font-size: 20px
+        font-weight: normal
+        line-height: normal
+        color: #49494b
+        text-align: center
+
+@media only screen and (max-width: 1199px)
+    .pluses
+        &__wrapper
+            margin-top: 70px
+        &__main
+            font-size: 70px
+        &__descr
+            font-size: 18px
+
+@media only screen and (max-width: 991px)
+    .pluses
+        &__main
+            font-size: 52px
+        &__descr
+            font-size: 14px
+
+@media only screen and (max-width: 767px)
+    .pluses
+        padding: 95px 0 110px 0
+        &__wrapper
+            flex-wrap: wrap
+            margin-top: 25px
+        &__item
+            margin-top: 40px
+            padding: 0 10px
+            width: 50%
+            &:nth-child(2n)
+                .pluses__descr
+                    text-align: right
+        &__main
+            font-size: 100px
+            span.laptop
+                display: none
+        &__descr
+            text-align: left
+            font-size: 25px
+
+@media only screen and (max-width: 575px)
+    .pluses
+        padding: 45px 0 55px 0
+        &__wrapper
+            margin-top: 0
+        &__main
+            font-size: 48px
+        &__descr
+            font-size: 14px
+            
