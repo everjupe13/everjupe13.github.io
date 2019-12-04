@@ -1,125 +1,106 @@
-const slider1 = tns({
-    container: '.services__wrapper-carousel',
+const slider = tns({
+    container: '.carousel__inner',
     items: 1,
-    slideBy: 1,
-    nav: false,
+    slideBy: 'page',
+    navPosition: 'bottom',
     autoplay: false,
     controls: false,
+    responsive: {
+        310: {
+            nav: true,
+        },
+        576: {
+            nav: false,
+        }
+    }
 });
 
-document.querySelector('.prev_services').onclick = function () {
-    slider1.goTo('prev');
+document.querySelector('.prev').onclick = function () {
+    slider.goTo('prev');
 };
 
-document.querySelector('.next_services').onclick = function () {
-    slider1.goTo('next');
+document.querySelector('.next').onclick = function () {
+    slider.goTo('next');
 };
 
-
-const slider2 = tns({
-    container: '.license__wrapper-carousel',
-    items: 1,
-    slideBy: 1,
-    nav: false,
-    navPosition: 'top',
-    autoplay: false,
-    controls: false,
-});
-
-
-document.querySelector('.prev_license').onclick = function () {
-    slider2.goTo('prev');
-};
-
-document.querySelector('.next_license').onclick = function () {
-    slider2.goTo('next');
-};
-
-
-
-function stopDefAction(evt) {
-    evt.preventDefault();
+function toggleSlide(item) {
+    $(item).each(function(i) {
+        $(this)
+            $('.catalog-item__main-info').eq(i).toggleClass('catalog-item__main-info_active');
+            $('.catalog-item__additional-info').eq(i).toggleClass('catalog-item__additional-info_active');
+        })
 }
-    
-// document.getElementById('cost-form').addEventListener(
-//     'click', stopDefAction, false
-// );
 
 
-$(document).ready(function() {
-
-
-    //Progress bar1 in Computation block
-    $('#d1 label').on('click', function() {
-        $('.clc-form__documents-wrapper__progress__green').css('width', '0%');
-        $('#d1-progress, #d2-progress, #d3-progress, #d4-progress, #d5-progress').css('background-color', '#f5f6f8');
+// Tabs
+$(document).ready(function(){
+    $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
+        $(this)
+          .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
+          .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
     });
 
-    $('#d2 label').on('click', function() {
-        $('.clc-form__documents-wrapper__progress__green').css('width', '25%');
-        $('#d1-progress').css('background-color', '#7bb63c');
-        $('#d2-progress, #d3-progress, #d4-progress, #d5-progress').css('background-color', '#f5f6f8');
+    function toggleSlide(item) {
+        $(item).each(function(i) {
+            $(this).on('click', function(e) {
+                e.preventDefault();
+                $('.catalog-item__main-info').eq(i).toggleClass('catalog-item__main-info_active');
+                $('.catalog-item__additional-info').eq(i).toggleClass('catalog-item__additional-info_active');
+            })
+        })
+    }
+
+    toggleSlide('.catalog-item__link');
+    toggleSlide('.catalog-item__back');
+
+    //Modal
+
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn('slow');
+    });
+    $('.modal__close').on('click', function() {
+        $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
     });
 
-    $('#d3 label').on('click', function() {
-        $('.clc-form__documents-wrapper__progress__green').css('width', '50%');
-        $('#d1-progress, #d2-progress').css('background-color', '#7bb63c');
-        $('#d3-progress, #d4-progress, #d5-progress').css('background-color', '#f5f6f8');
+    $('.button_mini').each(function(i) {
+        $(this).on('click', function() {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text())
+            $('.overlay, #order').fadeIn('slow');
+        });
     });
 
-    $('#d4 label').on('click', function() {
-        $('.clc-form__documents-wrapper__progress__green').css('width', 'calc(75% - 10px)');
-        $('#d1-progress, #d2-progress, #d3-progress').css('background-color', '#7bb63c');
-        $('#d4-progress, #d5-progress').css('background-color', '#f5f6f8');
-    });
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                name: "required",
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: "Пожалуйста, введите свое имя",
+                phone: "Пожалуйста, введите свой номер телефона",
+                email: {
+                  required: "Пожалуйста, введите свою почту",
+                  email: "Неверный формат"
+                }
+            }
+        });
+    }
 
-    $('#d5 label').on('click', function() {
-        $('.clc-form__documents-wrapper__progress__green').css('width', '100%');
-        $('#d1-progress, #d2-progress, #d3-progress, #d4-progress').css('background-color', '#7bb63c');
-        $('#d5-progress').css('background-color', '#f5f6f8');
-    });
-
-
-
-
-
-
-    //Progress bar2 in Computation block
-    $('#q1 label').on('click', function() {
-        $('.clc-form__quantity-wrapper__progress__green').css('width', '0%');
-        $('#q1-progress, #q2-progress, #q3-progress, #q4-progress, #q5-progress').css('background-color', '#f5f6f8');
-    });
-
-    $('#q2 label').on('click', function() {
-        $('.clc-form__quantity-wrapper__progress__green').css('width', '25%');
-        $('#q1-progress').css('background-color', '#7bb63c');
-        $('#q2-progress, #q3-progress, #q4-progress, #q5-progress').css('background-color', '#f5f6f8');
-    });
-
-    $('#q3 label').on('click', function() {
-        $('.clc-form__quantity-wrapper__progress__green').css('width', 'calc(50% - 15px)');
-        $('#q1-progress, #q2-progress').css('background-color', '#7bb63c');
-        $('#q3-progress, #q4-progress, #q5-progress').css('background-color', '#f5f6f8');
-    });
-
-    $('#q4 label').on('click', function() {
-        $('.clc-form__quantity-wrapper__progress__green').css('width', 'calc(75% - 11px)');
-        $('#q1-progress, #q2-progress, #q3-progress').css('background-color', '#7bb63c');
-        $('#q4-progress, #q5-progress').css('background-color', '#f5f6f8');
-    });
-
-    $('#q5 label').on('click', function() {
-        $('.clc-form__quantity-wrapper__progress__green').css('width', '100%');
-        $('#q1-progress, #q2-progress, #q3-progress, #q4-progress').css('background-color', '#7bb63c');
-        $('#q5-progress').css('background-color', '#f5f6f8');
-    });
-    
-
-    $('input[name=phone]').mask("+7 (999)-999-9999");
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
 
 
+    // function jump(h){
+    //     var top = document.getElementById(h).offsetTop;
+    //     window.scrollTo(0, top);
+    // }
 
-    $('.form').submit(function(e) {
+    $('form').submit(function(e) {
         e.preventDefault();
         $.ajax({
             type: "POST",
@@ -127,75 +108,12 @@ $(document).ready(function() {
             data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");
-            $('#callback, #cost').fadeOut('');
-            $('.overlay, #thanks').fadeIn('slow');
-            $('.form').trigger('reset');
-        });
-        return false;
-    });
-
-
-
-
-    $('#clc').submit(function(e) {
-        e.preventDefault();
-        $.ajax({
-            // type: "POST",
-            // url: "mailer/smart.php",
-            // data: $(this).serialize()
-        }).done(function() {
-            $(this).find("input").val("");
-            $('.overlay, #cost').fadeIn('slow');
+            $('#order, #consultation').fideOut('slow');
+            $('.overlay, #thanks').fideIn()
             $('form').trigger('reset');
         });
-        return false;
+        return false
     });
 
-
-    // $('form').submit(function(e) {
-    //     e.preventDefault();
-    //     $.ajax({
-    //         // type: "POST",
-    //         // url: "mailer/smart.php",
-    //         // data: $(this).serialize()
-    //     }).done(function() {
-    //         $(this).find("input").val("");
-    //         $('.overlay, #thanks').fadeIn('slow');
-    //         $('form').trigger('reset');
-    //     });
-    //     return false;
-    // })
-
-
-
-    $('.modal__close').on('click', function() {
-        $('.overlay, #thanks, #callback, #cost').fadeOut('slow');
-    });
-
-    $('#callback__call').on('click', function() {
-        $('.overlay, #callback').fadeIn('slow');
-    });
-
-    $('#cost__call1, #cost__call2').on('click', function() {
-        $('.overlay, #cost').fadeIn('slow');
-    });
-
-
-    function validForms(form) {
-        $(form).validate({
-            rules: {
-                name: "required",
-                phone: "required",
-            },
-            messages: {
-                name: "Пожалуйста, введите своё имя",
-                phone: "Пожалуйста, введите свой номер телефона",
-            }
-        });
-    }
-
-    validForms('#cost form');
-    validForms('#discount-form');
-    validForms('#modal-form');
-
+    $('input[name=phone]').mask("+7 (999)-999-9999")
 })
