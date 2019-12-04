@@ -132,7 +132,7 @@ $(document).ready(function() {
             $('form').trigger('reset');
         });
         return false;
-    });
+    })
 
     // $('#cost-form').submit(function(e) {
     //     e.preventDefault();
@@ -170,7 +170,7 @@ $(document).ready(function() {
             $('form').trigger('reset');
         });
         return false;
-    });
+    })
 
 
     // $('form').submit(function(e) {
