@@ -1,0 +1,116 @@
+.advantages {
+    min-height: 475px;
+    padding: 70px 0 100px 0;
+    background-color: #f6f6f6;
+    &__causes {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-top: 65px;
+        width: 100%;
+    }
+    &__cause {
+        width: 250px;
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        
+    }
+    &__main {
+        margin-top: 40px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 18px;
+        text-align: center;
+        color: #0d0d0d;
+    }
+    &__descr {
+        margin: 0 auto;
+        margin-top: 30px;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: normal;
+        text-align: center;
+        color: #0d0d0d;
+        a {
+            text-transform: uppercase;
+            text-decoration: underline;
+            color: $main-color;
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .advantages {
+        &__causes {
+            width: 100%;
+        }
+        &__cause {
+            width: 33%;
+        }
+        &__descr {
+            width: 270px
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .advantages {
+        &__descr {
+            width: 100%;
+            font-size: 13px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .advantages {
+        &__causes {
+            flex-direction: column;
+            margin-top: 35px;
+        }
+        &__cause {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            width: 100%;
+            img {
+                display: block;
+            }
+        }
+        &__text {
+            width: calc(100% - 120px);
+            div{
+                text-align: justify;
+            }
+        }
+        &__main {
+            margin-top: 0;
+        }
+        &__descr {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .advantages {
+        min-height: 450px;
+        padding: 50px 0;
+        &__causes {
+            margin-top: 0;
+        }
+        &__text {
+            div {
+                text-align: center;
+            }    
+        }
+        &__descr {
+            display: none;
+        }
+    }
+}
