@@ -1,0 +1,116 @@
+.carousel {
+    padding: 80px 0;
+    &__inner {
+        position: relative;
+        width: 550px;
+        margin: 0 auto;
+    }
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 31px;
+        border: none;
+        background-color: #fff;
+        img {
+            width: 31px;
+            height: 50px;
+        }
+    }
+    .next {
+        left: auto;
+        right: 31px;
+    }
+    .tns-inner {
+        .tns-item {
+            img {
+                display: block;
+                width: 750px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .carousel {
+        .prev, .next {
+            left: 2px;
+            img {
+                width: 25px;
+                height: auto;
+            }
+        }
+        .next {
+            right: 2px;
+            left: auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .carousel {
+        .tns-inner {
+            .tns-item {
+                img {
+                    width: 640px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .carousel {
+        .tns-inner {
+            .tns-item {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .prev {
+            left: -5px;
+        }
+        .next {
+            right: -5px
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .carousel {
+        .prev,  .next {
+            display: none;
+        }
+        .tns-inner {
+            .tns-item {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .tns-nav-active {
+            background-color: $main-color;
+            transition: 0.3s all;
+            &:focus {
+                border: none;
+                box-shadow: 3px 3px 40px rgba($main-color, .9);
+            }
+        }
+    }
+    .tns-nav {
+        display: flex;
+        justify-content: center;
+        button {
+            position: relative;
+            width: 40px;
+            height: 5px;
+            margin: 0 15px;
+            margin-top: 1px;
+            border: 1px solid rgb(189, 188, 188);
+            border-radius: 2px;
+            background-color: #fff;
+        }
+    }
+}
