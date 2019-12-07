@@ -52,14 +52,3 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
-@font-face {
-	font-family: 'Open Sans';
-	src: url('../fonts/OpenSans-Bold.eot');
-	src: local('Open Sans Bold'), local('OpenSans-Bold'),
-		url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/OpenSans-Bold.woff') format('woff'),
-		url('../fonts/OpenSans-Bold.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
-}
