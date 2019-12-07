@@ -824,21 +824,21 @@
   .discount:after {
     content: '';
     position: absolute;
-    left: -100px;
-    bottom: -98px;
+    left: -210px;
+    bottom: -206px;
     display: block;
-    width: 260px;
-    height: 260px;
+    width: 500px;
+    height: 500px;
     border-radius: 100%;
     background-color: rgba(255, 255, 255, 0.2); }
   .discount:before {
     content: '';
     position: absolute;
-    top: -114px;
-    right: -172px;
+    top: -243px;
+    right: -370px;
     display: block;
-    width: 330px;
-    height: 330px;
+    width: 700px;
+    height: 700px;
     border-radius: 100%;
     background: url("../icons/circle.svg") center center/cover no-repeat; }
   .discount__wrapper {
@@ -930,9 +930,31 @@
   background-color: #fff;
   border-radius: 30px; }
 
+@media only screen and (max-width: 1700px) {
+  .discount:after {
+    left: -130px;
+    bottom: -130px;
+    width: 360px;
+    height: 360px; }
+  .discount:before {
+    top: -163px;
+    right: -270px;
+    width: 500px;
+    height: 500px; } }
+
 @media only screen and (max-width: 1199px) {
   .discount {
     padding: 66px 0 77px 0; }
+    .discount:after {
+      left: -150px;
+      bottom: -150px;
+      width: 300px;
+      height: 300px; }
+    .discount:before {
+      top: -160px;
+      right: -210px;
+      width: 400px;
+      height: 400px; }
     .discount__book-img {
       width: auto;
       left: 0;
