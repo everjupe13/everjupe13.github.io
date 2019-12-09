@@ -1,5 +1,5 @@
 const slider1 = tns({
-    container: '.services__wrapper-carousel',
+    container: '.rates__carousel-inner',
     items: 1,
     slideBy: 1,
     nav: false,
@@ -7,69 +7,24 @@ const slider1 = tns({
     controls: false,
 });
 
-document.querySelector('.prev_services').onclick = function () {
+document.querySelector('.prev').onclick = function () {
     slider1.goTo('prev');
 };
 
-document.querySelector('.next_services').onclick = function () {
+document.querySelector('.next').onclick = function () {
     slider1.goTo('next');
 };
-
-
-const slider2 = tns({
-    container: '.license__wrapper-carousel',
-    items: 1,
-    slideBy: 1,
-    nav: false,
-    navPosition: 'top',
-    autoplay: false,
-    controls: false,
-});
-
-
-document.querySelector('.prev_license').onclick = function () {
-    slider2.goTo('prev');
-};
-
-document.querySelector('.next_license').onclick = function () {
-    slider2.goTo('next');
-};
-
-const slider3 = tns({
-    container: '.pluses__carousel',
-    items: 1,
-    slideBy: 1,
-    gutter: 10,
-    nav: false,
-    navPosition: 'top',
-    autoplay: false,
-    controls: false,
-});
-
-document.querySelector('.prev_pluses').onclick = function () {
-    slider3.goTo('prev');
-};
-
-document.querySelector('.next_pluses').onclick = function () {
-    slider3.goTo('next');
-};
-
-
 
 function stopDefAction(evt) {
     evt.preventDefault();
 }
-    
-// document.getElementById('clc').addEventListener(
-//     'click', stopDefAction, false
-// );
-
 
 $(document).ready(function() {
 
-    $('input[name=phone]').mask("+7 (999)-999-99-99");
 
-    $('#discount-form, #modal-form, #cost-form').submit(function(e) {
+    $('input[name=phone]').mask("+7 (999)-999-9999");
+
+    $('#modal-form').submit(function(e) {
         e.preventDefault();
         $.ajax({
             // type: "POST",
@@ -77,23 +32,18 @@ $(document).ready(function() {
             // data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");
-            $('#callback, #cost').fadeOut('slow');
+            $('#callback').fadeOut('');
             $('.overlay, #thanks').fadeIn('slow');
-            $('form').trigger('reset');
+            $('#callback form').trigger('reset');
         });
         return false;
-    })
-
+    });
 
     $('.modal__close').on('click', function() {
-        $('.overlay, #thanks, #callback, #cost').fadeOut('slow');
+        $('.overlay, #thanks, #callback').fadeOut('slow');
     });
 
-    $('.cost-call').on('click', function() {
-        $('.overlay, #cost').fadeIn('slow');
-    });
-
-    $('#cost__call1').on('click', function() {
+    $('.call-btn').on('click', function() {
         $('.overlay, #callback').fadeIn('slow');
     });
 
