@@ -22,6 +22,13 @@
 .white {
   color: #fcfbff; }
 
+@media only screen and (min-width: 1200px) {
+  .title {
+    font-size: 30px; }
+    .title:after {
+      bottom: -7px;
+      width: 300px; } }
+
 @media only screen and (max-width: 767px) {
   .title:after {
     width: 200px; }
@@ -34,6 +41,10 @@
   position: relative;
   margin: 0 auto;
   width: 680px; }
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1000px; } }
 
 @media only screen and (max-width: 767px) {
   .container {
@@ -95,6 +106,21 @@
       height: 13px;
       background: url("../icons/promo/phone.svg") center center/cover no-repeat; }
 
+@media only screen and (min-width: 1200px) {
+  .header__logo img {
+    max-width: 190px;
+    width: 190px; }
+  .header__menu-item {
+    padding: 0 30px; }
+    .header__menu-item a {
+      font-size: 20px; }
+  .header__phone {
+    font-size: 20px; }
+    .header__phone:before {
+      left: -28px;
+      width: 18px;
+      height: 17px; } }
+
 @media only screen and (max-width: 767px) {
   .header__menu {
     display: none; } }
@@ -140,6 +166,31 @@
     bottom: -81px;
     display: block;
     max-width: 363px; }
+
+@media only screen and (min-width: 1200px) {
+  .promo__header {
+    margin-top: 110px;
+    font-size: 33px; }
+  .promo__cost {
+    margin-top: 25px;
+    font-size: 30px; }
+  .promo__subheader {
+    margin-top: 25px;
+    font-size: 20px;
+    line-height: 27px; }
+  .promo__btn {
+    margin-top: 40px;
+    width: 345px;
+    height: 73px;
+    font-size: 19px;
+    border-radius: 60px; }
+  .promo__policy {
+    font-size: 10px;
+    line-height: 16px; }
+  .promo__img {
+    bottom: -88px;
+    max-width: 490px;
+    width: 490px; } }
 
 @media only screen and (max-width: 767px) {
   .promo__header {
@@ -362,6 +413,32 @@
 .rates__wrapper-mobile {
   display: none; }
 
+@media only screen and (min-width: 1200px) {
+  .rates__descr {
+    margin-bottom: 35px;
+    font-size: 18px; }
+  .rates__header {
+    font-size: 18px; }
+  .rates__maincol {
+    padding-top: 13px;
+    width: 180px;
+    height: 98px;
+    font-size: 20px; }
+    .rates__maincol span {
+      font-size: 23px; }
+  .rates__cost {
+    font-size: 22px; }
+  .rates__btn {
+    width: 154px;
+    height: 51px;
+    font-size: 18px; }
+  .col-1, .col-2, .col-3, .col-4 {
+    width: 250px; }
+  .row-2, .row-3, .row-4, .row-5, .row-6, .row-7 {
+    height: 74px; }
+  .row-8 {
+    height: 90px; } }
+
 @media only screen and (max-width: 767px) {
   .rates {
     padding: 60px 0 42px 0; }
@@ -395,6 +472,7 @@
     .feedback__sign img {
       max-width: 174px; }
   .feedback__wrapper {
+    width: 680px;
     margin-top: 52px;
     display: flex;
     justify-content: space-between;
@@ -414,13 +492,34 @@
     line-height: 1;
     color: #fcfbff; }
   .feedback__btn {
-    margin-top: 28px;
+    position: absolute;
+    bottom: 6px;
+    right: 20px;
     width: 146px;
     height: 38px;
     font-size: 12px;
     font-weight: bold;
     line-height: normal;
-    color: #3a3a3a; }
+    color: #3a3a3a;
+    z-index: 3; }
+
+@media only screen and (min-width: 1200px) {
+  .feedback__subtitle.laptop {
+    font-size: 18px; }
+  .feedback__wrapper {
+    width: 1000px; }
+  .feedback__header {
+    font-size: 18px; }
+  .feedback__descr {
+    font-size: 16px; }
+  .feedback__btn {
+    bottom: 6px;
+    right: 240px;
+    width: 190px;
+    height: 50px;
+    font-size: 15px; }
+  .feedback__img img {
+    width: 550px; } }
 
 @media only screen and (max-width: 767px) {
   .feedback {
@@ -433,6 +532,7 @@
       top: 334px;
       width: 136px; }
     .feedback__wrapper {
+      width: 100%;
       margin-top: 30px;
       flex-direction: column; }
     .feedback__img img {
@@ -444,7 +544,8 @@
       width: 147px; }
     .feedback__btn {
       position: absolute;
-      right: -150px;
+      left: 170px;
+      right: auto;
       bottom: 0; } }
 
 .footer {
@@ -479,6 +580,15 @@
     font-weight: 500;
     line-height: normal;
     color: #3a3a3a; }
+
+@media only screen and (min-width: 1200px) {
+  .footer .title {
+    font-size: 20px; }
+  .footer__wrapper {
+    padding: 30px 40px 50px 40px;
+    width: 400px; }
+  .footer__descr {
+    font-size: 14px; } }
 
 @media only screen and (max-width: 767px) {
   .footer {

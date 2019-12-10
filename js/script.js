@@ -15,6 +15,23 @@ document.querySelector('.next').onclick = function () {
     slider1.goTo('next');
 };
 
+const slider2 = tns({
+    container: '.feedback__carousel',
+    mode: 'gallery',
+    animateDelay: '100000000',
+    items: 1,
+    slideBy: 1,
+    nav: false,
+    autoplay: false,
+    controls: false,
+    
+});
+
+document.querySelector('.feedback__btn').onclick = function () {
+    slider2.goTo('next');
+};
+
+
 function stopDefAction(evt) {
     evt.preventDefault();
 }
