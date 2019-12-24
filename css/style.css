@@ -146,24 +146,34 @@
     margin-right: 110px; } }
 
 @media only screen and (max-width: 1440px) {
-  .promo__img {
-    margin-right: 70px;
-    width: 450px;
-    height: 381px; }
-  .promo__header {
-    font-size: 33px; }
-  .promo__subheader {
-    font-size: 22px;
-    line-height: 29px; }
-  .promo__form input {
-    margin-right: 25px;
-    width: 290px;
-    height: 60px; }
-  .promo__btn {
-    width: 310px;
-    height: 60px; }
-  .promo__school {
-    margin-top: 147px; } }
+  .promo {
+    padding: 60px 0 80px 0; }
+    .promo__img {
+      margin-right: 70px;
+      width: 450px;
+      height: 381px; }
+    .promo__header {
+      font-size: 28px; }
+    .promo__subheader {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 29px; }
+    .promo__form {
+      margin-top: 20px; }
+      .promo__form input {
+        font-size: 18px;
+        margin-right: 25px;
+        width: 290px;
+        height: 60px; }
+    .promo__btn {
+      font-size: 18px;
+      width: 310px;
+      height: 60px; }
+    .promo__descr {
+      font-size: 17px; }
+    .promo__school {
+      margin-top: 70px;
+      font-size: 18px; } }
 
 @media only screen and (max-width: 1200px) {
   .promo {
