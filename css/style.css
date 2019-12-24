@@ -108,7 +108,7 @@
     line-height: 24px;
     color: #FEFEFF; }
   .promo__school {
-    margin-top: 250px;
+    margin-top: 220px;
     font-weight: 300;
     font-size: 24px;
     line-height: 29px;
@@ -172,7 +172,7 @@
     .promo__descr {
       font-size: 17px; }
     .promo__school {
-      margin-top: 70px;
+      margin-top: 60px;
       font-size: 18px; } }
 
 @media only screen and (max-width: 1200px) {
@@ -226,7 +226,7 @@
     .promo__descr {
       font-size: 13px; }
     .promo__school {
-      margin-top: 68px;
+      margin-top: 50px;
       font-size: 17px; } }
 
 @media only screen and (max-width: 1856px) {
