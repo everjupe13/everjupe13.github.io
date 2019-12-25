@@ -59,8 +59,7 @@
   position: relative;
   padding: 75px 0 125px 0;
   height: 100vh;
-  background: linear-gradient(60.62deg, #1B51BB 0%, #601CAD 100%);
-  overflow: hidden; }
+  background: linear-gradient(60.62deg, #1B51BB 0%, #601CAD 100%); }
   .promo a:hover {
     text-decoration: none; }
   .promo:before {
