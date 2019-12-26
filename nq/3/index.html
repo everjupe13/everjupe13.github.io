@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Бухгалтерия</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/tiny-slider.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    
+    <section class="promo">
+        <div class="container promo__container">
+            <header>
+                <div class="header">
+                    <div class="header__logo">
+                        <img src="icons/logo.svg" alt="Logo">
+                    </div>
+                    <nav>
+                        <ul class="header__menu">
+                            <li class="header__menu-item"><a href="#">Обучение</a></li>
+                            <li class="header__menu-item"><a href="#">Преподаватели</a></li>
+                            <li class="header__menu-item"><a href="#">Сертификаты</a></li>
+                        </ul>
+                    </nav>
+                    <a href="tel:+79048279656" class="header__phone">+7 (904) 827-96-56</a>
+                </div>
+            </header>
+
+            <h1 class="promo__header">Заговорите на Английском<br>уже после 4 занятия<br>по авторской методике</h1>
+            <div class="promo__descr">Если после обучения вы не сдадите<br>международный тест - гарантируем,<br>что вернем вам деньги.</div>
+            <button id="cost__call1" class="btn promo__btn">Записаться на обучение</button>
+            <div class="promo__policy">Нажимая кнопку вы соглашаетесь с политикой<br>конфиденциальности. Мы не передаем ваши данные.</div>
+            <img src="img/promo/girl.png" alt="Girl" class="promo__img">
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="title"><span>Программы</span> обучения</h2>
+            <div class="subtitle">Выберите программу, отталкиваясь от своего уровня знания языка</div>
+            <div id="services__wrapper" class="services__wrapper">
+                <div class="card">
+                    <div class="card__number">01</div>
+                    <div class="card__title">Beginner Обучение 1 мес.</div>
+                    <div class="card__cost">от <span>1200</span> руб./мес.</div>
+                </div>
+                <div class="card">
+                    <div class="card__number">02</div>
+                    <div class="card__title">Elementary Обучение 2 мес.</div>
+                    <div class="card__cost">от <span>1400</span> руб./мес.</div>
+                </div>
+                <div class="card">
+                    <div class="card__number">03</div>
+                    <div class="card__title">Intermediate Обучение 3 мес.</div>
+                    <div class="card__cost">от <span>1500</span> руб./мес.</div>
+                </div>
+                <div class="card">
+                    <div class="card__number">04</div>
+                    <div class="card__title">Vantage Обучение 4 мес.</div>
+                    <div class="card__cost">от <span>1800</span> руб./мес.</div>
+                </div>
+                <div class="card">
+                    <div class="card__number">05</div>
+                    <div class="card__title">Advanced Обучение 5 мес.</div>
+                    <div class="card__cost">от <span>1900</span> руб./мес.</div>
+                </div>
+                <div class="card">
+                    <div class="card__number">06</div>
+                    <div class="card__title">Proficiency Обучение 6 мес.</div>
+                    <div class="card__cost">от <span>2100</span> руб./мес.</div>
+                </div>
+            </div>
+
+            <div class="services__carousel">
+                <div class="services__wrapper services__wrapper-carousel">
+                    <div>
+                        <div class="card">
+                            <div class="card__number">01</div>
+                            <div class="card__title">Beginner Обучение 1 мес.</div>
+                            <div class="card__cost">от <span>1200</span> руб./мес.</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card">
+                            <div class="card__number">02</div>
+                            <div class="card__title">Elementary Обучение 2 мес.</div>
+                            <div class="card__cost">от <span>1400</span> руб./мес.</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card">
+                            <div class="card__number">03</div>
+                            <div class="card__title">Intermediate Обучение 3 мес.</div>
+                            <div class="card__cost">от <span>1500</span> руб./мес.</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card">
+                            <div class="card__number">04</div>
+                            <div class="card__title">Vantage Обучение 4 мес.</div>
+                            <div class="card__cost">от <span>1800</span> руб./мес.</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card">
+                            <div class="card__number">05</div>
+                            <div class="card__title">Advanced Обучение 5 мес.</div>
+                            <div class="card__cost">от <span>1900</span> руб./мес.</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card">
+                            <div class="card__number">06</div>
+                            <div class="card__title">Proficiency Обучение 6 мес.</div>
+                            <div class="card__cost">от <span>2100</span> руб./мес.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="prev prev_services"><img src="icons/prev.svg" alt="Prev"></button>
+                <button class="next next_services"><img src="icons/next.svg" alt="Next"></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="learning">
+        <div class="container">
+            <h2 class="title white"><span>Как проходит</span> обучение</h2>
+            <div class="subtitle white">Хотите узнать подробнее? Ждем вас на бесплатном уроке</div>
+            <img src="img/learning/statue.png" alt="Statue" class="learning__img">
+            <div class="learning__wrapper">
+                <div class="learning__item">
+                    <div class="learning__number">70%</div>
+                    <div class="learning__descr">
+                        <div class="learning__header">Практика</div>
+                        <div class="learning__subheader">Разговариваем с носителями языка</div>
+                    </div>
+                </div>
+                <div class="learning__item">
+                    <div class="learning__number">17%</div>
+                    <div class="learning__descr">
+                        <div class="learning__header">Теория</div>
+                        <div class="learning__subheader">Изучаем правила Английского</div>
+                    </div>
+                </div>
+                <div class="learning__item">
+                    <div class="learning__number">13%</div>
+                    <div class="learning__descr">
+                        <div class="learning__header">Экзамены</div>
+                        <div class="learning__subheader">Проверочные работы, тестирование</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <section class="pluses">
+        <div class="container pluses__container">
+            <button class="prev prev_pluses"><img src="icons/prev.svg" alt="Prev"></button>
+            <button class="next next_pluses"><img src="icons/next.svg" alt="Next"></button>
+            <h2 class="title"><span>Преподаватели</span> школы</h2>
+            <div class="subtitle">Работают исключительно носители языка с высшим педагогическим образованием</div>
+            <div class="pluses__wrapper">
+                <div class="pluses__carousel">
+                    <div>
+                        <div class="pluses__carousel-flex">
+                            <div class="pluses__carousel-img">
+                                <img src="img/pluses/avatar.png" alt="avatar">
+                            </div>
+                            <div class="pluses__carousel-wrapper">
+                                <div class="pluses__carousel-info">
+                                    <div class="pluses__carousel-name">Шпакович Никита</div>
+                                    <div class="pluses__carousel-position">Преподаватель</div>
+                                    <div class="pluses__carousel-years">
+                                        <div class="pluses__carousel-number">7</div>
+                                        <div class="pluses__carousel-descr laptop">Лет опыта обучения<br>английскому языку</div>
+                                        <div class="pluses__carousel-descr mobile">Лет опыта обучения английскому языку</div>
+                                    </div>
+                                    <div class="pluses__carousel-graduate">Диплом HBS</div>
+                                    <div class="pluses__carousel-achievements">
+                                        - 13 лет жил в Англии<br>
+                                        - Обучил более 900 студентов
+                                    </div>
+                                    <button class="btn pluses__carousel-btn cost-call">Начать обучение</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pluses__carousel-flex">
+                            <div class="pluses__carousel-img">
+                                <img src="img/pluses/avatar.png" alt="avatar">
+                            </div>
+                            <div class="pluses__carousel-wrapper">
+                                <div class="pluses__carousel-info">
+                                    <div class="pluses__carousel-name">Шпакович Никита</div>
+                                    <div class="pluses__carousel-position">Преподаватель</div>
+                                    <div class="pluses__carousel-years">
+                                        <div class="pluses__carousel-number">7</div>
+                                        <div class="pluses__carousel-descr laptop">Лет опыта обучения<br>английскому языку</div>
+                                        <div class="pluses__carousel-descr mobile">Лет опыта обучения английскому языку</div>
+                                    </div>
+                                    <div class="pluses__carousel-graduate">Диплом HBS</div>
+                                    <div class="pluses__carousel-achievements">
+                                        - 13 лет жил в Англии<br>
+                                        - Обучил более 900 студентов
+                                    </div>
+                                    <button class="btn pluses__carousel-btn cost-call">Начать обучение</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pluses__carousel-flex">
+                            <div class="pluses__carousel-img">
+                                <img src="img/pluses/avatar.png" alt="avatar">
+                            </div>
+                            <div class="pluses__carousel-wrapper">
+                                <div class="pluses__carousel-info">
+                                    <div class="pluses__carousel-name">Шпакович Никита</div>
+                                    <div class="pluses__carousel-position">Преподаватель</div>
+                                    <div class="pluses__carousel-years">
+                                        <div class="pluses__carousel-number">7</div>
+                                        <div class="pluses__carousel-descr laptop">Лет опыта обучения<br>английскому языку</div>
+                                        <div class="pluses__carousel-descr mobile">Лет опыта обучения английскому языку</div>
+                                    </div>
+                                    <div class="pluses__carousel-graduate">Диплом HBS</div>
+                                    <div class="pluses__carousel-achievements">
+                                        - 13 лет жил в Англии<br>
+                                        - Обучил более 900 студентов
+                                    </div>
+                                    <button class="btn pluses__carousel-btn cost-call">Начать обучение</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pluses__carousel-flex">
+                            <div class="pluses__carousel-img">
+                                <img src="img/pluses/avatar.png" alt="avatar">
+                            </div>
+                            <div class="pluses__carousel-wrapper">
+                                <div class="pluses__carousel-info">
+                                    <div class="pluses__carousel-name">Шпакович Никита</div>
+                                    <div class="pluses__carousel-position">Преподаватель</div>
+                                    <div class="pluses__carousel-years">
+                                        <div class="pluses__carousel-number">7</div>
+                                        <div class="pluses__carousel-descr laptop">Лет опыта обучения<br>английскому языку</div>
+                                        <div class="pluses__carousel-descr mobile">Лет опыта обучения английскому языку</div>
+                                    </div>
+                                    <div class="pluses__carousel-graduate">Диплом HBS</div>
+                                    <div class="pluses__carousel-achievements">
+                                        - 13 лет жил в Англии<br>
+                                        - Обучил более 900 студентов
+                                    </div>
+                                    <button class="btn pluses__carousel-btn cost-call">Начать обучение</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="discount">
+        <div class="container">
+            <h2 class="title white"><span>Первое занятие</span> - бесплатно</h2>
+            <div class="subtitle white">Заполните форму и мы пришлем вам купон на первый пробный урок</div>
+            <div class="discount__wrapper">
+                <img src="img/discount/gift.png" alt="Book" class="discount__book-img">
+                <div class="discount__charter">
+                    <img src="img/discount/letter.png" alt="Letter" class="discount__letter-img">
+                    <div class="discount__descr">Купон действует ровно месяц с момента его получения</div>
+                </div>
+                <div class="border-inside">
+                    <div class="discount-form">
+                        <div class="discount-form__title">Заполните форму</div>
+                        <div class="discount-form__subtitle">И менеджер свяжется с вами в ближайшее время</div>
+                        <form id="discount-form" action="#" class="discount-form__form">
+                            <input name="name" placeholder="Имя" type="text" required>
+                            <input name="phone" placeholder="+7 (___)-___-__-__" required>
+                            <button class="btn discount-form__btn">Получить купон</button>
+                        </form>
+                        <div class="discount-form__descr">Или свяжитесь с нами через любой удобный мессенджер</div>
+                        <div class="discount-form__social">
+                            <a href="whatsapp://send?text=Hello world!" target="_blank" rel="noopener noreferrer" class="discount-form__whatsapp"><img src="icons/social/whatsapp.svg" alt="whatsapp"></a>
+                            <a href="viber://chats" target="_blank" rel="noopener noreferrer" class="discount-form__viber"><img src="icons/social/viber.svg" alt="viber"></a>
+                            <a href="tg://resolve?domain=testName" target="_blank" rel="noopener noreferrer" class="discount-form__telegram"><img src="icons/social/telegram.svg" alt="telegram"></a>
+                            <a href="https://www.vk.com" target="_blank" rel="noopener noreferrer" class="discount-form__vkontakte"><img src="icons/social/vk.svg" alt="vkontakte"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="license" class="license">
+        <div class="container">
+            <h2 class="title"><span>Сертификаты</span> и лицензии</h2>
+            <div class="subtitle">Входим в ТОП-10 школ изучения иностранных языков в России и СНГ</div>
+            <div class="license__wrapper">
+                <img src="img/license/license1.jpg" alt="Document" class="license__item">
+                <img src="img/license/license2.jpg" alt="Document" class="license__item">
+                <img src="img/license/license3.jpg" alt="Document" class="license__item">
+            </div>
+
+            <div class="license__blocker">
+                <div class="license__wrapper-carousel">
+                    <div class="license__wrapper-item">
+                        <img src="img/license/license1.jpg" alt="Document" class="license__img">
+                    </div>
+                    <div class="license__wrapper-item">
+                        <img src="img/license/license2.jpg" alt="Document" class="license__img">
+                    </div>
+                    <div class="license__wrapper-item">
+                        <img src="img/license/license3.jpg" alt="Document" class="license__img">
+                    </div>
+                </div>
+            </div>
+
+            <button class="prev prev_license"><img src="icons/prev.svg" alt="Prev"></button>
+            <button class="next next_license"><img src="icons/next.svg" alt="Next"></button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <h2 class="title white"><span>Остались</span> вопросы?</h2>
+            <div class="subtitle footer__subtitle white">Свяжитесь с нами любым удобным способом</div>
+            <div class="footer__wrapper">
+                <div class="footer__info">
+                    <div class="footer__links">
+                        <div class="footer__contacts">
+                            Контакты:<br>
+                            <br>
+                            Телефон: +7 (904) 827-96-56<br>
+                            WhatsApp: +7 (996) 686-45-27<br>
+                            Mail: shpakovich_nik@mail.ru<br>
+                            Адрес: Россия, г. Омск, ул.&nbsp;Рокоссовского, офис 2
+                        </div>
+                        <button class="btn footer__btn cost-call">Заказать звонок</button>
+                    </div>
+                </div>
+
+                <div class="footer__aside">
+                    <img src="icons/logo.svg" alt="Logo" class="footer__logo">
+                    <div class="footer__descr">
+                        Обучение Английскому языку<br>
+                        онлайн с гарантией результата,<br>
+                        прописанной в договоре
+                    </div>
+                    <div class="footer__policy"><a href="#">Политика конфиденциальности</a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="overlay">
+        <div class="modal" id="thanks">
+            <div class="modal__close">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="modal__subtitle">Спасибо за вашу заявку!</div>
+        </div>
+
+        <div class="discount-form modal__callback" id="callback">
+            <div class="modal__close">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="discount-form__title">ЗАПОЛНИТЕ ФОРМУ</div>
+            <div class="discount-form__subtitle">И менеджер свяжется с вами в ближайшее время</div>
+            <form id="modal-form" action="#" class="discount-form__form">
+                <input name="name" placeholder="Имя" type="text" required>
+                <input name="phone" placeholder="+7 (___)-___-__-__" required>
+                <button class="btn discount-form__btn">Записаться на урок</button>
+            </form>
+            <div class="discount-form__descr">Или свяжитесь с нами через любой удобный мессенджер</div>
+            <div class="discount-form__social">
+                <a href="whatsapp://send?text=Hello world!" target="_blank" rel="noopener noreferrer" class="discount-form__whatsapp"><img src="icons/social/whatsapp.svg" alt="whatsapp"></a>
+                <a href="viber://chats" target="_blank" rel="noopener noreferrer" class="discount-form__viber"><img src="icons/social/viber.svg" alt="viber"></a>
+                <a href="tg://resolve?domain=testName" target="_blank" rel="noopener noreferrer" class="discount-form__telegram"><img src="icons/social/telegram.svg" alt="telegram"></a>
+                <a href="https://www.vk.com" target="_blank" rel="noopener noreferrer" class="discount-form__vkontakte"><img src="icons/social/vk.svg" alt="vkontakte"></a>
+            </div>
+        </div>
+
+        <div class="discount-form modal__callback" id="cost">
+            <div class="modal__close">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="discount-form__title">ЗАПОЛНИТЕ ФОРМУ</div>
+            <div class="discount-form__subtitle">И менеджер свяжется с вами в ближайшее время</div>
+            <form id="cost-form" action="#" class="discount-form__form">
+                <input name="name" placeholder="Имя" type="text" required>
+                <input name="phone" placeholder="+7 (___)-___-__-__" required>
+                <button class="btn discount-form__btn">Заказать звонок</button>
+            </form>
+            <div class="discount-form__descr">Или свяжитесь с нами через любой удобный мессенджер</div>
+            <div class="discount-form__social">
+                <a href="whatsapp://send?text=Hello world!" target="_blank" rel="noopener noreferrer" class="discount-form__whatsapp"><img src="icons/social/whatsapp.svg" alt="whatsapp"></a>
+                <a href="viber://chats" target="_blank" rel="noopener noreferrer" class="discount-form__viber"><img src="icons/social/viber.svg" alt="viber"></a>
+                <a href="tg://resolve?domain=testName" target="_blank" rel="noopener noreferrer" class="discount-form__telegram"><img src="icons/social/telegram.svg" alt="telegram"></a>
+                <a href="https://www.vk.com" target="_blank" rel="noopener noreferrer" class="discount-form__vkontakte"><img src="icons/social/vk.svg" alt="vkontakte"></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
