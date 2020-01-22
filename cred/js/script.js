@@ -1,49 +1,22 @@
 const slider1 = tns({
-    container: '.calculator__slider',
-    items: 1,
-    slideBy: 1,
-    nav: true,
-    navPosition: 'top',
-    autoplay: false,
-    controls: false,
-    // responsive: {
-    //     310: {
-    //         items: 1,
-    //         nav: false,
-    //     },
-    //     576: {
-    //         items: 1,
-    //         nav: false,
-    //     },
-    //     769: {
-    //         items: 1,
-    //         nav: false,
-    //     },
-    //     1025: {
-    //         items: 3,
-    //         nav: false,
-    //     }
-    // }
-});
-
-
-const slider2 = tns({
-    container: '.license__wrapper-carousel',
-    items: 1,
+    container: '.part__carousel',
+    items: 3,
     slideBy: 1,
     nav: false,
     navPosition: 'top',
     autoplay: false,
     controls: false,
+    // gutter: 10
 });
 
 
-document.querySelector('.prev').onclick = function () {
-    slider2.goTo('prev');
+
+document.querySelector('.part__btn_prev').onclick = function () {
+    slider1.goTo('prev');
 };
 
-document.querySelector('.next').onclick = function () {
-    slider2.goTo('next');
+document.querySelector('.part__btn_next').onclick = function () {
+    slider1.goTo('next');
 };
 
 
