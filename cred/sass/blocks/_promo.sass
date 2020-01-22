@@ -1,0 +1,143 @@
+.promo
+    padding: 155px 0 190px 0
+    width: 100%
+    min-height: 500px
+    background: url('../img/main_bg.jpg') center center/cover no-repeat
+    &__header
+        margin-bottom: 0
+        font-size: 40px
+        font-weight: 900
+        line-height: normal
+        color: #333231
+        text-transform: uppercase
+    &__cost
+        margin-top: 30px
+        font-size: 34px
+        font-weight: 900
+        line-height: normal
+        color: #5da60e
+    &__discount
+        margin-top: 30px
+        font-size: 18px
+        font-weight: 500
+        line-height: 24px
+        color: #484645
+    &__btn
+        margin: 0
+        margin-top: 40px
+        display: block
+        width: 290px
+        height: 61px
+        border: none
+        border-radius: 5px
+        border-bottom: 2px solid #598E1D
+        box-shadow: 0px 15px 30px rgba(110, 174, 38, 0.7)
+        background: radial-gradient(49.14% 50% at 48.29% 0%, rgba(129, 192, 57, 0.5) 0%, rgba(255, 255, 255, 0) 100%, #6EAE26 100%), #6EAE26
+        text-shadow: 0 1px 1px #51811b
+        font-size: 14px
+        font-weight: bold
+        line-height: 14px
+        color: #ffffff
+        font-size: 18px
+    &__policy
+        margin-top: 42px
+        font-size: 11px
+        font-weight: 500
+        line-height: 21px
+        color: #484645
+
+label.error
+    margin-bottom: 0
+    font-size: 12px
+    font-weight: 500
+    line-height: 17px
+    color: #484645
+    text-align: center
+
+
+
+ 
+
+@media only screen and (max-width: 1199px)
+    .promo
+        &__img
+            right: 0
+            width: 575px
+
+
+@media only screen and (max-width: 991px)
+    .promo
+        padding: 37px 0 45px 0
+        &__header
+            font-size: 20px
+        &__cost
+            margin-top: 12px
+            font-size: 16px
+        &__discount
+            margin-top: 12px
+            font-size: 12px
+            line-height: 17px
+        &__img
+            top: -23px
+            right: -15px
+            max-width: 474px
+
+    .discount-form
+        &__promo
+            margin-top: 12px
+            width: 175px
+        input
+            width: 175px
+            font-size: 12px
+        &__button
+            width: 175px
+            height: 54px
+            font-size: 14px
+            border-bottom: 4px solid #598e1d
+        &__policy
+            margin-top: 23px
+            font-size: 7px
+
+    label.error
+        font-size: 9px
+        line-height: 9px
+
+
+@media only screen and (max-width: 767px)
+    .promo
+        min-height: 400px
+        &__main
+            margin-top: 50px
+        &__img
+            top: 5px
+            right: 0
+            width: 350px
+    .discount-form
+        &__button
+            height: 40px
+
+@media only screen and (max-width: 575px)
+    .promo
+        min-height: 300px
+        padding: 40px 0 30px 0
+        &__main
+            margin-top: 0
+        &__header
+            font-size: 19px
+            text-align: center
+        &__cost
+            text-align: center
+        &__discount
+            margin-top: 25px
+            text-align: center
+        &__img
+            display: none
+    .discount-form
+        &__promo
+            margin: 0 auto
+            margin-top: 12px
+        &__button
+            height: 54px
+        &__policy
+            margin-top: 20px
+

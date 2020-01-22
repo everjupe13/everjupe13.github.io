@@ -1,0 +1,27 @@
+.container
+    position: relative
+    margin: 0 auto
+    width: 1140px
+
+@media only screen and (max-width: 1199px)
+    .container
+        // width: 630px
+        width: 960px
+
+@media only screen and (max-width: 991px)
+    .container
+        width: 720px
+        // padding: 0 45px
+        &__questions
+            padding: 0 40px
+
+@media only screen and (max-width: 767px)
+    .container
+        width: 540px
+        
+@media only screen and (max-width: 575px)
+    .container
+        padding: 0 15px
+        width: 100%
+        &__calculation
+            padding: 0
