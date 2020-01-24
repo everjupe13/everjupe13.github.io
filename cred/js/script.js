@@ -35,8 +35,8 @@ var ib=document.getElementById('demo');
         if (ib.value < '10000') {
             ib.value = '10000'
         }
-        else if (ib.value > '1000000') {
-            ib.value = '1000000'
+        else if (ib.value > '3000000') {
+            ib.value = '3000000'
         }
     }
 
