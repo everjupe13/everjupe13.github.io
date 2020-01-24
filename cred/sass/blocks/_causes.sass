@@ -36,4 +36,44 @@
         line-height: 22px
         text-align: center
 
+@media only screen and (max-width: 1650px)
+    .causes
+        padding: 60px 0 70px 0
+        &__wrapper
+            margin-top: 60px
+        &__item
+            padding: 30px 5px
+            width: 250px
+            height: 280px
+            &:nth-child(1)
+                padding: 30px 20px 30px
+        &__img
+            width: 80px
+        &__header
+            font-size: 17px
+        &__descr
+            font-size: 14px
+            line-height: 17px
 
+@media only screen and (max-width: 1090px)
+    .causes
+        &__item
+            padding: 21px 5px 30px
+            width: 170px
+            height: 188px
+            &:nth-child(1)
+                padding: 21px 20px 30px
+        &__img
+            width: 48px
+        &__header
+            margin-top: 18px
+            font-size: 12px
+            line-height: 15px
+        &__descr
+            margin-top: 8px
+            font-size: 10px
+            line-height: 12px
+    
+@media only screen and (max-width: 690px)
+    .causes
+        display: none

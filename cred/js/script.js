@@ -20,6 +20,34 @@ document.querySelector('.part__btn_next').onclick = function () {
 };
 
 
+function fun1() {
+    var rng=document.getElementById('myRange'); //rng - это ползунок
+    var i1=document.getElementById('demo'); // i1 - input
+    i1.value=rng.value;
+
+    var div=document.getElementById('test'); // div - блок test
+    var rngRight= rng.value/10000
+	div.style.width=rngRight+'%';
+}
+
+var ib=document.getElementById('demo');
+    ib.onblur = function() {
+        if (ib.value < '10000') {
+            ib.value = '10000'
+        }
+        else if (ib.value > '1000000') {
+            ib.value = '1000000'
+        }
+    }
+
+
+function fun2() {
+    var rng=document.getElementById('myRange'); //rng - это ползунок
+    var i1=document.getElementById('demo');
+
+    rng.value=i1.value;
+}
+
 
 // function stopDefAction(evt) {
 //     evt.preventDefault();
@@ -32,36 +60,6 @@ document.querySelector('.part__btn_next').onclick = function () {
 
 $(document).ready(function() {
 
-    function validateFormsMain(form) {
-        $(form).validate({
-            rules: {
-                fromCity: "required",
-                fromStreet: "required",
-                fromHouse: "required",
-                whereCity: "required",
-                whereStreet: "required",
-                whereHouse: "required",
-                phone: "required",
-                fromCityMobile: "required",
-                whereCityMobile: "required",
-                fromStreetMobile: "required",
-                whereStreetMobile:"required",
-            },
-            messages: {
-                fromCity: "Пожалуйста, заполните поле",
-                fromStreet: "Пожалуйста, заполните поле",
-                fromHouse: "Пожалуйста, заполните поле",
-                whereCity: "Пожалуйста, заполните поле",
-                whereStreet: "Пожалуйста, заполните поле",
-                whereHouse: "Пожалуйста, заполните поле",
-                fromCityMobile: "Пожалуйста, заполните поле",
-                whereCityMobile: "Пожалуйста, заполните поле",
-                fromStreetMobile: "Пожалуйста, заполните поле",
-                whereStreetMobile:"Пожалуйста, заполните поле",
-                phone: "Пожалуйста, введите свой номер телефона",
-            }
-        });
-    }
 
     function validateForms(form) {
         $(form).validate({
@@ -73,9 +71,6 @@ $(document).ready(function() {
             }
         });
     }
-
-    validateForms('#promo__form');
-    validateFormsMain('#calculator__form');
 
     $('input[name=phone]').mask("+7 (999)-999-9999");
 

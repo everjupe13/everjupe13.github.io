@@ -1,5 +1,5 @@
 .part
-    padding: 40px 50px
+    padding: 40px 0 50px 0
     height: 165px
     &__wrapper
         position: relative
@@ -45,3 +45,53 @@
 .otkritie
     // width: 180px
     width: 248px
+
+@media only screen and (max-width: 1650px)
+    .sberbank
+        width: auto
+    .otkritie
+        width: auto
+    .part
+        // padding: 40px 0 50px 0
+        height: 140px
+        &__wrapper
+            padding: 0 100px
+        &__img
+            width: auto
+            &_under
+                height: 50px
+        &__btn
+            width: 40px
+            height: 40px
+            img
+                width: 20px
+                height: 20px
+            &_prev
+                left: 20px
+            &_next
+                right: 20px
+
+@media only screen and (max-width: 1090px)
+    .part
+        height: 112px
+        padding: 22px 0 29px 0
+        &__wrapper
+            padding: 0 35px
+        &__btn
+            width: 25px
+            height: 25px    
+            img
+                width: 11px
+                height: 11px
+            &_prev
+                left: 0
+                img
+                    margin-right: 2px
+            &_next
+                right: 0
+                img
+                    margin-left: 2px
+
+@media only screen and (max-width: 690px)
+    .part
+        display: none                    

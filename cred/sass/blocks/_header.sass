@@ -36,4 +36,39 @@
         color: #000000
         &:hover
             color: $main-color
+
+
+@media only screen and (max-width: 1650px)
+    .container_header
+        height: 60px
+    .logo
+        width: 155px
+    .header
+        &__menu
+            margin-left: 70px
+            width: 330px
+        &__link
+            font-size: 15px
+        &__phone
+            font-size: 16px
     
+@media only screen and (max-width: 1090px)
+    .container_header
+        height: 40px
+    .logo
+        width: auto
+    .header
+        &__menu
+            margin-left: 120px
+            width: 201px
+        &__link
+            font-size: 10px
+        &__phone
+            font-size: 10px
+
+@media only screen and (max-width: 690px)
+    .header
+        &__menu
+            display: none
+        &__phone
+            line-height: 20px
