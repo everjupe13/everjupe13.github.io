@@ -26,7 +26,7 @@ function fun1() {
     i1.value=rng.value;
 
     var div=document.getElementById('test'); // div - блок test
-    var rngRight= rng.value/10000
+    var rngRight= rng.value/30000
 	div.style.width=rngRight+'%';
 }
 
@@ -46,6 +46,10 @@ function fun2() {
     var i1=document.getElementById('demo');
 
     rng.value=i1.value;
+
+    var div=document.getElementById('test'); // div - блок test
+    var rngRight= rng.value/30000
+	div.style.width=rngRight+'%';
 }
 
 

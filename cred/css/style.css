@@ -587,6 +587,8 @@
     margin-top: 60px; }
     .chlist__header {
       font-size: 18px; }
+    .chlist__cost {
+      width: 270px; }
     .chlist__options label {
       font-size: 16px; }
     .chlist__options input[type=text], .chlist__options select {
@@ -611,6 +613,8 @@
     margin-top: 48px; }
     .chlist__header {
       font-size: 14px; }
+    .chlist__cost {
+      width: 180px; }
     .chlist__options {
       margin-top: 19px;
       margin-bottom: 52px; }
@@ -654,6 +658,8 @@
     margin-top: 35px; }
     .chlist__header {
       font-size: 14px; }
+    .chlist__cost {
+      width: 180px; }
     .chlist__options {
       margin-top: 0px;
       margin-bottom: 36px;
