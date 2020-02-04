@@ -1,0 +1,122 @@
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__logo
+        display: flex
+        align-items: center
+        width: 50%
+        &_img
+            width: 125px
+        &_descr
+            margin-left: 30px
+    &__title
+        font-weight: 500
+        font-size: 28px
+        line-height: 35px
+        color: #26180F
+        text-transform: uppercase
+    &__subtitle
+        margin-top: 14px
+        font-weight: normal
+        font-size: 20px
+        line-height: 25px
+        color: #26180F
+        text-transform: uppercase
+    &__info
+        width: 50%
+    &__contact
+        display: flex
+        justify-content: flex-end
+        align-items: center
+    &__phone
+        margin-right: 8px
+        display: block
+        font-weight: 500
+        font-size: 28px
+        line-height: 28px
+        color: #433225
+    &__btn
+        display: block
+        margin: 22px 0 0 auto
+        width: 323px
+        height: 57px
+
+@media only screen and (max-width: 1530px)
+    .header
+        &__title
+            font-size: 24px
+            line-height: 31px
+        &__subtitle
+            margin-top: 14px
+            font-size: 18px
+            line-height: 20px
+        &__phone
+            font-size: 25px
+            line-height: 28px
+        &__item
+            img
+                width: 50px
+                height: 50px
+        &__btn
+            margin: 20px 0 0 auto
+            font-size: 24px
+
+@media only screen and (max-width: 1100px)
+    .header
+        &__logo
+            &_img
+                width: 85px
+            &_descr
+                margin-left: 10px   
+        &__title
+            font-size: 14px
+            line-height: 21px
+        &__subtitle
+            margin-top: 8px
+            font-size: 11px
+            line-height: 18px
+        &__phone
+            font-size: 14px
+        &__btn
+            margin: 11px 0 0 auto
+            width: 168px
+            height: 30px
+            font-size: 14px
+            line-height: 10px
+        
+@media only screen and (max-width: 640px) and (min-width: 511px)
+    .header
+        &__logo
+            width: auto
+            &_img
+                width: 186px
+            &_descr
+                display: none
+        &__info
+            width: auto
+        &__contact
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-end
+        &__phone
+            font-size: 28px
+        &__btn
+            width: 323px
+            height: 58px
+            font-size: 28px
+
+@media only screen and (max-width: 510px)
+    .header
+        &__logo
+            width: auto
+            &_img
+                width: 100px
+            &_descr
+                display: none
+        &__info
+            width: auto
+        &__contact
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-end

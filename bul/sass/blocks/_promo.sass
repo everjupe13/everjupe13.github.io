@@ -1,0 +1,235 @@
+.promo
+    padding: 35px 0 82px
+    background-color: #ffffff
+    &__main
+        margin-top: 77px
+    &__header
+        font-style: normal
+        font-weight: 500
+        font-size: 38px
+        line-height: 47px
+        text-align: center
+        color: #0F0600
+        text-transform: uppercase
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        margin-top: 101px
+    &__form
+        &_outer
+            margin-left: 38px
+        &__header
+            font-weight: 500
+            font-size: 28px
+            line-height: 35px
+            color: #92755F
+            text-align: right
+    &__form
+        margin-top: 38px
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        &__btn
+            margin-top: 37px
+            width: 459px
+            height: 57px
+        label
+            margin: 0
+            font-weight: 500
+            font-size: 20px
+            line-height: 25px
+            text-align: center
+            color: #201919
+        input
+            padding: 10px 20px
+            height: 57px
+            background: #E9E9E9
+            border-radius: 3px
+            border: none
+            font-weight: 500
+            font-size: 20px
+            line-height: 25px
+            color: #201919
+        select
+            padding: 10px 20px
+            height: 57px
+            background: #E9E9E9
+            border-radius: 3px
+            border: none
+            font-weight: 500
+            font-size: 20px
+            line-height: 25px
+            color: #201919
+        > div
+            margin: 12px 0 0
+            display: flex
+            justify-content: space-between
+            align-items: center
+    &__name
+        width: calc(100% - 62px)     
+    &__phone
+        width: calc(100% - 109px)  
+    &__select
+        width: calc(100% - 155px)
+
+@media only screen and (max-width: 1530px)
+    .promo
+        &__header
+            margin: 0
+            font-size: 35px
+            line-height: 41px
+        &__video
+            position: relative
+            width: 100%
+            height: 328px
+            iframe
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+            &_wrapper
+                width: 60%
+        &__form
+            margin-top: 15px
+            &_outer
+                margin: 0
+                width: calc(40% - 38px)
+            &__header
+                margin: -5px
+                font-size: 20px
+                line-height: 28px
+            label
+                font-size: 15px
+                line-height: 15px
+            input , select
+                height: 44px    
+            > div
+                margin: 9px 0 0
+            &__btn
+                margin-top: 22px
+                width: 100%
+                font-size: 24px
+        
+@media only screen and (max-width: 1100px)
+    .promo
+        padding: 20px 0 60px
+        &__main
+            margin-top: 60px
+        &__header
+            font-size: 24px
+            line-height: 30px
+        &__wrapper
+            margin-top: 70px
+        &__video
+            height: 229px
+            &_wrapper
+                width: 58%
+        &__form
+            margin-top: 10px
+            &_outer
+                width: calc(42% - 20px)
+            &__header
+                font-size: 14px
+                line-height: 20px
+            label
+                font-size: 11px
+            input , select
+                padding: 3px 10px
+                font-size: 11px
+                line-height: 11px
+                height: 30px
+            &__btn
+                height: 30px
+                font-size: 14px
+                line-height: 10px
+        &__name
+            width: calc(100% - 38px)     
+        &__phone
+            width: calc(100% - 62px)  
+        &__select
+            width: calc(100% - 86px)
+
+@media only screen and (max-width: 640px)
+    .promo
+        padding: 14px 0 60px
+        &__header
+            font-size: 34px
+            line-height: 42px
+        &__wrapper
+            margin-top: 74px
+            flex-direction: column
+            align-items: center
+        &__video
+            height: 442px
+            &_wrapper
+                width: 100%
+        &__form
+            margin-top: 30px
+            align-items: center
+            &_outer
+                // padding: 0 79px
+                margin-top: 36px
+                width: 100%
+            &__header
+                font-size: 28px
+                line-height: 35px
+                text-align: center
+            label
+                padding-right: 19px
+                font-size: 20px
+                line-height: 20px
+            input, select
+                height: 57px
+                font-size: 20px
+            > div
+                justify-content: center
+            &__btn
+                margin-top: 37px
+                width: 459px
+                height: 57px
+                font-size: 28px
+        &__name
+            width: 397px    
+        &__phone
+            width: 350px
+        &__select
+            width: 304px
+
+@media only screen and (max-width: 510px)
+    .promo
+        &__header
+            font-size: 16px
+            line-height: 22px
+        &__wrapper
+            margin-top: 45px
+        &__video
+            height: 240px
+        &__form
+            margin-top: 20px
+            &_outer
+                margin-top: 25px
+            &__header
+                font-size: 16px
+                line-height: 24px
+            label
+                padding-right: 10px
+                font-size: 11px
+            input , select
+                font-size: 11px
+                line-height: 11px
+                height: 37px
+            &__btn
+                margin-top: 25px
+                width: calc(100% - 20px)
+                height: 40px
+                font-size: 15px
+        &__name
+            width: 230px    
+        &__phone
+            width: 202px
+        &__select
+            width: 176px
+        
+        
