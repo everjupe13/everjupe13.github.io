@@ -1,8 +1,8 @@
 <?php 
 
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$sel = $_POST['promo__social'];
+$name = $_POST['modal-name'];
+$phone = $_POST['modal-phone'];
+// $email = $_POST['email'];
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -32,8 +32,7 @@ $mail->Subject = 'Данные';
 $mail->Body    = '
 		Пользователь оставил данные <br> 
 	Имя: ' . $name . ' <br>
-	Номер телефона: ' . $phone . '
-	Мессенджер: ' . $sel . '';
+	Номер телефона: ' . $phone . '';
 
 if(!$mail->send()) {
     return false;

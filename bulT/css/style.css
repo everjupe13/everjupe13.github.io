@@ -202,8 +202,15 @@
     line-height: 35px;
     color: #92755F;
     text-align: right; }
+  .promo__form__subheader {
+    margin-top: 16px;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 35px;
+    text-align: right;
+    color: #92755F; }
   .promo__form {
-    margin-top: 38px;
+    margin-top: 19px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end; }
@@ -268,7 +275,7 @@
     .promo__video_wrapper {
       width: 60%; }
   .promo__form {
-    margin-top: 15px; }
+    margin-top: 13px; }
     .promo__form_outer {
       margin: 0;
       width: calc(40% - 38px); }
@@ -276,6 +283,9 @@
       margin: -5px;
       font-size: 20px;
       line-height: 28px; }
+    .promo__form__subheader {
+      font-size: 18px;
+      line-height: 20px; }
     .promo__form label {
       font-size: 15px;
       line-height: 15px; }
@@ -299,7 +309,7 @@
     .promo__wrapper {
       margin-top: 70px; }
     .promo__video {
-      height: 229px; }
+      height: 234px; }
       .promo__video_wrapper {
         width: 58%; }
     .promo__form {
@@ -309,6 +319,10 @@
       .promo__form__header {
         font-size: 14px;
         line-height: 20px; }
+      .promo__form__subheader {
+        margin-top: 13px;
+        font-size: 13px;
+        line-height: 16px; }
       .promo__form label {
         font-size: 11px; }
       .promo__form input, .promo__form select {
@@ -351,6 +365,11 @@
         font-size: 28px;
         line-height: 35px;
         text-align: center; }
+      .promo__form__subheader {
+        margin-top: 30px;
+        font-size: 25px;
+        line-height: 25px;
+        text-align: center; }
       .promo__form label {
         padding-right: 19px;
         font-size: 20px;
@@ -387,6 +406,10 @@
     .promo__form__header {
       font-size: 16px;
       line-height: 24px; }
+    .promo__form__subheader {
+      margin-top: 15px;
+      font-size: 16px;
+      line-height: 18px; }
     .promo__form label {
       padding-right: 10px;
       font-size: 11px; }
