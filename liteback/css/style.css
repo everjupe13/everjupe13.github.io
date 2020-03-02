@@ -99,7 +99,7 @@
   opacity: 0.8;
   text-shadow: 0px 0.5px 0.5px #51811B; }
 
-@media only screen and (max-width: 1650px) {
+@media only screen and (max-width: 2050px) {
   .container_header {
     height: 60px; }
   .logo {
