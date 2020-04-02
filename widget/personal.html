@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LiteBack</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container container_header">
+            <img src="img/logo.svg" alt="Logo" class="header__logo">
+            <nav class="header__navigation">
+                <div class="header__link header-personal__link">
+                    Чат бот для сайта
+                </div>
+            </nav>
+            <div class="header__cabinet header-personal__cabinet">
+
+
+                <nav class="topmenu">
+                    <div class="topmenu__info">
+                        <img src="img/topmenu/avatar.svg" alt="" class="topmenu__avatar">
+                        <div class="topmenu__name">user@example.com</div>
+                    </div>
+                    <div class="topmenu-submenu">
+                        <div class="topmenu-submenu__logout">
+                            <a href="http://liteback/wp-login.php?action=logout&amp;redirect_to=%2F&amp;_wpnonce=a63e8a70d4" class="topmenu-submenu__logout-link">Выйти из кабинета</a>
+                            <img src="img/topmenu/exit.svg" alt="" class="topmenu-submenu__logout-img">
+                        </div>
+                    </div>
+                </nav>
+
+
+            </div>
+        </div>
+    </header>
+
+    <section class="personal">
+        <div class="container">
+            <div class="personal__main">
+
+                <!-- Menu -->
+                <li class="personal__menu">
+                    <ul id="settings-wrap" class="personal__item personal__item_active">Настройка виджета</ul>
+                    <ul id="download-wrap" class="personal__item">Установка на сайт</ul>
+                    <ul id="call-wrap" class="personal__item">Уведомления</ul>
+                    <ul id="integration-wrap" class="personal__item">Интеграции</ul>
+                </li>
+
+                <!-- First block -->
+                <div id="settings" class="personal__settings">
+                    <div class="personal__wrapper">
+                        <div class="personal__descr">
+                            <form action="#" class="personal__form" id="personal-form">
+
+                                <div class="personal__descr_title">Фотография менеджера:</div>
+                                <div class="personal__form_photo">
+
+                                    <input name="photo-choice" id="photoChoice1" type="radio" value="1" checked>
+                                    <label for="photoChoice1"><img src="img/personal/form-photo/1.png" alt="" class="personal__form_photo-img"></label>
+
+                                    <input name="photo-choice" id="photoChoice2" type="radio" value="2">
+                                    <label for="photoChoice2"><img src="img/personal/form-photo/2.png" alt="" class="personal__form_photo-img"></label>
+
+                                    <input name="photo-choice" id="photoChoice3" type="radio" value="3">
+                                    <label for="photoChoice3"><img src="img/personal/form-photo/3.png" alt="" class="personal__form_photo-img"></label>
+
+                                    <input name="photo-choice" id="photoChoice4" type="radio" value="4">
+                                    <label for="photoChoice4"><img src="img/personal/form-photo/4.png" alt="" class="personal__form_photo-img"></label>
+
+                                    <input name="photo-choice" id="photoChoice5" type="radio" value="5">
+                                    <label for="photoChoice5"><img src="img/personal/form-photo/5.png" alt="" class="personal__form_photo-img"></label>
+
+                                    <input name="photo-choice" id="photoChoice6" type="radio" value="6">
+                                    <label for="photoChoice6"><img src="img/personal/form-photo/6.png" alt="" class="personal__form_photo-img"></label>
+
+                                    <input name="photo-choice" id="photoChoice7" type="radio" value="7">
+                                    <label for="photoChoice7"><img src="img/personal/form-photo/7.png" alt="" class="personal__form_photo-img"></label>
+
+                                    <input name="photo-choice" id="photoChoice8" type="radio" value="8">
+                                    <label for="photoChoice8"><img src="img/personal/form-photo/8.png" alt="" class="personal__form_photo-img"></label>
+
+                                    <input name="photo-choice" id="photoChoice9" type="radio" value="9">
+                                    <label for="photoChoice9"><img src="img/personal/form-photo/9.png" alt="" class="personal__form_photo-img"></label>
+
+                                    <input name="photo-choice" id="photoChoice10" type="radio" value="10">
+                                    <label for="photoChoice10"><img src="img/personal/form-photo/10.png" alt="" class="personal__form_photo-img"></label>
+
+                                    <input name="photo-choice" id="photoChoice11" type="radio" value="11">
+                                    <label for="photoChoice11"><img src="img/personal/form-photo/11.png" alt="" class="personal__form_photo-img"></label>
+
+                                    <input name="photo-choice" id="photoChoice12" type="radio" value="12">
+                                    <label for="photoChoice12"><img src="img/personal/form-photo/12.png" alt="" class="personal__form_photo-img"></label>
+
+                                </div>
+
+                                <div class="personal__divider"></div>
+
+                                <div class="personal__descr_title">Цвет виджета:</div>
+                                <div class="personal__form_color">
+
+                                    <input name="color-choice" id="colorChoice1" type="radio" value="1" checked>
+                                    <label for="colorChoice1" class="personal__form_color_figure personal__form_color-darkgrey"></label>
+
+                                    <input name="color-choice" id="colorChoice2" type="radio" value="2">
+                                    <label for="colorChoice2" class="personal__form_color_figure personal__form_color-grey"></label>
+
+                                    <input name="color-choice" id="colorChoice3" type="radio" value="3">
+                                    <label for="colorChoice3" class="personal__form_color_figure personal__form_color-lightgrey"></label>
+
+                                    <input name="color-choice" id="colorChoice4" type="radio" value="4">
+                                    <label for="colorChoice4" class="personal__form_color_figure personal__form_color-darkbrown"></label>
+
+                                    <input name="color-choice" id="colorChoice5" type="radio" value="5">
+                                    <label for="colorChoice5" class="personal__form_color_figure personal__form_color-brown"></label>
+
+                                    <input name="color-choice" id="colorChoice6" type="radio" value="6">
+                                    <label for="colorChoice6" class="personal__form_color_figure personal__form_color-lightbrown"></label>
+
+                                    <input name="color-choice" id="colorChoice7" type="radio" value="7">
+                                    <label for="colorChoice7" class="personal__form_color_figure personal__form_color-blue"></label>
+
+                                    <input name="color-choice" id="colorChoice8" type="radio" value="8">
+                                    <label for="colorChoice8" class="personal__form_color_figure personal__form_color-lightblue"></label>
+
+                                    <input name="color-choice" id="colorChoice9" type="radio" value="9">
+                                    <label for="colorChoice9" class="personal__form_color_figure personal__form_color-lightblue2"></label>
+
+                                    <input name="color-choice" id="colorChoice10" type="radio" value="10">
+                                    <label for="colorChoice10" class="personal__form_color_figure personal__form_color-lightblue3"></label>
+
+                                    <input name="color-choice" id="colorChoice11" type="radio" value="11">
+                                    <label for="colorChoice11" class="personal__form_color_figure personal__form_color-green1"></label>
+
+                                    <input name="color-choice" id="colorChoice12" type="radio" value="12">
+                                    <label for="colorChoice12" class="personal__form_color_figure personal__form_color-green2"></label>
+
+                                    <input name="color-choice" id="colorChoice13" type="radio" value="13">
+                                    <label for="colorChoice13" class="personal__form_color_figure personal__form_color-green3"></label>
+
+                                    <input name="color-choice" id="colorChoice14" type="radio" value="14">
+                                    <label for="colorChoice14" class="personal__form_color_figure personal__form_color-green4"></label>
+
+                                    <input name="color-choice" id="colorChoice15" type="radio" value="15">
+                                    <label for="colorChoice15" class="personal__form_color_figure personal__form_color-purple"></label>
+
+                                    <input name="color-choice" id="colorChoice16" type="radio" value="16">
+                                    <label for="colorChoice16" class="personal__form_color_figure personal__form_color-red"></label>
+
+                                    <input name="color-choice" id="colorChoice17" type="radio" value="17">
+                                    <label for="colorChoice17" class="personal__form_color_figure personal__form_color-lightred"></label>
+
+                                    <input name="color-choice" id="colorChoice18" type="radio" value="18">
+                                    <label for="colorChoice18" class="personal__form_color_figure personal__form_color-orange"></label>
+
+                                    <input name="color-choice" id="colorChoice19" type="radio" value="19">
+                                    <label for="colorChoice19" class="personal__form_color_figure personal__form_color-darkorange"></label>
+
+                                    <input name="color-choice" id="colorChoice20" type="radio" value="20">
+                                    <label for="colorChoice20" class="personal__form_color_figure personal__form_color-sky"></label>
+
+                                    <input name="color-choice" id="colorChoice21" type="radio" value="21">
+                                    <label for="colorChoice21" class="personal__form_color_figure personal__form_color-pink"></label>
+
+                                </div>
+
+                                <div class="personal__divider"></div>
+
+                                <div class="personal__descr_title">Расположение:</div>
+                                <div class="personal__form_place">
+                                    <input name="place-choice" id="placeChoice1" type="radio" value="left" checked>
+                                    <label for="placeChoice1">Слева</label>
+                                    <input name="place-choice" id="placeChoice2" type="radio" value="right">
+                                    <label for="placeChoice2">Справа</label>
+                                </div>
+                                <div class="personal__divider"></div>
+                            </form>
+                        </div>
+                        <div class="personal__appearance">
+                            <img src="img/personal/background.png" alt="background" class="personal__img">
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- Second block -->
+                <div id="download" class="personal__download">
+                    <div class="personal__wrapper">
+                        <div class="personal__descr">
+
+                            <div class="personal__descr_title">1. Скопируйте и установите код на сайт.</div>
+                            <div class="personal__descr_code">
+                                &lt;script type="text/javascript" src="//api.venyoo.ru/wnew.js?
+                                wc=venyoo/default/science&<br>widget_id=5992200236826624">&lt;/script>
+                            </div>
+                            <div class="personal__descr_text">
+                                Рекомендуем вставить код перед закрывающим тегом </body> 
+                                на все страницы сайта.
+                            
+                            </div>
+
+                            <div class="personal__descr_title">2. Что будет после установки?</div>
+                            <div class="personal__descr_text">
+                                После установки виджет приступит к работе. Будет вступать в контакт
+                                с каждым посетителем, собирать вопросы и контактные данные.
+                                Далее собранные данные клиента будут отправляться вам на почту
+                            </div>
+                        </div>
+                        <div class="personal__appearance">
+                            <img src="img/personal/background.png" alt="background" class="personal__img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third block -->
+                <div id="call" class="personal__call">
+                    <div class="personal__wrapper">
+                        <div class="personal__descr">
+                            <div class="personal__descr_title">1. Уведомления о новых заявках</div>
+                            <div class="personal__descr_text">
+                                Добавьте электронные почты, на которые должны приходить
+                                новые заявки.
+                            </div>
+                        </div>
+                        <div class="personal__appearance">
+                            <img src="img/personal/background.png" alt="background" class="personal__img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fourth block -->
+                <div id="integration" class="personal__integration">
+                    <div class="personal__wrapper">
+                        <div class="personal__descr">
+                            <div class="personal__descr_title">1. Цели Google Analytics и Яндекс.Метрики</div>
+                            <div class="personal__descr_text">
+                                Для добавления цели в Яндекс.Метрике выберите тип цели
+                                Java-script событие и впишите в него идентификатор из списка ниже.
+                                <br><br>
+                                Для добавления цели в Google Analytics укажите категорию
+                                liteback, действием будет идентификатор из списка ниже:
+                            </div>
+
+                        </div>
+                        <div class="personal__appearance">
+                            <img src="img/personal/background.png" alt="background" class="personal__img">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="footer footer-personal">
+            <div class="container">
+                <div class="footer__main">
+                    <div class="footer__more">
+                        Все права защищены. ©2020 
+                    </div>
+    
+                    <div class="footer__links">
+                        По всем вопросам обращайтесь на почту: liteback@mail.ru
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </section>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/personal.js"></script>
+    
+
+</body>
+</html>

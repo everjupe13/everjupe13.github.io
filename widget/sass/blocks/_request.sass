@@ -1,0 +1,141 @@
+.request
+    padding: 70px 0 120px 0
+    background: url('../img/main_bg.jpg') center center/cover no-repeat
+    &__form
+        padding: 48px 48px 67px
+        width: 500px
+        height: 467px
+        background: #FFFFFF
+        border: 0.5px solid #D0C9C9
+        box-sizing: border-box
+        border-radius: 2px
+        &__header
+            font-weight: 600
+            font-size: 22px
+            line-height: 1
+            text-align: center
+            color: #474645
+            opacity: 0.9
+        &__subheader
+            margin-top: 20px
+            margin-bottom: 15px
+            font-weight: normal
+            font-size: 18px
+            line-height: 1.4
+            text-align: center
+            color: #484645
+            opacity: 0.9
+        &__input
+            padding: 5px 10px
+            margin-top: 10px
+            width: 100%
+            height: 67px
+            font-weight: normal
+            font-size: 20px
+            line-height: 1
+            background: #FFFFFF
+            text-align: center
+            opacity: 0.9
+            border: 0.5px solid rgba(129, 130, 129, 0.51)
+            border-radius: 2px
+        &__btn
+            margin-top: 10px
+            width: 100%
+            height: 67px
+            border: none
+            border-radius: 2px
+            box-shadow: 0px 1px 0px #598E1D
+            background: radial-gradient(49.14% 50% at 48.29% 0%, rgba(129, 192, 57, 0.5) 0%, rgba(255, 255, 255, 0) 100%, #6EAE26 100%), #6EAE26
+            font-style: normal
+            font-weight: bold
+            font-size: 21px
+            line-height: 1
+            color: rgba(255, 255, 255, .8)
+            text-shadow: 0px 0.5px 0.5px #51811B;
+
+
+
+.order1 
+    order: 2
+
+.tal
+    text-align: left
+
+.fls
+    justify-content: flex-start
+
+.order2
+    margin: 0
+    margin-right: 35px
+    order: 1
+
+@media only screen and (max-width: 1650px)
+    .request
+        padding: 50px 0 80px 0
+        &__form
+            padding: 40px 40px 51px
+            width: 380px
+            height: 355px
+            &__header
+                font-size: 16px
+            &__subheader
+                margin-top: 12px
+                margin-bottom: 10px
+                font-size: 14px
+            &__input
+                margin-top: 10px
+                height: 50px
+                font-size: 16px
+            &__btn
+                height: 50px
+                font-size: 17px
+    .order2
+        margin-right: 20px
+   
+@media only screen and (max-width: 1090px)
+    .request
+        padding: 53px 0 57px
+        &__form
+            width: 262px
+            height: 245px
+            padding: 25px 25px 35px
+            &__header
+                font-size: 12px
+            &__subheader
+                margin-top: 5px
+                margin-bottom: 7px
+                font-size: 10px
+                line-height: 12px
+            &__input
+                margin-top: 7px
+                padding: 10px 15px
+                height: 37px
+                font-size: 12px
+            &__btn
+                margin-top: 7px
+                height: 37px
+                font-size: 12px
+
+    .order2
+        margin-right: 15px
+
+@media only screen and (max-width: 660px)
+    .request
+        padding: 45px 0 60px 
+        &__form
+            padding: 0
+            height: auto
+            background-color: transparent
+            border: none
+            &__header, &__subheader
+                display: none
+            &__input
+                width: 214px
+                height: 37px
+                font-size: 12px
+                &:nth-child(2n - 1)
+                    margin-top: 0   
+            &__btn
+                width: 214px
+                height: 37px
+                font-size: 12px

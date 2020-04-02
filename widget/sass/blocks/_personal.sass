@@ -1,0 +1,361 @@
+.personal
+    background: url('../img/main_bg.jpg') center center/cover no-repeat
+    padding: 70px 0 0
+    &__main
+        height: 720px
+        border: 1px solid #EEEEEE
+        background-color: #fff
+        overflow: hidden
+    &__menu
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 75px
+        list-style-type: none
+        cursor: pointer
+    &__item
+        margin: 0
+        padding: 0
+        width: calc(25%)
+        height: 75px
+        font-size: 20px
+        line-height: 72px
+        color: rgba(109,97,97, .8)
+        text-align: center
+        border: 0.5px solid #EEEEEE
+        border-top: none
+        background: #F9F9F9
+        &_active
+            border-bottom: none
+            background-color: #fff
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        margin: 40px
+    &__descr
+        width: 55%
+    &__appearance
+        width: 45%
+        height: 100%
+        img
+            width: 100%
+            height: 100%
+    &__descr
+        padding-right: 50px
+        &_title
+            margin-bottom: 20px
+            font-weight: 500
+            font-size: 20px
+            line-height: 1
+            color: rgba(0, 0, 0, .8)
+        &_code
+            margin-top: 20px
+            margin-bottom: 20px
+            padding: 20px
+            border-radius: 3px
+            border: 0.5px solid #DFDFDF
+            background: #F9F9F9
+        &_text
+            margin-bottom: 30px
+            font-weight: normal
+            font-size: 16px
+            line-height: 22px
+            color: rgba(23,23,23, .8)
+    &__divider
+        margin-bottom: 40px
+        width: 100%
+        height: 3px
+        background-color: #CBCBCB
+    &__form
+        &_photo
+            display: flex
+            flex-wrap: wrap
+            margin-bottom: 20px
+            input
+                display: none
+                + label
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    position: relative
+                    margin: 5px 10px 5px 0
+                    width: 56px
+                    height: 56px
+                    border-radius: 100%
+                &:checked + label
+                    border: 3px solid #6DAF26
+                    &:after
+                        content: ''
+                        position: absolute
+                        top: -4px
+                        right: -8px
+                        width: 23px
+                        height: 23px
+                        background: url('../img/personal/form-photo/checked.svg') center center/cover no-repeat
+            &-img
+                width: 50px
+                height: 50px
+        &_color
+            display: flex
+            flex-wrap: wrap
+            margin-bottom: 20px
+            &-darkgrey
+                background-color: #58616B
+            &-grey
+                background-color: #707070
+            &-lightgrey
+                background-color: #C4C4C4
+            &-darkbrown
+                background-color: #6B513C
+            &-brown
+                background-color: #A27B4F
+            &-lightbrown
+                background-color: #A79F89
+            &-blue
+                background-color: #2E87E1
+            &-lightblue
+                background-color: #349EDB
+            &-lightblue2
+                background-color: #0096A7
+            &-lightblue3
+                background-color: #449FB8
+            &-green1
+                background-color: #57905D
+            &-green2
+                background-color: #4F9563
+            &-green3
+                background-color: #31A557
+            &-green4    
+                background-color: #7FB339
+            &-purple
+                background-color: #5B4D81
+            &-red
+                background-color: #DC375B
+            &-lightred
+                background-color: #DC292F
+            &-orange
+                background-color: #FF6E52
+            &-darkorange
+                background-color: #EF7F10
+            &-sky
+                background-color: #7383B5 
+            &-pink
+                background-color: #F4C9B8
+            input
+                display: none
+                + label
+                    position: relative
+                    margin: 5px 10px 5px 0 
+                    display: block
+                    width: 26px
+                    height: 26px
+                    border-radius: 100%
+                    border: 3px solid #fff                   
+                &:checked + label
+                    border: none
+                    &:after
+                        content: ''
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate( -50% , -50%)
+                        width: 13px
+                        height: 13px
+                        background: url('../img/personal/form-photo/checked2.svg') center center/cover no-repeat
+                &:checked + .personal__form_color-darkgrey
+                    border: 3px solid rgba(88,97,107, .1)
+                &:checked + .personal__form_color-grey
+                    border: 3px solid rgba(112,112,112, .1)
+                &:checked + .personal__form_color-lightgrey
+                    border: 3px solid rgba(196,196,196, .1)
+                &:checked + .personal__form_color-darkbrown
+                    border: 3px solid rgba(107,81,60, .1)
+                &:checked + .personal__form_color-brown
+                    border: 3px solid rgba(162,123,79, .1)
+                &:checked + .personal__form_color-lightbrown
+                    border: 3px solid rgba(167,159,137, .1)
+                &:checked + .personal__form_color-blue
+                    border: 3px solid rgba(46,135,225, .1)
+                &:checked + .personal__form_color-lightblue
+                    border: 3px solid rgba(52,158,219, .1)
+                &:checked + .personal__form_color-lightblue2
+                    border: 3px solid rgba(0,150,167, .1)
+                &:checked + .personal__form_color-lightblue3
+                    border: 3px solid rgba(68,159,184, .1)
+                &:checked + .personal__form_color-green1
+                    border: 3px solid rgba(87,144,93, .1)
+                &:checked + .personal__form_color-green2
+                    border: 3px solid rgba(79,149,99, .1)
+                &:checked + .personal__form_color-green3
+                    border: 3px solid rgba(49,165,87, .1)
+                &:checked + .personal__form_color-green4
+                    border: 3px solid rgba(127,179,57, .1)
+                &:checked + .personal__form_color-purple
+                    border: 3px solid rgba(91,77,129, .1)
+                &:checked + .personal__form_color-red
+                    border: 3px solid rgba(220,55,91, .1)
+                &:checked + .personal__form_color-lightred
+                    border: 3px solid rgba(220,41,47, .1)
+                &:checked + .personal__form_color-orange
+                    border: 3px solid rgba(255,110,82, .1)
+                &:checked + .personal__form_color-darkorange
+                    border: 3px solid rgba(239,127,16, .1)
+                &:checked + .personal__form_color-sky
+                    border: 3px solid rgba(115,131,181, .1)
+                &:checked + .personal__form_color-pink
+                    border: 3px solid rgba(244,201,184, .1)
+        &_place
+            margin-bottom: 20px
+            input
+                display: none
+                + label
+                    position: relative
+                    margin: 0 30px 0 30px
+                    font-weight: normal
+                    font-size: 20px
+                    line-height: 1
+                    color: rgba(109,97,97, .8)
+                    &:before
+                        content: ''
+                        position: absolute
+                        left: -30px
+                        top: 50%
+                        width: 22px
+                        height: 22px
+                        transform: translateY(-50%)
+                        border-radius: 100%
+                        border: 0.5px solid #BEBEBE
+                        background: #FFFFFF
+                    &:after
+                        content: ''
+                        position: absolute
+                        left: -24px
+                        top: 50%
+                        width: 10px
+                        height: 10px
+                        transform: translateY(-50%)
+                        border-radius: 100%
+                        background-color: #fff
+                &:checked + label
+                    &:before
+                        border: 3px solid #DC292F
+                    &:after
+                        background-color: #DC292F
+
+                        
+
+
+
+#download, #call, #integration
+    display: none
+
+@media only screen and (max-width: 1650px)
+    .personal
+        padding: 50px 0 0
+        &__main
+            height: 610px
+        &__menu
+            height: 55px
+        &__item
+            font-size: 16px
+            line-height: 54px
+            height: 55px
+        &__wrapper
+            margin: 30px
+        &__divider
+            margin-bottom: 25px
+        &__descr
+            &_code
+                font-size: 14px
+            &_title
+                margin-bottom: 10px
+                font-size: 16px
+            &_text
+                font-size: 14px
+        &__form
+            &_photo
+                margin-bottom: 10px
+                input
+                    + label
+                        width: 46px
+                        height: 46px
+                    &:checked + label
+                        &:after
+                            top: -8px
+                &-img
+                    width: 40px
+                    height: 40px
+            &_color
+                input
+                    + label
+                        margin: 3px 6px 3px 0
+            &_place
+                input
+                    + label
+                        font-size: 15px
+
+@media only screen and (max-width: 1090px)
+    .personal 
+        padding: 40px 0 0
+        &__main
+            height: 440px
+        &__menu
+            height: 43px
+        &__item
+            font-size: 13px
+            line-height: 43px
+            height: 43px
+        &__wrapper
+            margin: 15px
+        &__divider
+            margin-bottom: 15px
+        &__descr
+            padding-right: 30px
+            &_code
+                margin: 10px 0
+                padding: 12px
+                font-size: 10px
+            &_title
+                margin-bottom: 10px
+                font-size: 13px
+            &_text
+                margin-bottom: 15px
+                font-size: 12px
+                line-height: 15px
+        &__form
+            &_photo
+                margin-bottom: 10px
+                input
+                    + label
+                        margin: 2px 4px 2px 0
+                        width: 40px
+                        height: 40px
+                    &:checked + label
+                        &:after
+                            top: -8px
+                &-img
+                    width: 34px
+                    height: 34px
+            &_color
+                margin-bottom: 10px
+                input
+                    + label
+                        width: 20px
+                        height: 20px
+                        margin: 2px 4px 2px 0
+            &_place
+                margin-bottom: 10px
+                input
+                    + label
+                        font-size: 14px
+                        &:before
+                            left: -26px
+                            width: 16px
+                            height: 16px
+                        &:after
+                            width: 8px
+                            height: 8px
+                            left: -22px
+                    &:checked + label
+                        &:before
+                            border: 2px solid #dc292f

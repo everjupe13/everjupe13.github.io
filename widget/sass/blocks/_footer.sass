@@ -1,0 +1,120 @@
+.footer
+    padding: 60px 0 80px 0
+    background: url('../img/main_bg.jpg') center center/cover no-repeat
+    &__main
+        margin-top: 60px
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        font-weight: normal
+        font-size: 20px
+        line-height: 24px
+        color: #484645
+    &__contacts
+        margin-bottom: 50px
+    &__contacts-back
+        margin-bottom: 30px
+    &__btn
+        width: 295px
+        height: 64px
+        font-weight: bold
+        opacity: 1
+        border-radius: 4px
+    &__links
+        text-align: right
+    &__info
+        margin-bottom: 45px
+    &__partner
+        margin-bottom: 40px
+    &__img
+        width: 530px
+    &-personal
+        background: none
+        background-color: transparent
+
+        
+@media only screen and (max-width: 1650px)
+    .footer
+        &__main
+            margin-top: 60px
+            font-size: 16px
+            line-height: 20px
+        &__contacts
+            margin-bottom: 40px
+        &__contacts-back
+            margin-bottom: 20px
+        &__btn
+            width: 244px
+            height: 53px
+        &__info
+            margin-bottom: 35px
+        &__partner
+            margin-bottom: 30px
+        &__img
+            width: 420px
+
+
+@media only screen and (max-width: 1090px)
+    .footer
+        padding: 53px 0 90px
+        &__main
+            margin-top: 50px
+            font-size: 12px
+        &__contacts
+            line-height: 16px
+            margin-bottom: 30px
+        &__contacts-back
+            margin-bottom: 15px
+        &__btn
+            padding-top: 3px
+            width: 175px
+            height: 37px
+            border-radius: 2px
+            font-size: 12px
+            color: rgba(255, 255, 255, .8)
+        &__info
+            line-height: 15px
+            margin-bottom: 25px
+        &__partner
+            margin-bottom: 23px
+            line-height: 15px
+        &__img
+            width: 327px
+                  
+
+@media only screen and (max-width: 660px)
+    .footer
+        position: relative
+        padding: 0
+        height: 73px
+        background: #DDDDDD
+        .container
+            height: 100%
+            &:before
+                content: ''
+                position: absolute
+                left: 15px
+                top: 50%
+                transform: translateY(-50%)
+                display: block
+                width: 96px
+                height: 20px
+                background: url('../img/logo.svg')
+            &:after
+                content: 'Все права защищены. ©2020'
+                position: absolute
+                right: 15px
+                top: 50%
+                transform: translateY(-50%)
+                display: block
+                padding-top: 2px
+                height: 20px
+                font-weight: normal
+                font-size: 10px
+                line-height: 20px
+                color: #6D6161
+                opacity: 0.8
+        &__main
+            display: none
+        .title, .subtitle
+            display: none
