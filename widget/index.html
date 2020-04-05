@@ -262,29 +262,41 @@
                     <div class="lbw-head__name">Менеджер сайта</div>
                     <div class="lbw-head__subname">Я отвечу на ваши вопросы</div>
                 </div>
-                <div class="lbw-close"><span class="lbw-close__btn"></span></div>
+                <div id="lbw-close" class="lbw-close"><span class="lbw-close__btn"></span></div>
             </div>
 
-            <div class="lbw-body">
+            <div id="lbw-body" class="lbw-body">
 
-                <div class="lbw-body__chat">
-                    <div class="lbw-body__chat-item part-oth">
-                        Добрый день. Я могу помочь Вам подобрать выгодные условия по кредиту!
+                <div class="lbw-body__chat-wrapper">
+                    <div class="lbw-body__chat">
+                        <div id="lbw-bot1" id="" class="lbw-body__chat-item part-oth">
+                            Добрый день. Я могу помочь Вам чем-нибудь помочь?
+                        </div>
+                        <div id="lbw-bot2" class="lbw-body__chat-item part-oth">
+                            Напишите, что вас интересует, и я вам обязательно помогу.
+                        </div>
+    
+                        <div id="lbw-user1" class="lbw-body__chat-item part-mi"></div>
+    
+                        <form action="#" id="qu-form" class="qu-form">
+                            <div class="qu-form__title">Оставьте свои контактные данные, и мы ответим на ваш вопрос.</div>
+                            <input class="qu-form__input" name="name" type="text" placeholder="Имя" required>
+                            <input class="qu-form__input" name="phone" type="text" placeholder="+7(___)___-____" required>
+    
+                            <button id="qu-form-btn" class="qu-form__btn">Отправить</button>
+                        </form>
+    
                     </div>
-                    <div class="lbw-body__chat-item part-oth">
-                        Напишите, что вас интересует, и я вам обязательно помогу.
-                    </div>
-
                 </div>
 
                 <div class="lbw-body__type">
-                    <form action="#" class="lbw-body__input-form">
-                        <input type="text" class="lbw-body__input" placeholder="Введите ваше сообщение">
-                        <button class="lbw-body__input-form__btn">
+                    <div id="lbw-asked-form" class="lbw-body__input-form">
+                        <input id="lbw-asked-input" type="text" class="lbw-body__input" placeholder="Введите ваше сообщение">
+                        <button id="lbw-asked-btn" class="lbw-body__input-form__btn">
                             <span class="arrow-top"></span>
                             <span class="arrow-bottom"></span>
                         </button>
-                    </form>
+                    </div>
                 </div>
 
             </div>
@@ -298,5 +310,6 @@
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/widget.js"></script>
 </body>
 </html>
