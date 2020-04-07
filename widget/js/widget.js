@@ -13,18 +13,20 @@ $(document).ready(function() {
 
         if(!$('#lbw-body').hasClass('first-active')) {
             $('#lbw-body').addClass('first-active');
-            start();
+            start1();
         }
 
+        $('#lbw-footer-link').toggleClass('lbw-footer-link-active');
     });
 
-    function start() {
+    function start1() {
         $('#lbw-bot1').delay(1500).fadeIn(400);
-        $('#lbw-bot2').delay(3000).fadeIn(400);
         // For testing
         // $('#lbw-bot1').fadeIn(400);
         // $('#lbw-bot2').fadeIn(400);
-
+    }
+    function start2() {
+        $('#lbw-bot2').fadeIn(400);
     }
 
     function finalAct(someId) {
@@ -45,13 +47,14 @@ $(document).ready(function() {
     });
 
     $('#lbw-asked-btn').on('click', function(){
-        if(($('#lbw-bot2').css('display') == 'block')&&(!$('#lbw-asked-btn').hasClass('stopped'))) {
+        if(($('#lbw-bot1').css('display') == 'block')&&(!$('#lbw-asked-btn').hasClass('stopped'))) {
             $('#lbw-asked-btn').addClass('stopped');
             var userText = $('#lbw-asked-input').val();
             $('#lbw-user1').css('display', 'block');
             $('#lbw-user1').text(userText);
             $('#lbw-asked-input').val("");
-            setTimeout(finalAct, 2500, "#qu-form");
+            setTimeout(start2, 3000);
+            setTimeout(finalAct, 5500, "#qu-form");
         }
     });
 
@@ -64,6 +67,7 @@ $(document).ready(function() {
         }).done(function() {
             $(this).find("input").val("");
             $('#qu-form').trigger('reset');
+            $('#lbw-footer').delay(2000).fadeIn();
         });
         return false;
     });
