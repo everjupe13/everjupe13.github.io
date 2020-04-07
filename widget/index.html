@@ -1,229 +1,326 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>LiteBack</title>
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="css/tiny-slider.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/widget.css">
 </head>
 <body>
+
+    <header class="header">
+        <div class="container container_header">
+            <img src="img/logo.svg" alt="Logo" class="header__logo">
+            <nav class="header__navigation">
+                <ul class="header__menu">
+                    <li class="header__menu-item">
+                        <a onclick="jump('causes')" id="causes-link" href="#" class="header__link">Подробнее</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a onclick="jump('request')" id="request-link" href="#" class="header__link">Регистрация</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a onclick="jump('buy')" id="buy-link" href="#" class="header__link">Тарифы</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__cabinet">
+                <button class="header__log">Войти</button>
+                <button class="header__btn">Регистрация</button>
+            </div>
+        </div>
+    </header>
+
     <section class="promo">
         <div class="container">
-            <header class="header">
-                <img src="icons/logo.svg" alt="Logo" class="header__logo">
-                <nav class="header__navigation">
-                    <ul class="header__menu">
-                        <li class="header__menu-item">
-                            <a href="#calculation" class="header__link">Расчет стоимости</a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="#license" class="header__link">Сертификаты</a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="#questions" class="header__link">Акции</a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="#footer" class="header__link">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-                <a href="tel:+79048279656" class="header__phone">+7 (904) 827-96-56</a>
-            </header>
+            <h1 class="promo__header">LITEBACK - ФОРМА ЗАХВАТА<br>ЛИДОВ С ВАШЕГО САЙТА</h1>
+            <div class="promo__cost">Стоимость 990 руб./мес.</div>
+            <div class="promo__discount">Получайте до 5 раз больше клиентов, при том<br> же бюджете с помощью нашего виджета</div>
+            <button onclick="jump('request')" class="promo__btn">Попробовать бесплатно</button>
+            <div class="promo__policy">Удобный виджет, устанавливается на любой сайт без и программиста,<br>всего за 10 минут. Тестовый бесплатный период - 7 дней.</div>
+            <img src="img/promo/promo-img.png" alt="" class="promo__img">
+        </div>
+    </section>
+
+
+    <section id="causes" class="causes">
+        <div class="container">
+            <h2 class="title title_desktop"><span>ВИДЖЕТ НЕ УПУСТИТ</span> НИ ОДНОГО КЛИЕНТА</h2>
+            <h2 class="title title_mobile"><span>ВИДЖЕТ НЕ УПУСТИТ</span><br>НИ ОДНОГО КЛИЕНТА</h2>
+            <div class="subtitle subtitle_desktop">Работает без вашего участия. Бот автоматически запрашивает номера телефонов<br>у посетителей вашего сайта.</div>
+            <div class="subtitle subtitle_mobile">Работает без вашего участия.<br>Бот автоматически запрашивает номера<br>телефонов у посетителей вашего сайта.</div>
+
+            <div class="causes__main">
+                <img src="img/causes/causes-img.png" alt="" class="causes__img">
             
-            <div class="promo__main">
-                <h1 class="promo__header">Квартирные переезды<br>в новосибирске</h1>
-                <div class="promo__cost">от 1400 руб.</div>
-                <div class="promo__discount">При заказе онлайн сегодня<br>Дарим скидку 17%</div>
-                <form id="promo__form" action="#" class="discount-form discount-form__promo">
-                    <input name="phone" placeholder="+7 (___)-___-____">
-                    <button class="discount-form__button">Получить расчет</button>
-                    <div class="discount-form__policy">Нажимая кнопку вы соглашаетесь<br>с политикой конфиденциальности.</div>
+                <div class="causes__wrapper">
+                    <div class="causes__item">
+                        <div class="causes__item-text">
+                            <div class="causes__item-text__header">ВИДЖЕТ САМОСТОЯТЕЛЬНО</div>
+                            <div class="causes__item-text__main">Общается с клиентами и собирает данные</div>
+                        </div>
+                        <div class="causes__item-img">
+                            <img src="img/causes/1.svg" alt="" class="causes__item-img_main">
+                        </div>
+                    </div>
+                    <div class="causes__item">
+                        <div class="causes__item-text">
+                            <div class="causes__item-text__header">РАБОТАЕТ КРУГЛОСУТОЧНО</div>
+                            <div class="causes__item-text__main">Собирает заявки даже когда вы спите</div>
+                        </div>
+                        <div class="causes__item-img">
+                            <img src="img/causes/2.svg" alt="" class="causes__item-img_main">
+                        </div>
+                    </div>
+                    <div class="causes__item">
+                        <div class="causes__item-text">
+                            <div class="causes__item-text__header">БЫСТРО ОПОВЕЩАЕТ ВАС</div>
+                            <div class="causes__item-text__main">Заявки приходят через 5 секунд на ваш Email</div>
+                        </div>
+                        <div class="causes__item-img">
+                            <img src="img/causes/3.svg" alt="" class="causes__item-img_main">
+                        </div>
+                    </div>
+                    <div class="causes__item">
+                        <div class="causes__item-text">
+                            <div class="causes__item-text__header">УВЕЛИЧИВАЕТ КОНВЕРСИЮ</div>
+                            <div class="causes__item-text__main">В среднем конверсия увеличивается в 2-2.5 раза</div>
+                        </div>
+                        <div class="causes__item-img">
+                            <img src="img/causes/4.svg" alt="" class="causes__item-img_main">
+                        </div>
+                    </div>                                          
+                </div>
+            </div> 
+
+        </div>
+    </section>
+
+    <section id="request" class="request">
+        <div class="container">
+            <h2 class="title"><span>ПОПРОБУЙТЕ</span> БЕСПЛАТНО</h2>
+            <div class="subtitle subtitle_desktop">Тестовый бесплатный период - 7 дней. Внедрение виджета на сайт<br>займет у вас не более 10 минут рабочего времени.</div>
+            <div class="subtitle subtitle_mobile">Тестовый бесплатный период - 7 дней.<br>Внедрение виджета на сайт займет у вас<br>не более 10 минут рабочего времени.</div>
+            
+            <div class="causes__main">
+            
+                <div class="causes__wrapper">
+                    <div class="causes__item fls">
+                        <div class="causes__item-text order1">
+                            <div class="causes__item-text__header tal">ДОСТУП НА 7 ДНЕЙ</div>
+                            <div class="causes__item-text__main tal">Получайте безлимитное количество заявок</div>
+                        </div>
+                        <div class="causes__item-img order2">
+                            <img src="img/request/1.svg" alt="" class="causes__item-img_main">
+                        </div>
+                    </div>
+ 
+                    <div class="causes__item fls">
+                        <div class="causes__item-text order1">
+                            <div class="causes__item-text__header tal">ПРОСТАЯ ИНТЕГРАЦИЯ</div>
+                            <div class="causes__item-text__main tal">С системами аналитики Яндекс и Google</div>
+                        </div>
+                        <div class="causes__item-img order2">
+                            <img src="img/request/2.svg" alt="" class="causes__item-img_main">
+                        </div>
+                    </div>
+                    
+                    <div class="causes__item fls">
+                        <div class="causes__item-text order1">
+                            <div class="causes__item-text__header tal">БЫСТРОЕ ОПОВЕЩЕНИЕ</div>
+                            <div class="causes__item-text__main tal">Заявки из сайта будут приходить на ваш E-mail</div>
+                        </div>
+                        <div class="causes__item-img order2">
+                            <img src="img/request/3.svg" alt="" class="causes__item-img_main">
+                        </div>
+                    </div>                    
+                                                             
+                </div>
+
+                <form class="request__form" action="#">
+                    <div class="request__form__header">РЕГИСТРАЦИЯ НА САЙТЕ</div>
+                    <div class="request__form__subheader">После регистрации вы попадете в личный кабинет</div>
+
+                    <input class="request__form__input" type="email" required placeholder="Введите E-mail">
+                    <input class="request__form__input" type="text" required placeholder="Введите пароль">
+                    
+                    <button class="request__form__btn">ЗАРЕГИСТРИРОВАТЬСЯ</button>
                 </form>
-                <img src="img/promo/truck.png" alt="Truck" class="promo__img">
-            </div>
-
+            </div>             
+            
         </div>
     </section>
 
-    <section class="causes">
+    <section id="buy" class="buy">
         <div class="container">
-            <h2 class="title">ГРУЗНСК - ЭТО НАДЕЖНОСТЬ<br>И КАЧЕСТВО</h2>
-            <div class="subtitle">Почему люди выбирают <span>нас</span>?</div>
-            <div class="causes__wrapper">
-                <div class="causes__item">
-                    <img src="img/causes/1.png" alt="Calendar" class="causes__img">
-                    <div class="causes__descr">
-                        Приедем точно<br>в срок без<br>опозданий
-                    </div>
+            <h2 class="title"><span>ТАРИФНЫЕ</span> ПЛАНЫ</h2>
+            <div class="subtitle">Выберите тарифный план, наиболее подходящий для вашего<br>бизнеса.</div>
+            
+            <div class="buy__main">
+                <div class="buy__item">
+                    <span class="buy__item__toggle"></span>
+                    <div class="buy__item__header">ТЕСТ ДРАЙВ</div>
+                    <div class="buy__item__cost">Беспл.</div>
+                    <div class="buy__item__time">На 7 дней.</div>
+                    <div class="buy__item__text">Используйте callback виджет 7 дней без ограничений</div>
+                    <button class="buy__item__btn">ПОПРОБОВАТЬ</button>
+                    <div class="buy__item__policy">Перед оплатой вы можете пользоваться сервисом 7 календарных дней бесплатно</div>
                 </div>
-                <div class="causes__item">
-                    <img src="img/causes/2.png" alt="Archive" class="causes__img">
-                    <div class="causes__descr">
-                        Бесплатная<br>погрузка и<br>разгрузка
-                    </div>
+                <div class="buy__item">
+                    <span class="buy__item__toggle buy__item__toggle_true">Хит</span>
+                    <div class="buy__item__header">ВИДЖЕТ НА МЕСЯЦ</div>
+                    <div class="buy__item__cost">990</div>
+                    <div class="buy__item__time">руб./мес.</div>
+                    <div class="buy__item__text">Используйте callback виджет целый месяц без ограничений</div>
+                    <button class="buy__item__btn">ПОПРОБОВАТЬ</button>
+                    <div class="buy__item__policy">Перед оплатой вы можете пользоваться сервисом 7 календарных дней бесплатно</div>
                 </div>
-                <div class="causes__item">
-                    <img src="img/causes/3.png" alt="Sharing" class="causes__img">
-                    <div class="causes__descr">
-                        20 лет опыта.<br>150 надежных<br>сотрудников
-                    </div>
+                <div class="buy__item">
+                    <span class="buy__item__toggle"></span>
+                    <div class="buy__item__header">ВИДЖЕТ НА ГОД</div>
+                    <div class="buy__item__cost">570</div>
+                    <div class="buy__item__time">руб./мес.</div>
+                    <div class="buy__item__text">Используйте callback виджет целый год без ограничений</div>
+                    <button class="buy__item__btn">ПОПРОБОВАТЬ</button>
+                    <div class="buy__item__policy">Перед оплатой вы можете пользоваться сервисом 7 календарных дней бесплатно</div>
                 </div>
-                <div class="causes__item">
-                    <img src="img/causes/4.png" alt="Money" class="causes__img">
-                    <div class="causes__descr">
-                        Даем 45 дней<br>на отсрочку<br>платежа
-                    </div>
-                </div>
-                <div class="causes__item">
-                    <img src="img/causes/5.png" alt="Clock" class="causes__img">
-                    <div class="causes__descr">
-                        Работаем 24/7,<br>Приедем<br>даже ночью
-                    </div>
-                </div>
-            </div>
+            </div>             
+            
         </div>
     </section>
 
-    <section id="calculation" class="calculation">
-        <div class="container container__calculation">
-            <h2 class="title">расчитайте стоимость перевозки</h2>
-            <div class="subtitle subtitle__calculation">Заполните все формы и наш менеджер <span>бесплатно</span><br>расчитает стоимость перевозки</div>
-            <div class="calculator calculator__calculation">
-                <form id="calculator__form" action="#" class="calculator__form">
-                    <div class="calculator__from-label">Откуда</div>
-                    <div class="calculator__where-label">Куда</div>
-                    <input name="fromCity" placeholder="укажите город" class="calculator__form__city" type="text">
-                    <input name="fromCityMobile" placeholder="Город" class="calculator__form-mobile__city" type="text">
-                    <input name="fromStreet" placeholder="Название улицы" type="text">
-                    <input name="fromHouse" placeholder="№ дома, подъезд" type="text">
-                    <input name="fromStreetMobile" placeholder="Улица, № дома" type="text" class="calculator__form-mobile__street">
-                    <input name="whereCity" placeholder="укажите город" class="calculator__form__city" type="text">
-                    <input name="whereCityMobile" placeholder="Город" class="calculator__form-mobile__city" type="text">
-                    <input name="whereStreet" placeholder="Название улицы" type="text">
-                    <input name="whereHouse" placeholder="№ дома, подъезд" type="text">
-                    <input name="whereStreetMobile" placeholder="Улица, № дома" type="text" class="calculator__form-mobile__street">
-                    <div class="calculator__wrapper">
-                        <div class="calculator__header">Заполните все поля и менеджер <span>бесплатно</span> расчитает стоимость</div>
-                        <input name="phone" placeholder="+7 (___)-___-____" class="calculator__phone">
-                        <button type="submit" class="calculator__button">Получить расчет</button>
-                        <div class="calculator__policy">Нажимая кнопку вы соглашаетесь<br>с политикой конфиденциальности.</div>
-                    </div>
-                </form>
-                <div id="#calculation-carousel" class="calculator__carousel">
-                    <div class="calculator__slider">
-                        <div>
-                            <div class="calculator__slider-item">
-                                <div class="calculator__slider-name">ford explorer</div>
-                                <div class="calculator__slider-carry">Грузоподъемность <span>1450 КГ</span></div>
-                                <img src="img/slider/1.png" alt="Ford Explorer" class="calculator__slider-img">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="calculator__slider-item">
-                                <div class="calculator__slider-name">ford explorer</div>
-                                <div class="calculator__slider-carry">Грузоподъемность <span>1450 КГ</span></div>
-                                <img src="img/slider/1.png" alt="Ford Explorer" class="calculator__slider-img">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="calculator__slider-item">
-                                <div class="calculator__slider-name">ford explorer</div>
-                                <div class="calculator__slider-carry">Грузоподъемность <span>1450 КГ</span></div>
-                                <img src="img/slider/1.png" alt="Ford Explorer" class="calculator__slider-img">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="calculator__slider-item">
-                                <div class="calculator__slider-name">ford explorer</div>
-                                <div class="calculator__slider-carry">Грузоподъемность <span>1450 КГ</span></div>
-                                <img src="img/slider/1.png" alt="Ford Explorer" class="calculator__slider-img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="license" class="license">
+
+    <footer class="footer">
         <div class="container">
-            <h2 class="title">Лицензии</h2>
-            <div class="subtitle">И сертификаты, как <span>гарантия</span> качества нашей работы.</div>
-            <div class="license__wrapper">
-                <img src="img/license/license1.jpg" alt="Document" class="license__item">
-                <img src="img/license/license2.jpg" alt="Document" class="license__item">
-                <img src="img/license/license3.jpg" alt="Document" class="license__item">
-            </div>
+            <h2 class="title title_desktop"><span>ОСТАЛИСЬ</span> ВОПРОСЫ?</h2>
+            <h2 class="title title_mobile"><span>ОСТАЛИСЬ</span> ВОПРОСЫ?</h2>
+            <div class="subtitle subtitle_desktop">Свяжитесь с нами любым удобным для вас способом, мы с радотью<br>ответим на любой ваш вопрос.</div>
+            <div class="subtitle subtitle_mobile">Свяжитесь с нами любым удобным для вас способом, мы с радотью<br>ответим на любой ваш вопрос.</div>
 
-            <div class="license__wrapper-carousel">
-                <div class="license__wrapper-item">
-                    <img src="img/license/license1.jpg" alt="Document" class="license__img">
-                </div>
-                <div class="license__wrapper-item">
-                    <img src="img/license/license2.jpg" alt="Document" class="license__img">
-                </div>
-                <div class="license__wrapper-item">
-                    <img src="img/license/license3.jpg" alt="Document" class="license__img">
-                </div>
-            </div>
-
-            <button class="prev"><img src="icons/prev.svg" alt="Prev"></button>
-            <button class="next"><img src="icons/next.svg" alt="Next"></button>
-        </div>
-    </section>
-
-    <section id="questions" class="questions">
-        <div class="container container__questions">
-            <h2 class="title">Остались вопросы?</h2>
-            <div class="subtitle">Заполните форму и наш менеджер <span>бесплатно</span> проконсультирует<br>вас по любому вопросу</div>
-            <div class="questions__wrapper">
-                <img src="img/questions/man.png" alt="Man" class="questions__img">
-                <div class="questions-form">
-                    <div class="questions-form__title">Заполните форму</div>
-                    <div class="questions-form__subtitle">И менеджер свяжется с вами в ближайшее время</div>
-                    <form id="questions-form" action="#" class="questions-form__form">
-                        <input name="name" placeholder="Имя" type="text">
-                        <input name="phone" placeholder="+7 (___)-___-____">
-                        <button class="questions-form__btn">Заказать звонок</button>
-                    </form>
-                    <div class="questions-form__descr">Или свяжитесь с нами через любой удобный мессенджер</div>
-                    <div class="questions-form__social">
-                        <a href="whatsapp://send?text=Hello world!" target="_blank" rel="noopener noreferrer" class="questions-form__whatsapp"><img src="icons/social/whatsapp.svg" alt="whatsapp"></a>
-                        <a href="viber://chats" target="_blank" rel="noopener noreferrer" class="questions-form__viber"><img src="icons/social/viber.svg" alt="viber"></a>
-                        <a href="tg://resolve?domain=testName" target="_blank" rel="noopener noreferrer" class="questions-form__telegram"><img src="icons/social/telegram.svg" alt="telegram"></a>
-                        <a href="https://www.vk.com" target="_blank" rel="noopener noreferrer" class="questions-form__vkontakte"><img src="icons/social/vk.svg" alt="vkontakte"></a>
+            <div class="footer__main">
+                <div class="footer__more">
+                    <div class="footer__contacts">
+                        Телефон: +7 (800) 000-00-00<br>
+                        Эл. почта: admin@mail.ru<br>
+                        WhatsApp: +7 (800) 000-00-00<br>
+                        Вконтакте: vk.com/admin
                     </div>
+                    <div class="footer__contacts-back">Или закажите обр. звонок</div>
+                    <button id="modal-call-btn" class="footer__btn header__btn">ЗАКАЗАТЬ ЗВОНОК</button>
+                </div>
+
+                <div class="footer__links">
+                    <div class="footer__info">
+                        О нас: Команда Liteback состоит из опытных<br>
+                        разработчиков, имеющих за плечами множество<br>
+                        реализованных проектов в сфере IT-технологий.
+                    </div>
+                    <div class="footer__partner">
+                        Партнерам: Подключайтесь к нашей партнерской<br>
+                        программе и зарабатывайте. <a href="#" class="footer__partner_more">Подробнее</a>
+                    </div>
+
+                    <img src="img/footer.png" alt="" class="footer__img">
                 </div>
             </div>
-        </div>
-    </section>
-
-    <footer id="footer" class="footer">
-        <div class="container">
-            <div class="footer__title">Контакты</div>
-            <div class="footer__phone">Телефон для связи: +7 (904) 827-96-56</div>
-            <div class="footer__address">Адрес: Россия, г. Омск, ул. Рокоссовского, д. 6, офис 170</div>
-            <div class="footer__mail">Mail: shpakovich_nik@mail.ru</div>
-            <div class="footer__whatsapp">WhatsApp: +7 (996) 686-45-27</div>
         </div>
     </footer>
 
+    <div class="modal__overlay">
+        <div class="modal__close">
+            <span></span>
+            <span></span>
+        </div>
 
-    <div class="overlay">
-        <div class="modal" id="thanks">
-            <div class="modal__close">&times;</div>
-            <div class="modal__subtitle">Спасибо за вашу заявку!</div>
+        <div id="modal-call" class="modal__content">
+            <div class="modal__title">Заказать звонок</div>
+
+            <form action="#" class="modal__form" id="call-form">
+                <input name="name" type="text" class="modal__input" placeholder="Имя" required>
+                <input name="phone" type="text" class="modal__input" placeholder="+7(___)-___-____" required>
+
+                <button class="modal__btn">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+            </form>
         </div>
     </div>
 
+
+    <div class="lbw">
+
+        <div class="lbw-wrapper">
+
+            <div class="lbw-head">
+                <div class="lbw-head__photo">
+                    <img src="img/personal/form-photo/1.png" alt="" class="lbw-head__photo-img">
+                </div>
+                <div class="lbw-head__info">
+                    <div class="lbw-head__name">Менеджер сайта</div>
+                    <div class="lbw-head__subname">Я отвечу на ваши вопросы</div>
+                </div>
+                <div id="lbw-close" class="lbw-close"><span class="lbw-close__btn"></span></div>
+            </div>
+
+            <div id="lbw-body" class="lbw-body">
+
+                <div class="lbw-body__chat-wrapper">
+                    <div class="lbw-body__chat">
+                        <div id="lbw-bot1" id="" class="lbw-body__chat-item part-oth">
+                            Добрый день. Я могу помочь Вам чем-нибудь помочь?
+                        </div>
+    
+                        <div id="lbw-user1" class="lbw-body__chat-item part-mi"></div>
+
+                        <div id="lbw-bot2" class="lbw-body__chat-item part-oth">
+                            Давайте я вам детально отвечу по телефону. Оставьте свои контактные данные и я отвечу на ваш вопрос
+                        </div>
+    
+                        <form action="#" id="qu-form" class="qu-form">
+                            <div class="qu-form__title">Оставьте свои контактные данные, и мы ответим на ваш вопрос.</div>
+                            <input class="qu-form__input" name="name" type="text" placeholder="Имя" required>
+                            <input class="qu-form__input" name="phone" type="text" placeholder="+7(___)___-____" required>
+    
+                            <button id="qu-form-btn" class="qu-form__btn">Отправить</button>
+                        </form>
+
+                        <div id="lbw-footer" class="lbw-body__chat-item part-oth">
+                            Спасибо! Мы вам перезвоним!
+                        </div>
+    
+                    </div>
+                </div>
+
+                <div class="lbw-body__type">
+                    <div id="lbw-asked-form" class="lbw-body__input-form">
+                        <input id="lbw-asked-input" type="text" class="lbw-body__input" placeholder="Введите ваше сообщение">
+                        <button id="lbw-asked-btn" class="lbw-body__input-form__btn">
+                            <span class="arrow-top"></span>
+                            <span class="arrow-bottom"></span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="lbw-footer-link" class="lbw-footer-wrapper lbw-footer-link-active">
+                <div class="lbw-footer">
+                    <a href="http://liteback.ru" target="_blank" rel="noopener noreferrer" class="lbw-footer__link">Работает на технологии "Liteback"</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
     <script src="js/jquery.min.js"></script>
-    <script src="js/tiny-slider.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/widget.js"></script>
 </body>
 </html>
