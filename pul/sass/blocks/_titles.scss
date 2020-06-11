@@ -1,0 +1,31 @@
+.title {
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: center;
+    color: #0d0d0d;
+    text-transform: uppercase;
+    &_left {
+        font-size: 36px;
+        line-height: 45px;
+        color: #fff;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .title {
+        &_left {
+            font-size: 30px;
+            line-height: 36px;
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+}

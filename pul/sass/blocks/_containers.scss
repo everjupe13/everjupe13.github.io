@@ -1,0 +1,32 @@
+.container {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 95px;
+}
+
+@media only screen and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+        padding: 0 40px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
