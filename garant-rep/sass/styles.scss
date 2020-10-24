@@ -1,0 +1,73 @@
+@import './base/vars';
+
+
+*, *::after, *::before {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+* {
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+.title_main {
+
+    margin: 0;
+
+    font-weight: 800;
+    font-size: 46px;
+    text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    color: #FFFFFF;
+    line-height: 130%;
+
+}
+
+.title_king {
+
+    margin: 0;
+    padding: 0;
+
+    font-weight: bold;
+    font-size: 42px;
+    text-align: center;
+    color: #443B38;
+    line-height: 130%;
+
+}
+
+.subtitle {
+
+    margin: 0;
+    padding: 0;
+
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    color: #8D9093;
+    line-height: 130%;
+}
+
+
+
+@import './blocks/containers';
+@import './blocks/fonts';
+@import './base/btn';
+@import './blocks/header';
+@import './blocks/hero';
+@import './blocks/about';
+@import './blocks/slider';
+@import './blocks/cost';
+@import './blocks/portfolio';
+@import './blocks/sale';
+@import './blocks/reaper';
+@import './blocks/answers';
+@import './blocks/footer';
+@import './blocks/modal';
