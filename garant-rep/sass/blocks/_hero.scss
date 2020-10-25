@@ -1,5 +1,7 @@
 .hero {
 
+    position: relative;
+
     padding: 255px 0 120px;
 
     background: #363636;
@@ -25,12 +27,66 @@
 
     &__btn {
 
+        position: relative;
+
         display: block;
 
         width: 427px;
         height: 75px;
-        margin-top: 75px;
         border-radius: 10px;
+
+        overflow: hidden;
+
+        &_wrapper {
+
+            position: relative;
+
+            display: inline-block;
+            
+            margin-top: 75px;
+
+            &:after {
+
+                content: '';
+
+                position: absolute;
+                top: 45%;
+                left: calc(100% - 55px);
+                
+                display: block;
+                width: 172px;
+                height: 172px;
+
+                background: url('../img/hero/book.png') center center/cover no-repeat;
+
+                transform: translateY(calc(-50% + 2px));
+
+                filter: drop-shadow(0px 10px 40px rgba(0, 0, 0, 0.15));
+
+                animation: pbounce 3s linear infinite;
+
+            }
+
+        }
+        
+        &:before {
+
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            height: 110%;
+            width: 1.5em;
+
+            background-color: rgba(255, 255, 255, 0.6 );
+
+            transform: translateX(-4em) skewX(-45deg);
+
+            animation: glowline-hero 3s linear infinite;
+
+        }
 
     }
 
@@ -47,7 +103,45 @@
 
     }
 
+    &__scroll {
+
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 71px;
+        height: 71px;
+        border-radius: 100%;
+
+        background: #ffffff;
+        
+        transform: translate(-50%, 50%);
+
+        img {
+
+            display: block;
+
+        }
+
+        &_down {
+
+            position: absolute;
+            bottom: 4px;
+
+        }
+
+    }
+
 }
+
+
+
+
 
 .hero-adv {
 
@@ -56,6 +150,7 @@
     align-items: flex-start;
 
     margin-top: 50px;
+    padding-right: 375px;
 
     &__item {
 
@@ -114,6 +209,34 @@
         font-size: 18px;
         line-height: 150%;
         color: #D4D9DD;
+
+    }
+
+}
+
+@keyframes pbounce {
+
+    0% {
+
+        transform: translateY(calc(-50% + 2px));
+
+    }
+
+    25% {
+
+        transform: translateY(calc(-50% - 2px));
+
+    }
+
+    75% {
+
+        transform: translateY(calc(-50% + 6px));
+
+    }
+
+    100% {
+
+        transform: translateY(calc(-50% + 2px));
 
     }
 

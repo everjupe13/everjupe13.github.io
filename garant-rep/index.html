@@ -83,11 +83,19 @@
                         </div>
                     </div>
 
-                    <button class="btn hero__btn" onclick="modalApp.openModal('Получите расчет стоимости', 'Получить расчет стоимости')">Получить расчет стоимости</button>
+                    <div class="hero__btn_wrapper">
+                        <button class="btn hero__btn" onclick="modalApp.openModal('Получите расчет стоимости', 'Получить расчет стоимости')">Получить расчет стоимости</button>
+                    </div>
 
                     <div class="hero__policy">* - Мастер бесплатно просчитает стоимость ремонта вашей квартиры и запишет вас на замер уже сегодня</div>
                 </div>
 
+            </div>
+
+            
+            <div class="hero__scroll">
+                <img src="./img/hero/scroll.svg" alt="" class="hero__scroll_up">
+                <img src="./img/hero/arrow-down.svg" alt="" class="hero__scroll_down">
             </div>
         </section>
         <!-- !Hero section -->
@@ -690,7 +698,7 @@
 
                 localAt = parseInt(this.option, 10) * 2500 * houseCoef * closetCoef * floorCoef;
                 localAt = Math.round(localAt / 10);
-                localAt = localAt * 10;
+                localAt = (localAt * 10 + '').replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
                 return localAt;
 
             },
@@ -735,10 +743,10 @@
                         break;
                 }
 
-                localAt = parseInt(this.option, 10) * 3500 * houseCoef * closetCoef * floorCoef;
-                localAt = Math.round(localAt / 10);
-                localAt = localAt * 10;
-                return localAt;
+                localTo = parseInt(this.option, 10) * 3500 * houseCoef * closetCoef * floorCoef;
+                localTo = Math.round(localTo / 10);
+                localTo = (localTo * 10 + '').replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+                return localTo;
 
             }
 

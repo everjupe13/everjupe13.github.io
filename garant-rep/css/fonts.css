@@ -67,6 +67,17 @@
 }
 
 @font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-MediumItalic.eot');
+    src: url('../fonts/Montserrat-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-MediumItalic.woff2') format('woff2'),
+        url('../fonts/Montserrat-MediumItalic.woff') format('woff'),
+        url('../fonts/Montserrat-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
 	font-family: 'Montserrat';
 	src: url('../fonts/Montserrat-ExtraBold.eot');
 	src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'),

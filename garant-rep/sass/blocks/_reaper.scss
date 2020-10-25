@@ -4,12 +4,19 @@
 
     background: url('../img/reaper/bg.png') center center/cover no-repeat;
 
+    overflow: none;
+
     &__img {
 
         position: absolute;
 
         top: -110px;
-        left: 0;
+        left: -50px;
+
+        max-width: 728px;
+        max-height: 728px;
+
+        filter: drop-shadow(0px 10px 40px rgba(0, 0, 0, 0.15));
         
     }
 
@@ -78,7 +85,7 @@
         display: block;
 
         width: 100%;
-        padding: 15px 30px;
+        padding: 15px 28%;
         margin-top: 30px;
         border: 1px solid #D4D9DD;
         border-radius: 5px;
@@ -90,10 +97,11 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 130%;
-        text-align: center;
         text-transform: uppercase;
         color: #8D9093;
 
+        transition: all .3s;
+        
         outline: none !important;
 
         &::placeholder {
@@ -102,12 +110,41 @@
 
         }
 
+        &:focus {
+
+            padding: 15px 30px
+
+        }
+
     }
 
     &__btn {
 
+        position: relative;
+
         width: 100%;
         margin-top: 21px;
+
+        overflow: hidden;
+
+        &:before {
+
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            height: 110%;
+            width: 1.5em;
+
+            background-color: rgba(255, 255, 255, 0.6 );
+
+            transform: translateX(-4em) skewX(-45deg);
+
+            animation: glowline 3s linear infinite;
+
+        }
 
     }
 
