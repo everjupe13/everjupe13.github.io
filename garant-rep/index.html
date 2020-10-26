@@ -6,9 +6,18 @@
     <title>Garant</title>
 
     <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/normalize.min.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/styles.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <!-- Header -->
@@ -25,21 +34,21 @@
                 <!-- Header nav -->
                 <nav class="header-nav">
                     <ul class="header-nav__list">
-                        <ul class="header-nav__item">
+                        <li class="header-nav__item">
                             <a href="#slider" class="header-nav__link">Наши работы</a>
-                        </ul>
-                        <ul class="header-nav__item">
+                        </li>
+                        <li class="header-nav__item">
                             <a href="#cost" class="header-nav__link">Цены</a>
-                        </ul>
-                        <ul class="header-nav__item">
+                        </li>
+                        <li class="header-nav__item">
                             <a href="#cost" class="header-nav__link">Замер</a>
-                        </ul>
-                        <ul class="header-nav__item">
+                        </li>
+                        <li class="header-nav__item">
                             <a href="#footer" class="header-nav__link">Контакты</a>
-                        </ul>
-                        <ul class="header-nav__item">
-                            <a href="#cost" class="header-nav__link">Типы</a>
-                        </ul>
+                        </li>
+                        <li class="header-nav__item">
+                            <a href="#" class="header-nav__link">Типы</a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- !Header nav -->
@@ -108,7 +117,7 @@
                 <h2 class="title_king">У наших клиентов нет трудностей</h2>
 
                 <div class="about__body">
-                    <div class="about__item">
+                    <div data-wow-offset="50" class="wow animate__animated animate__fadeInUp about__item">
                         <div class="frame-img__img">
                             <div class="frame-img__img_back"></div>
                             <img src="./img/about/1.svg" alt="1" class="frame-img__img_img">
@@ -118,7 +127,7 @@
                             О предстоящем ремонте в Вашей квартире и о сроках ремонта
                         </div>
                     </div>
-                    <div class="about__item">
+                    <div data-wow-offset="50" class="wow animate__animated animate__fadeInUp about__item">
                         <div class="frame-img__img">
                             <div class="frame-img__img_back"></div>
                             <img src="./img/about/2.svg" alt="2" class="frame-img__img_img">
@@ -128,7 +137,7 @@
                             Материалов по соотношению цена-качество
                         </div>
                     </div>
-                    <div class="about__item">
+                    <div data-wow-offset="50" class="wow animate__animated animate__fadeInUp about__item">
                         <div class="frame-img__img">
                             <div class="frame-img__img_back"></div>
                             <img src="./img/about/3.svg" alt="3" class="frame-img__img_img">
@@ -138,7 +147,7 @@
                             Самостоятельно, а так же доставим его прямо в картиру
                         </div>
                     </div>
-                    <div class="about__item">
+                    <div data-wow-offset="50" class="wow animate__animated animate__fadeInUp about__item">
                         <div class="frame-img__img">
                             <div class="frame-img__img_back"></div>
                             <img src="./img/about/4.svg" alt="" class="frame-img__img_img">
@@ -161,7 +170,7 @@
                 <div class="title_king">С 2009 года сдали более 200 квартир с ремонтом различной сложности</div>
 
                 <div class="slider__wrapper">
-                    new slider.init()
+                    
                 </div>
 
             </div>
@@ -174,7 +183,7 @@
 
                 <h2 class="title_king">Рассчитайте точную стоимость и закрепите за собой скидку 5% на ремонт квартиры</h2>
 
-                <div id="calculation" class="cost__body">
+                <div id="calculation" class="wow animate__animated animate__fadeInRight cost__body">
 
                     <div class="cost-form">
 
@@ -356,7 +365,7 @@
 
                     <div class="portfolio__main">
 
-                        <div class="card">
+                        <div data-wow-offset="20" class="wow animate__animated animate__fadeIn card">
                             <div class="frame-img__img card__img">
                                 <span class="frame-img__img_back card__img_back"></span>
                                 <img src="./img/portfolio/card1.svg" alt="1" class="frame-img__img_img card__img_img">
@@ -368,7 +377,7 @@
                             </div>
                         </div>
 
-                        <div class="card">
+                        <div data-wow-offset="20" class="wow animate__animated animate__fadeIn card">
                             <div class="frame-img__img card__img">
                                 <span class="frame-img__img_back card__img_back"></span>
                                 <img src="./img/portfolio/card2.svg" alt="2" class="frame-img__img_img card__img_img">
@@ -380,7 +389,7 @@
                             </div>
                         </div>
 
-                        <div class="documents">
+                        <div data-wow-offset="20" class="wow animate__animated animate__fadeIn documents">
                             <div class="documents__item">
                                 <img src="./img/portfolio/doc1.jpg" alt="1" class="documents__img">
                                 <div class="documents__title">Сертификаты</div>
@@ -485,7 +494,7 @@
 
                 <div class="reaper__body">
 
-                <img src="./img/reaper/book.png" alt="book" class="reaper__img">
+                <img src="./img/reaper/book.png" alt="book" data-wow-offset="20" class="wow animate__animated animate__fadeIn reaper__img">
 
                     <div class="reaper__info">
                         <div class="info">
@@ -498,7 +507,7 @@
 
                     <div class="reaper__form">
 
-                        <div class="reaper-form">
+                        <div data-wow-offset="20" class="wow animate__animated animate__fadeIn reaper-form">
 
                             <div class="reaper-form__title">После заявки с Вами свяжется:</div>
 
@@ -628,11 +637,14 @@
     <script src="./js/vue-the-mask.min.js"></script>
     <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/axios.min.js"></script>
+    <script src="./js/wow.min.js"></script>
 
+    <script>new WOW().init();</script>
 
     <script src="./js/sender.js"></script>
     <script type="text/javascript" src="./js/script.js"></script>
 
+    
 
     <script>
 

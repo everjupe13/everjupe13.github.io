@@ -28,6 +28,12 @@
     color: #FFFFFF;
     line-height: 130%;
 
+    @include desktop {
+
+        font-size: 36px;
+
+    }
+
 }
 
 .title_king {
@@ -41,6 +47,12 @@
     color: #443B38;
     line-height: 130%;
 
+    @include desktop {
+
+        font-size: 28px;
+
+    }
+
 }
 
 .subtitle {
@@ -53,6 +65,13 @@
     text-align: center;
     color: #8D9093;
     line-height: 130%;
+
+    @include desktop {
+
+        font-size: 22px;
+
+    }
+
 }
 
 

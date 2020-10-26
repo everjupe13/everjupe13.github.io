@@ -2,7 +2,15 @@
 
     padding: 98px 0 80px;
 
+    background: url('../img/portfolio/bg.png') center center/cover no-repeat;
+
     overflow: hidden;
+
+    @include desktop {
+
+        padding: 60px 0 50px;
+
+    }
 
     &__grid {
 
@@ -11,6 +19,15 @@
         grid-column-gap: 30px;
 
         margin-top: 65px;
+
+        @include desktop {
+
+            grid-template-columns: 550px 1fr;
+            grid-column-gap: 25px;
+            
+            margin-top: 45px;
+
+        }
 
     }
 
@@ -35,6 +52,13 @@
 
         background: rgba(255, 199, 0, 0.2);
 
+        @include desktop {
+
+            width: 280px;
+            height: 280px;
+
+        }
+
         &:after {
 
             content: '';
@@ -55,6 +79,13 @@
 
             transform: translate(-50%, -50%);
 
+            @include desktop {
+
+                width: 240px;
+                height: 240px;
+
+            }
+
         }
 
         &_title {
@@ -69,6 +100,12 @@
             text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 
             opacity: 0.9;
+
+            @include desktop {
+
+                font-size: 40px;
+
+            }
 
         }
 
@@ -89,6 +126,15 @@
 
             opacity: 0.9;
 
+            @include desktop {
+
+                margin-top: 20px;
+                padding: 0 40px;
+
+                font-size: 12px;
+
+            }
+
         }
 
     }
@@ -99,6 +145,14 @@
         right: -120px;
         bottom: -80px;
         z-index: 4;
+
+        @include desktop {
+
+            right: -130px;
+
+            max-width: 450px;
+
+        }
 
     }
 
@@ -112,6 +166,12 @@
     align-items: center;
 
     margin-bottom: 35px;
+
+    @include desktop {
+
+        margin-bottom: 25px;
+
+    }
 
     &:last-child {
 
@@ -141,12 +201,26 @@
         width: 100px;
         height: 100px;
 
+        @include desktop {
+
+            width: 90px;
+            height: 90px;
+
+        }
+
         &_back {
 
             &:after {
 
                 width: 80px;
                 height: 80px;
+
+                @include desktop {
+
+                    width: 70px;
+                    height: 70px;
+
+                }
 
             }
 
@@ -167,6 +241,12 @@
         color: #443B38;
         line-height: 130%;
 
+        @include desktop {
+
+            font-size: 16px;
+
+        }
+
     }
 
     &__text {
@@ -177,6 +257,12 @@
         font-size: 20px;
         color: #8D9093;
         line-height: 130%;
+
+        @include desktop {
+
+            font-size: 14px;
+
+        }
 
     }
 
@@ -191,9 +277,24 @@
     width: min-content;
     margin-top: 70px;
 
+    @include desktop {
+
+        grid-template-columns: repeat(3, 150px);
+        grid-column-gap: 35px;
+        
+        margin-top: 30px;
+
+    }
+
     &__img {
 
         filter: drop-shadow(0px 5px 30px rgba(0, 0, 0, 0.12));
+
+        @include desktop {
+
+            max-width: 150px;
+
+        }
 
     }
 
@@ -206,6 +307,14 @@
         text-align: center;
         color: #8D9093;
         line-height: 130%;
+
+        @include desktop {
+
+            margin-top: 15px;
+
+            font-size: 16px;
+            
+        }
 
     }
 

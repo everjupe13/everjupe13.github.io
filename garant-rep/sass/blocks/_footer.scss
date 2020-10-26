@@ -4,6 +4,12 @@
 
     padding-top: 81px;
 
+    @include desktop {
+
+        padding-top: 40px;
+
+    }
+
     &__map {
 
         position: absolute;
@@ -28,6 +34,13 @@
         background: #FFFFFF;
         box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
 
+        @include desktop {
+
+            padding: 30px;
+            padding-left: 40px;
+
+        }
+
     }
 
     &__subtitle {
@@ -49,6 +62,15 @@
         color: #443B38;
         line-height: 1;
 
+        @include desktop {
+
+            margin-top: 5px;
+            margin-bottom: 25px;
+            
+            font-size: 28px;
+
+        }
+
     }
 
     &__label {
@@ -59,6 +81,12 @@
         font-size: 14px;
         color: #8D9093;
         line-height: 130%;
+
+        @include desktop {
+
+            font-size: 13px;
+
+        }
 
     }
 
@@ -71,12 +99,27 @@
         line-height: 130%;
         color: #443B38;
 
+        @include desktop {
+
+            margin-top: 8px;
+            font-size: 18px;
+
+        }
+
     }
 
     &__btn {
 
         width: 100%;
         margin-top: 60px;
+        
+        @include desktop {
+
+            margin-top: 45px;
+
+            font-size: 17px;
+
+        }
 
     }
 

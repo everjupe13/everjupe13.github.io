@@ -4,6 +4,12 @@
 
     background: rgba(196, 196, 196, 0.07);
 
+    @include desktop {
+
+        padding: 35px 0 45px;
+
+    }
+
     &__wrapper {
 
         margin-top: 80px;

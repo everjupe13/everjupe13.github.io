@@ -13,19 +13,17 @@
     
     // background: transparent;
 
+    @include desktop {
+
+        padding: 15px 0;
+
+    }
+
     .container {
 
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        width: 1520px;
-
-        @include desktop-promo {
-
-            width: 1200px;
-
-        }
 
     }
 
@@ -39,6 +37,12 @@
             &__list {
 
                 padding-left: 45px;
+
+                @include desktop {
+
+                    padding-left: 25px;
+                    
+                }
 
             }
 
@@ -59,8 +63,31 @@
 
         font-size: 16px;
 
+        @include desktop {
+
+            margin-left: 10px;
+            padding: 10px 15px;
+
+            font-size: 14px;
+
+        }
+
     }
     
+}
+
+.logo {
+
+    img{
+
+        @include desktop {
+
+            max-width: 150px;
+
+        }
+
+    }
+
 }
 
 .header-nav {
@@ -78,6 +105,14 @@
     &__item {
 
         padding: 0 17px;
+
+        list-style-type: none;
+
+        @include desktop {
+
+            padding: 0 10px;
+            
+        }
 
         &:nth-child(1) {
 
@@ -103,6 +138,12 @@
         color: #FFFFFF;
         line-height: 130%;
 
+        @include desktop {
+
+            font-size: 12px;
+
+        }
+
         &:hover {
 
             border-bottom: 1px solid #fff;
@@ -126,6 +167,12 @@
         text-decoration: none;
         color: #fff;
         line-height: 130%;
+
+        @include desktop {
+
+            font-size: 20px;
+
+        }
 
         &:hover {
 

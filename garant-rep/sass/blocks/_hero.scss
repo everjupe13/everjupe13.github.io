@@ -7,21 +7,21 @@
     background: #363636;
     background: url('../img/hero/bg.jpg') center center/cover no-repeat;
 
-    .container {
+    @include desktop {
 
-        width: 1520px;
-
-        @include desktop-promo {
-
-            width: 1200px;
-
-        }
+        padding: 160px 0 80px;
 
     }
 
     &__body {
 
         padding-right: 500px;
+
+        @include desktop {
+
+            padding-right: 200px;
+
+        }
 
     }
 
@@ -37,6 +37,16 @@
 
         overflow: hidden;
 
+        @include desktop {
+
+            width: 380px;
+            height: 75px;
+            padding: 5px 20px;
+
+            font-size: 17px;
+
+        }
+
         &_wrapper {
 
             position: relative;
@@ -44,6 +54,12 @@
             display: inline-block;
             
             margin-top: 75px;
+
+            @include desktop {
+
+                margin-top: 35px;
+
+            }
 
             &:after {
 
@@ -101,6 +117,15 @@
         color: #D4D9DD;
         line-height: 150%;
 
+        @include desktop {
+
+            margin-top: 20px;
+            padding-right: 400px;
+
+            font-size: 11px;
+
+        }
+
     }
 
     &__scroll {
@@ -152,6 +177,18 @@
     margin-top: 50px;
     padding-right: 375px;
 
+    @include desktop-promo {
+
+        padding-right: 50px;
+
+    }
+
+    @include desktop {
+
+        margin-top: 30px;
+
+    }
+
     &__item {
 
         position: relative;
@@ -159,6 +196,12 @@
         width: 50%;
         padding: 5px 30px 5px 63px;
         border-right: 1px solid rgba(255, 255, 255, 0.3);
+
+        @include desktop {
+
+            padding: 5px 30px 5px 45px;
+
+        }
 
         &:after {
 
@@ -174,6 +217,13 @@
             height: 40px;
 
             background: url('../img/hero/1.svg') center center/cover no-repeat;
+
+            @include desktop {
+
+                width: 30px;
+                height: 30px;
+
+            }
 
         }
 
@@ -200,6 +250,12 @@
         color: #FFC700;
         line-height: 150%;
 
+        @include desktop {
+
+            font-size: 16px;
+
+        }
+
     }
 
     &__text {
@@ -209,6 +265,12 @@
         font-size: 18px;
         line-height: 150%;
         color: #D4D9DD;
+
+        @include desktop {
+
+            font-size: 14px;
+
+        }
 
     }
 

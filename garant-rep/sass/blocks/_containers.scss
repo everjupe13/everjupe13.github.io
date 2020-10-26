@@ -1,3 +1,37 @@
+.header .container, .hero .container {
+
+    width: 1520px;
+
+    @include desktop-promo {
+
+        width: 1200px;
+
+    }
+
+    @include desktop {
+
+        width: 960px;
+
+    }
+    @include laptop {
+
+        width: 720px;
+
+    }
+    @include tablet {
+
+        width: 540px;
+
+    }
+    @include phone {
+
+        width: 100%;
+        padding: 0 15px;
+
+    }
+
+}
+
 .container {
 
     position: relative;

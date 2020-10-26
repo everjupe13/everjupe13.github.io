@@ -2,6 +2,12 @@
 
     padding: 125px 0 105px;
 
+    @include desktop {
+
+        padding: 60px 0 45px;
+
+    }
+
     &__body {
 
         display: grid;
@@ -9,6 +15,13 @@
         grid-column-gap: 45px;
 
         margin-top: 70px;
+
+        @include desktop { 
+
+            margin-top: 35px;
+            grid-column-gap: 25px;
+
+        }
         
     }
 
@@ -28,6 +41,14 @@
         color: #443B38;
         line-height: 130%;
 
+        @include desktop {
+
+            margin-top: 20px;
+
+            font-size: 17px;
+
+        }
+
     }
 
     &__text {
@@ -39,6 +60,14 @@
         line-height: 130%;
         text-align: center;
         color: #8D9093;
+
+        @include desktop {
+
+            padding: 0 10px;
+            
+            font-size: 14px;
+
+        }
 
     }
 
@@ -56,6 +85,13 @@
 
         width: 115px;
         height: 115px;
+
+        @include desktop {
+
+            width: 100px;
+            height: 100px;
+
+        }
 
         &_img {
 
@@ -98,6 +134,13 @@
                 background: radial-gradient(112.87% 112.87% at 50% 0%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%), #FFC700;
                 box-shadow: 0px 5px 30px rgba(255, 199, 0, 0.4);
                 transform: translate(-50%, -50%);
+
+                @include desktop {
+
+                    width: 80px;
+                    height: 80px;
+
+                }
 
             }
 
