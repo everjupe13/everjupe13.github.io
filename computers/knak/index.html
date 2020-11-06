@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Please, check it out! &#127920;</h1>
+
+            <form class="form" action="php/handler.php" method="POST">
+                <h3 class="form__title">Start record! &#127916;</h3>
+                <div class="row">
+                    <div class="two columns">
+                        <label for="first_inp" class="form__label">First Name</label>
+                    </div>
+                    <div class="ten columns">
+                        <input name="name" type="text" class="form__input" id="first_inp" placeholder="VasyaPupkin" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="two columns">
+                        <label for="email_inp" class="form__label">Email</label>
+                    </div>
+                    <div class="ten columns">
+                        <input name="email" type="text" class="form__input" id="email_inp" placeholder="VasyaPupkin@example.tu" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="two columns">
+                        <label for="pass_inp" class="form__label">Password</label>
+                    </div>
+                    <div class="ten columns">
+                        <input name="pass" type="password" class="form__input" id="pass_inp" required>
+                    </div>
+                </div>
+
+                <h5 class="form__subtitle">Choose your allias:</h5>
+                <div class="row choice">
+                    <div class="three columns">
+                        <div class="form__wrapper_check">
+                            <input name="check1" type="checkbox" id="check1_inp" required>
+                            <label class="form__label_check" for="check1_inp">Busketball? &#127936;</label>
+                        </div>
+                        <div class="form__wrapper_check">
+                            <input name="check2" type="checkbox" id="check2_inp" required>
+                            <label class="form__label_check" for="check2_inp">Tennis? &#127934;</label>
+                        </div>
+                    </div>
+                    <div class="nine columns">
+                        <div class="form__wrapper_check">
+                            <input name="radio" type="radio" id="radio1_inp" required checked>
+                            <label class="form-check-label form__label_check" for="radio1_inp">Piano? &#127929;</label>
+                        </div>
+                        <div class="form__wrapper_check">
+                            <input name="radio" type="radio" id="radio2_inp" required>
+                            <label class="form-check-label form__label_check" for="radio2_inp">Guitar? &#127928;</label>
+                        </div>
+                        <div class="form__wrapper_check">
+                            <input name="radio" type="radio" id="radio3_inp" required>
+                            <label class="form-check-label form__label_check" for="radio3_inp">Or just music? &#127932;</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <h5 class="form__subtitle">Something else? Please tell us:</h5>
+                <label for="textarea_inp" class="form__label">Your comment</label>
+                <textarea class="form__textarea" id="textarea_inp" rows="3" required></textarea>
+                
+                <h5 class="form__subtitle">Here you can upload your snippet:</h5>
+                <label class="form__label" for="upload_inp">Upload your audio &#127911;</label>
+                <input name="file" accept="audio/*" type="file" class="form__input_upload" id="upload_inp" required>
+
+                <h6 class="form__subtitle">Check everything again! It's ok?</h6>
+                <button type="submit" class="button button-primary form__submit">Click me</button>
+            </form>
+
+
+        </div>
+    </section>
+</body>
+</html>

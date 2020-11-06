@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form picker</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <main class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="title">Select your form:</h1>
+                    <ol class="nav main__nav">
+                        <li class="nav-link mr-4 nav__item">
+                            <a href="#loginForm">Login form &#127747;</a>
+                        </li>
+                        <li class="nav-link mr-4 nav__item">
+                            <a href="#feedbackForm">Feedback form &#127908;</a>
+                        </li>
+                        <li class="nav-link mr-4 nav__item">
+                            <a href="#uploadForm">File upload form &#127916;</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-9 main__wrapper">
+
+
+
+                    <form class="form" id="loginForm" action="php/formHandlers/login.php" method="POST">
+                        <h3 class="form__title">Login form &#127915;</h3>
+                        <div class="form-group">
+                            <label for="login_inp" class="form__label">Login</label>
+                            <input name="login" type="text" class="form-control form__input" id="login_inp" placeholder="VasyaPupkin" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pass_inp" class="form__label">Password</label>
+                            <input name="pass" type="password" class="form-control form__input" id="pass_inp" required>
+                        </div>
+                        <div class="form-group form-check">
+                            <input name="check1" type="checkbox" class="form-check-input" id="check1_inp" required>
+                            <label class="form-check-label form__label_check" for="check1_inp">Check me out</label>
+                        </div>
+                        <div class="form-group form-check">
+                            <input name="check2" type="checkbox" class="form-check-input" id="check2_inp" required>
+                            <label class="form-check-label form__label_check" for="check2_inp">Also check me out</label>
+                        </div>
+                        <div class="form-group form-check">
+                            <input name="check3" type="checkbox" class="form-check-input" id="check3_inp" required>
+                            <label class="form-check-label form__label_check" for="check3_inp">And me! &#128568;</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary form__submit">Submit</button>
+                    </form>
+
+
+
+                    <form class="form" id="feedbackForm" action="php/formHandlers/feedback.php" method="POST">
+                        <h3 class="form__title">Feedback form &#127909;</h3>
+                        <div class="form-group row">
+                            <label for="email_inp" class="col-2 col-form-label form__label">Email</label>
+                            <div class="col-10">
+                                <input name="email" type="text" class="form-control form__input" id="email_inp" placeholder="VasyaPupkin@example.tu" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="loginF_inp" class="col-2 col-form-label form__label">Login</label>
+                            <div class="col-10">
+                                <input name="login" type="text" class="form-control form__input" id="loginF_inp" placeholder="VasyaPupkin" required>
+                            </div>
+                        </div>
+                        <div class="form-group form-check">
+                            <input name="radio" type="radio" class="form-check-input" id="radio1_inp" required checked>
+                            <label class="form-check-label form__label_check" for="radio1_inp">Check me out</label>
+                        </div>
+                        <div class="form-group form-check">
+                            <input name="radio" type="radio" class="form-check-input" id="radio2_inp" required>
+                            <label class="form-check-label form__label_check" for="radio2_inp">Or check me out</label>
+                        </div>
+                        <div class="form-group form-check">
+                            <input name="radio" type="radio" class="form-check-input" id="radio3_inp" required>
+                            <label class="form-check-label form__label_check" for="radio3_inp">Or me! &#128568;</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="textarea_inp" class="form__label">Your comment</label>
+                            <textarea class="form-control form__textarea" id="textarea_inp" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary form__submit">Submit</button>
+                    </form>
+
+
+
+                    <form class="form" id="uploadForm" action="php/formHandlers/upload.php" method="POST">
+                        <h3 class="form__title">File upload form &#127909;</h3>
+                        <div class="row">
+                            <div class="col form-group">
+                                <input name="first-name" type="text" class="form-control form__input" placeholder="First name" required>
+                            </div>
+                            <div class="col">
+                                <input name="last-name" type="text" class="form-control" placeholder="Last name" required>
+                            </div>
+                        </div>                        
+                        <div class="form-group">
+                            <label class=" form__label" for="upload_inp">Upload your file &#127911;</label>
+                            <input name="file" accept="audio/*" type="file" class="form-control-file" id="upload_inp" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary form__submit">Submit</button>
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
