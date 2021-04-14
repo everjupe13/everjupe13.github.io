@@ -1,0 +1,7 @@
+// size to one line
+@mixin size($width, $height: $width) {
+
+    width: $width;
+    height: $height;
+    
+}

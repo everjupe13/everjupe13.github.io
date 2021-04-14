@@ -1,0 +1,124 @@
+[data-moved] {
+
+    @include append-attr("onplace") {
+
+        #window.window {
+
+            left: 0px;
+            top: 0px;
+
+            width: 100%;
+    
+            border-radius: 0;
+
+            box-shadow: none;
+
+        }
+
+        .logo {
+
+            margin-left: 20px;
+
+        }
+
+        .header__title {
+
+            margin-left: 20px;
+
+        }
+
+    }
+
+    @include append-attr("shifted") {
+
+        overflow-x: hidden;
+
+        #window.window {
+
+            left: 200px;
+            top: 50px;
+
+            width: 100%;
+    
+            border-radius: 20px 0 0 0;
+
+            box-shadow: -15px -10px 40px 5px rgba(15, 15, 15, .2);
+            
+        }
+
+    }
+
+}
+
+
+
+
+[data-btn-state] {
+
+    @include append-attr("disactive") {
+
+        &.menu-switcher__btn {
+
+            span {
+
+                &:nth-child(2) {
+
+                    display: block;
+
+                }
+
+                &:nth-child(2n + 1) {
+
+                    transform: none;
+
+                }
+
+            }
+            
+        }
+
+    }
+
+    @include append-attr("active") {
+
+        &.menu-switcher__btn {
+
+            div {
+
+                &:nth-child(2) {
+
+                    display: none;
+
+                }
+
+                &:nth-child(1) {
+
+                    position: absolute;
+                    top: 50%;
+
+                    width: 40px;
+                    margin: 0;
+
+                    transform: rotate(45deg) translateY(calc(-50%));
+
+                }
+
+                &:nth-child(3) {
+
+                    position: absolute;
+                    top: 50%;
+
+                    width: 40px;
+                    margin: 0;
+
+                    transform: rotate(-45deg) translateY(calc(-50%));
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

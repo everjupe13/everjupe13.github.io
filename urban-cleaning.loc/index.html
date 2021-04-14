@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Cleaning</title>
+    <link rel="stylesheet" href="./assets/css/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/preloader.min.css">
+    <link rel="stylesheet" href="./assets/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./assets/css/animate.min.css">
+    <link rel="stylesheet" href="./assets/css/fonts.min.css">
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+    
+</head>
+<body id="app">
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__wrapper"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
+    <!-- !Preloader -->
+    
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+
+            <!-- Logo section -->
+            <div class="logo">
+                <a href="#"><img src="./assets/img/logo.svg" alt="logo-img" class="logo__img"></a>
+                <a href="#"><img src="./assets/img/logo-mobile.svg" alt="logo-img" class="logo__mobile"></a>
+            </div>
+            <!-- !Logo section -->
+
+            <!-- Header body -->
+            <div class="header__body">
+
+                <div class="header__info">
+
+                    <!-- navigation menu -->
+                    <nav id="#menu" class="header-nav">
+
+                        <button class="header-nav__close">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+
+                        <ul class="header-nav__list">
+                            <li class="header-nav__item">
+                                <a href="#hero" class="header-nav__link">О нас</a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a href="#cost" class="header-nav__link">Калькулятор</a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a href="#advantages" class="header-nav__link">Преимущества</a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a href="#roadmap" class="header-nav__link">Схема работы</a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a href="#answers" class="header-nav__link">Вопросы</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- !navigation menu -->
+
+                    <!-- social-nav links -->
+                    <div class="social-nav">
+                        <div class="social-nav__item" style="display: none;">
+                            <a href="https://www.youtube.com/user/zulya257" target="_blank" rel="noopener noreferrer" class="social-nav__link"><img src="./assets/img/social/yt.svg" alt="yt"></a>
+                        </div>
+                        <div class="social-nav__item">
+                            <a href="https://www.instagram.com/urbancleaning.rf/" target="_blank" rel="noopener noreferrer" class="social-nav__link"><img src="./assets/img/social/ig.svg" alt="ig"></a>
+                        </div>
+                    </div>
+                    <!-- !social-nav links -->
+
+                </div>
+
+                <!-- phone block --> 
+                <div class="phone">
+                    <a href="#" id="phone_link" class="phone__link">+7(999)-999-99-99</a>
+                    <!-- <div class="phone__text">Выезд в день обращения</div> -->
+                    <div class="phone__address">Уфа. Проспект Октября 111/1</div>
+                </div>
+                <!-- !phone block -->
+
+            </div>
+            <!-- !Header body -->
+
+            <div class="social-nav mobile">
+                <div class="social-nav__item" style="display: none;">
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="social-nav__link"><img src="./assets/img/social/yt.svg" alt="yt"></a>
+                </div>
+                <div class="social-nav__item">
+                    <a href="https://www.instagram.com/urbancleaning.rf/" target="_blank" rel="noopener noreferrer" class="social-nav__link"><img src="./assets/img/social/ig.svg" alt="ig"></a>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    <!-- !Header -->
+
+     <!-- Main section -->
+     <main id="main">
+        
+        <!-- Hero -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero__main">
+                    <h1 class="hero__title"><span class="single">Профессиональная</span> уборка любых помещений от 15 <span class="rouble"></span>/м<span class="sup">2</span> <span class="orange">в Уфе</span></h1>
+                    <button onclick="modalApp.openModal()" class="btn hero__btn">Рассчитать стоимость</button>
+                </div>
+            </div>
+        </section>
+        <!-- !Hero -->
+
+        <!-- Catalogue -->
+        <section id="catalogue" class="catalogue">
+            <div class="container">
+                <div class="catalogue__body">
+
+                    <!-- Row -->
+                    <div class="catalogue__row">
+                        <div class="catalogue__main">
+
+                            <div class="catalogue__item">
+                                <div onclick="jump('#cost')" class="catalogue__item__img">
+                                    <img src="./assets/img/catalogue/items/1.webp" alt="1">
+                                </div>
+                                <div class="catalogue__item__title">
+                                    Комплексная уборка квартир и коттеджей
+                                </div>
+                            </div>
+                            <div class="catalogue__item__info upper">
+                                <div class="catalogue__item__info__title">Комплексная уборка квартир и коттеджей</div>
+                                <div class="catalogue__item__info__cost">от 40 руб/м<sup>2</sup></div>
+                                <div class="font-segoe catalogue__item__info__text">
+                                    Зачем тратить свое время на уборку, когда ее можно доверить профессионалам? Если вы – счастливый обладатель собственного дома или квартиры с внушительным метражом, поддержание порядка может стать большой проблемой. Закажите бригаду клинеров на дом и потратьте свое свободное время на что-то более приятное. Гарантируем стопроцентную чистоту и индивидуальный подход к уборке каждого жилого помещения.
+                                </div>
+                            </div>
+
+                            <div class="catalogue__item">
+                                <div onclick="jump('#cost')" class="catalogue__item__img">
+                                    <img src="./assets/img/catalogue/items/2.webp" alt="2">
+                                </div>
+                                <div class="catalogue__item__title">
+                                    Уборка после ремонта
+                                </div>
+                            </div>
+                            <div class="catalogue__item__info upper">
+                                <div class="catalogue__item__info__title">Уборка после ремонта</div>
+                                <div class="catalogue__item__info__cost">от 145 руб/м<sup>2</sup></div>
+                                <div class="font-segoe catalogue__item__info__text">
+                                Ремонт – это настоящий катаклизм. Часто он сопровождается выполнением «грязных» работ, после которых остаются горы мусора и пыли. Компания «Урбан Клининг» возьмет на себя решение этого вопроса. Быстро и качественно устраним следы присутствия рабочих, вывезем строительный мусор, проведем сухую и влажную уборку помещения после малярных и штукатурных работ, перепланировки, замены окон и т.д.
+                                </div>
+                            </div>
+
+                            <div class="catalogue__item">
+                                <div onclick="jump('#cost')" class="catalogue__item__img">
+                                    <img src="./assets/img/catalogue/items/3.webp" alt="3">
+                                </div>
+                                <div class="catalogue__item__title">
+                                    Химчистка матрацев, мягкой мебели, ковров
+                                </div>
+                            </div>
+                            <div class="catalogue__item__info upper">
+                                <div class="catalogue__item__info__title">Химчистка матрацев, мягкой мебели, ковров</div>
+                                <div class="catalogue__item__info__cost">от 500 руб</div>
+                                <div class="font-segoe catalogue__item__info__text">
+                                    Матрацы и мягкая мебель требуют регулярной чистки не только по эстетическим соображениям, но и по санитарным. Они быстро накапливают неприятные запахи, пыль и вредную микрофауну, неизбежно со временем становясь опасными для здоровья. Компания «Урбан Клининг» использует только сертифицированные гиппоаллергенные чистящие средства. Мы гарантируем эффективное устранение пятен, нежелательных микроэлементов и запахов. Подарите себе ощущение чистоты и комфорта, а матрацу или любимому креслу – вторую жизнь!
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="font-segoe catalogue__aside">
+                            Беремся за любые виды уборки, включая особо сложные и требующие специальных средств и оборудования. Работаем на разовой и постоянной основе по договору регулярного обслуживания. Предлагаем одни из самых выгодных цен на все виды работ в регионе.</div>
+                    </div>
+                    <!-- !Row -->
+                    <hr>
+                    <!-- Row -->
+                    <div class="catalogue__row">
+                        <div class="catalogue__main">
+
+                            <div class="catalogue__item">
+                                <div onclick="jump('#cost')" class="catalogue__item__img">
+                                    <img src="./assets/img/catalogue/items/4.webp" alt="4">
+                                </div>
+                                <div class="catalogue__item__title">
+                                    Уборка коммерческих помещений
+                                </div>
+                            </div>
+                            <div class="catalogue__item__info lower">
+                                <div class="catalogue__item__info__title">Уборка коммерческих помещений</div>
+                                <div class="catalogue__item__info__cost">от 40 руб/м<sup>2</sup></div>
+                                <div class="font-segoe catalogue__item__info__text">
+                                    Предлагаем полный комплекс услуг по уборке и дезинфекции коммерческих помещений. Если ваш бизнес сопряжен с необходимостью выполнения жестких санитарных требований или вы просто хотите постоянно поддерживать идеальную чистоту, наша команда поможет вам с решением этого вопроса. Оперативно подготовим помещение перед сдачей новому арендатору. Работаем быстро и качественно. Предлагаем одни из наиболее выгодных цен в городе на все виды уборки.
+                                </div>
+                            </div>
+
+                            <div class="catalogue__item">
+                                <div onclick="jump('#cost')" class="catalogue__item__img">
+                                    <img src="./assets/img/catalogue/items/5.webp" alt="5">
+                                </div>
+                                <div class="catalogue__item__title">
+                                    Мойка фасадов
+                                </div>
+                            </div>
+                            <div class="catalogue__item__info lower">
+                                <div class="catalogue__item__info__title">Мойка фасадов</div>
+                                <div class="catalogue__item__info__cost">от 200 руб/м<sup>2</sup></div>
+                                <div class="font-segoe catalogue__item__info__text">
+                                    Предлагаем помощь в сезонной и регулярной мойке фасадов, витражей и окон. В нашей команде трудятся сертифицированные промышленные альпинисты, имеющие все необходимые допуски, поэтому мы можем работать на высотных зданиях. Беремся за мойку любых площадей, гарантируем стопроцентную эффективность и оперативность выполнения работ.
+                                </div>
+                            </div>
+
+                            <div class="catalogue__item">
+                                <div onclick="jump('#cost')" class="catalogue__item__img">
+                                    <img src="./assets/img/catalogue/items/6.webp" alt="6">
+                                </div>
+                                <div class="catalogue__item__title">
+                                    Дезинфекция и дератизация
+                                </div>
+                            </div>
+                            <div class="catalogue__item__info lower">
+                                <div class="catalogue__item__info__title">Дезинфекция и дератизация</div>
+                                <div class="catalogue__item__info__cost">Индивидуально</div>
+                                <div class="font-segoe catalogue__item__info__text">
+                                Нежелательные «хвостатые» соседи - это действительно большая проблема. Крысы умеют приспосабливаться к любым условиям и ядам. Они разносят различные инфекции, которые могут стать серьезной угрозой для здоровья. Компания «Урбан Клининг» предлагает услуги по выведению крыс и других паразитов из помещения. Используем безвредные для человека препараты, проводим полную дезинфекцию помещения, гарантируя не только чистоту, но и безопасность.
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="font-segoe catalogue__aside catalogue__aside_second">
+                            Наша команда - это квалифицированные профессионалы, обладающие многолетним опытом работы. Все сотрудники имеют медицинские книжки и необходимые допуски, используя сертифицированные, чистящие средства.
+                        </div>
+                    </div>
+                    <!-- !Row -->
+
+                </div>
+            </div>
+        </section>
+        <!-- !Catalogue -->
+
+        <!-- Cost -->
+        <section id="cost" class="cost">
+            <div class="container">
+                <div class="wow animate__animated animate__fadeInRight cost__body">
+                    <h2 class="title">Калькулятор Услуг</h2>
+                    <div class="cost__wrapper">
+                        <div class="cost__main">
+                            <!-- Computation -->
+                            <form id="computation" class="computation">
+                                <div class="font-segoe computation__title">Что будем убирать?</div>
+
+                                <div class="computation-grid-4 computation-area__grid">
+
+                                    <input name="area" id="area_input1" class="computation-area__input" type="radio" value="1" v-model="area" v-on:click="checkClick('1', 'area')">
+                                    <label for="area_input1" class="computation-area" v-on:click="forwardClick">
+                                        <div class="computation-area__img">
+                                            <img src="./assets/img/computation/1.svg" alt="icon">
+                                            <img src="./assets/img/computation/1w.svg" class="hidden" alt="icon">
+                                        </div>
+                                        <div class="computation-area__text">Квартира</div>
+                                    </label>
+
+                                    <input name="area" id="area_input2" class="computation-area__input" type="radio" value="2" v-model="area" v-on:click="checkClick('2', 'area')">
+                                    <label for="area_input2" class="computation-area" v-on:click="forwardClick">
+                                        <div class="computation-area__img">
+                                            <img src="./assets/img/computation/2.svg" alt="icon">
+                                            <img src="./assets/img/computation/2w.svg" class="hidden" alt="icon">
+                                        </div>
+                                        <div class="computation-area__text">Коттедж</div>
+                                    </label>
+
+                                    <input name="area" id="area_input3" class="computation-area__input" type="radio" value="3" v-model="area" v-on:click="checkClick('3', 'area')">
+                                    <label for="area_input3" class="computation-area" v-on:click="forwardClick">
+                                        <div class="computation-area__img">
+                                            <img src="./assets/img/computation/3.svg" alt="icon">
+                                            <img src="./assets/img/computation/3w.svg" class="hidden" alt="icon">
+                                        </div>
+                                        <div class="computation-area__text">Офис</div>
+                                    </label>
+
+                                    <input name="area" id="area_input4" class="computation-area__input" type="radio" value="4" v-model="area" v-on:click="checkClick('4', 'area')">
+                                    <label for="area_input4" class="computation-area" v-on:click="forwardClick">
+                                        <div class="computation-area__img">
+                                            <img src="./assets/img/computation/4.svg" alt="icon">
+                                            <img src="./assets/img/computation/4w.svg" class="hidden" alt="icon">
+                                        </div>
+                                        <div class="computation-area__text">Коммерческое помещение</div>                                        
+                                    </label>
+
+                                </div>
+
+                                <div class="font-segoe computation__title computation-kind__title">Виды уборки</div>
+
+                                <div class="computation-grid-4 computation-kind__grid">
+                                    
+                                    <input name="kind" id="kind_input1" class="computation-kind__input" type="radio" value="1" v-model="kind" v-on:click="checkClick('1', 'kind')">
+                                    <label for="kind_input1" class="computation-kind" v-on:click="backLis">
+                                        <span class="computation-kind__box"></span>
+                                        <span class="computation-kind__text">Текущая уборка</span>
+                                    </label>
+
+                                    <input name="kind" id="kind_input2" class="computation-kind__input" type="radio" value="2" v-model="kind" v-on:click="checkClick('2', 'kind')">
+                                    <label for="kind_input2" class="computation-kind" v-on:click="forwardLis" >
+                                        <span class="computation-kind__box"></span>
+                                        <span class="computation-kind__text">Генеральная уборка</span>
+                                    </label>
+
+                                    <input name="kind" id="kind_input3" class="computation-kind__input" type="radio" value="3" v-model="kind" v-on:click="checkClick('3', 'kind')">
+                                    <label for="kind_input3" class="computation-kind" v-on:click="forwardLis">
+                                        <span class="computation-kind__box"></span>
+                                        <span class="computation-kind__text">Уборка после ремонта</span>
+                                    </label>
+
+                                    <input name="kind" id="kind_input4" class="computation-kind__input" type="radio" value="4" v-model="kind" v-on:click="checkClick('4', 'kind')">
+                                    <label for="kind_input4" class="computation-kind" v-on:click="backLis">
+                                        <span class="computation-kind__box"></span>
+                                        <span class="computation-kind__text">Регулярная уборка</span>
+                                    </label>
+
+                                </div>
+
+                                <div class="font-segoe computation__title computation-extra__title">Дополнительно</div>
+
+                                <div class="computation-grid-extra">
+                                    
+                                    <div class="computation-extra__windows">
+                                        
+                                        <input name="extra_1" id="extra_input1" class="computation-kind__input" type="checkbox" v-model="extra_1">
+                                        <label for="extra_input1" class="computation-kind" onclick=costApp.disableNum()>
+                                            <span class="computation-kind__box"></span>
+                                            <span class="computation-kind__text">Мойка окон</span>
+                                        </label>
+
+                                        <div class="qty computation-extra__counter">
+                                            <button id="q_up" type="button" class="qty_btn qty-up" onclick="costApp.increaseNum()"><span></span></button>
+                                            <input type="text" name="extra_2" class="qty_input font-segoe" disabled value="1" v-model="extra_2">
+                                            <button id="q_down" type="button" class="qty_btn qty-down" onclick="costApp.decreaseNum()"><span></span></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="computation-extra__chem">
+
+                                        <div class="computation-extra__chem__title"><span>Химчистка</span></div>
+
+                                        <div class="computation-extra__chem__aside">
+
+                                            <input id="chem_input1" class="computation-kind__input" value="1" type="checkbox" v-model="chem">
+                                            <label for="chem_input1" class="computation-kind">
+                                                <span class="computation-kind__box"></span>
+                                                <span class="computation-kind__text">Матрасов</span>
+                                            </label>
+
+                                            <input id="chem_input2" class="computation-kind__input" value="2" type="checkbox" v-model="chem">
+                                            <label for="chem_input2" class="computation-kind">
+                                                <span class="computation-kind__box"></span>
+                                                <span class="computation-kind__text">Штор</span>
+                                            </label>
+
+                                            <input id="chem_input3" class="computation-kind__input" value="3" type="checkbox" v-model="chem">
+                                            <label for="chem_input3" class="computation-kind">
+                                                <span class="computation-kind__box"></span>
+                                                <span class="computation-kind__text">Диванов</span>
+                                            </label>
+
+                                            <input id="chem_input4" class="computation-kind__input" value="4" type="checkbox" v-model="chem">
+                                            <label for="chem_input4" class="computation-kind">
+                                                <span class="computation-kind__box"></span>
+                                                <span class="computation-kind__text">Ковров</span>
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="font-segoe computation__title computation-accept__title">Площадь М<sup>2</sup></div>
+                                <div class="computation-grid-accept">
+                                    <div class="computation-accept__main">
+                                        <div class="computation-accept__range">
+
+                                            <div class="computation-accept__item">
+                                                <input name="accept" id="accept_input1" class="computation-accept__input" type="radio" value="30" checked v-model="square">
+                                                <label for="accept_input1" class="computation-accept">
+                                                    <span class="computation-accept__number">30</span>
+                                                    <span class="computation-accept__round"></span>
+                                                </label>
+                                            </div>
+
+                                            <div class="computation-accept__item">
+                                                <input name="accept" id="accept_input2" class="computation-accept__input" type="radio" value="60" v-model="square">
+                                                <label for="accept_input2" class="computation-accept">
+                                                    <span class="computation-accept__number">60</span>
+                                                    <span class="computation-accept__round"></span>
+                                                </label>
+                                            </div>
+
+                                            <div class="computation-accept__item">
+                                                <input name="accept" id="accept_input3" class="computation-accept__input" type="radio" value="100" v-model="square">
+                                                <label for="accept_input3" class="computation-accept">
+                                                    <span class="computation-accept__number">100</span>
+                                                    <span class="computation-accept__round"></span>
+                                                </label>
+                                            </div>
+
+                                            <div class="computation-accept__item">
+                                                <input name="accept" id="accept_input4" class="computation-accept__input" type="radio" value="200" v-model="square">
+                                                <label for="accept_input4" class="computation-accept">
+                                                    <span class="computation-accept__number">200</span>
+                                                    <span class="computation-accept__round"></span>
+                                                </label>
+                                            </div>
+
+                                            <div class="computation-accept__item">
+                                                <input name="accept" id="accept_input5" class="computation-accept__input" type="radio" value="300" v-model="square">
+                                                <label for="accept_input5" class="computation-accept">
+                                                    <span class="computation-accept__number">300</span>
+                                                    <span class="computation-accept__round"></span>
+                                                </label>
+                                            </div>
+
+                                            <div class="computation-accept__item">
+                                                <input name="accept" id="accept_input6" class="computation-accept__input" type="radio" value="400" v-model="square">
+                                                <label for="accept_input6" class="computation-accept">
+                                                    <span class="computation-accept__number">400</span>
+                                                    <span class="computation-accept__round"></span>
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                        <div class="font-segoe computation__title computation-accept__title_mobile">Стоимость</div>
+                                        <div class="font-segoe computation-accept__sum">
+                                            <span id="accept_sum">{{ sum }}</span>
+                                            <input v-model.number="sum" name="sum" type="hidden">
+                                        </div>
+                                    </div>
+                                    <button type="button" onclick="costAppModal.openModal()" class="btn computation-accept__btn">Получить скидку</button>
+                                </div>
+
+                                <div class="font-segoe computation__title computation-descr__title">Услуга включает в себя:</div>
+
+                                <div class="computation-grid-2">
+                                    <div class="computation-descr">
+                                        <li class="computation-descr__item" v-for="item in items">{{ item }}</li>
+                                        <!-- <li class="computation-descr__item">Мойка полов, плинтусов, стен и потолка</li>
+                                        <li class="computation-descr__item">Мойка кухонного гарнитура внутри и снаружи</li>
+                                        <li class="computation-descr__item">Мойка шкафов и тумбочек внутри и снаружи</li>
+                                        <li class="computation-descr__item">Удаление пыли с бытовой техники, мебели и других предметов интерьера</li> -->
+                                    </div>
+                                    <div class="font-segoe computation-descr">
+                                        <li class="computation-descr__item" v-for="item in itemsSec">{{ item }}</li>
+                                        <!-- <li class="computation-descr__item">Мойка дверных коробок, дверей и фурнитуры</li>
+                                        <li class="computation-descr__item">Мойка батарей, отопительных стояков и любых элементов системы отопления</li>
+                                        <li class="computation-descr__item">Мойка санузла</li>
+                                        <li class="computation-descr__item">Вынос полиэтилена, картона, мусора. На каждую генеральную уборку берем с собой парогенератор абсолютно бесплатно!</li> -->
+                                    </div>
+                                </div>
+                                
+                                <a href="#" class="save" download>
+                                    <div class="save__text">Скачать прайс-лист</div>
+                                    <div class="save__img"><img src="./assets/img/pdf.svg" alt="pdf"></div>
+                                </a>
+                            </form>
+                            <!-- !Computation -->
+                        </div>
+                        <div class="cost__aside">
+                            <img src="./assets/img/cost/woman.webp" alt="aside_img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- !Cost -->
+
+        <!-- Form -->
+        <section id="form" class="form">
+            <div class="container">
+                <div data-wow-offset="200" class="wow animate__animated animate__fadeIn form__wrapper">
+                    <div class="form__title">Консультация специалиста по клинингу и расчет стоимости</div>
+                    <div class="form__subtitle">В течение 5 минут</div>
+                    <div class="form__input-area">
+                        <div class="font-segoe form__input-wrapper">
+                            <input v-model="name" id="name" type="text" class="form__input" placeholder="Иван">
+                            <label for="name" class="form__label">Ваше имя</label>
+                        </div>
+                        <div class="font-segoe form__input-wrapper">
+                            <the-mask v-model="phone" mask="+7 (###) ###-##-##" :masked="true" class="form__input" placeholder="+7 (000) 000-00-00"></the-mask>
+                            <label for="phone" class="form__label">Номер телефона*</label>
+                        </div>
+                        <button class="btn form__btn" v-on:click="submitForm()" :disabled="!formIsValid">
+                            <span v-if="!sending">Получить консультацию</span>
+                            <span v-else>Отправка...</span>
+                        </button>
+                    </div>
+                    <a href="#" class="font-segoe form__policy">Нажимая на кнопку вы даёте согласие на использование своих <span>персональных данных</span></a>
+                </div>
+            </div>
+        </section>
+        <!-- !Form -->
+
+        <!-- Slider -->
+        <section id="slider" class="slider">
+            <div class="container">
+                <div class="slider__wrapper">
+                    <div class="slider__aside">
+                        <div class="title">Наши работы</div>
+                        <div class="font-segoe slider__text">Убедитесь сами, насколько профессионально работают наши клинеры.</div>
+                    </div>
+                    <div class="slider__main">
+                        <div class="owl-carousel owl-theme">
+                            <div class="item" onclick="sliderApp.openModal('./assets/img/slider/1.webp')">
+                                <img src="./assets/img/slider/1.webp" alt="banner1" class="item__img">
+                            </div>
+                            <div class="item" onclick="sliderApp.openModal('./assets/img/slider/2.webp')">
+                                <img src="./assets/img/slider/2.webp" alt="banner2" class="item__img">
+                            </div>
+                            <div class="item" onclick="sliderApp.openModal('./assets/img/slider/3.webp')">
+                                <img src="./assets/img/slider/3.webp" alt="banner3" class="item__img">
+                            </div>
+                            <div class="item" onclick="sliderApp.openModal('./assets/img/slider/1.webp')">
+                                <img src="./assets/img/slider/1.webp" alt="banner4" class="item__img">
+                            </div>
+                            <div class="item" onclick="sliderApp.openModal('./assets/img/slider/2.webp')">
+                                <img src="./assets/img/slider/2.webp" alt="banner5" class="item__img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- !Slider -->
+
+        <!-- Advantages -->
+        <section id="advantages" class="advantages">
+            <div class="container">
+                <h2 class="title">Мы можем то, чего не могут другие!</h2>
+
+                <div class="advantages__body">
+
+                    <div class="wow animate__animated animate__fadeInUp advantages__item">
+                        <div class="advantages__item__img"><img src="./assets/img/advantages/3.svg" alt="3"></div>
+                        <div class="title_grid advantages__item__title">Комплексная уборка</div>
+                        <pre class="font-segoe advantages__item__text">
+Уборка прилегающей территории
+Генеральная уборка бань и саун
+Чистка и уход за напольными покрытиями
+Чистка бассейнов</pre>
+                    </div>
+                    <div class="wow animate__animated animate__fadeInUp advantages__item">
+                        <div class="advantages__item__img"><img src="./assets/img/advantages/2.svg" alt="2"></div>
+                        <div class="title_grid advantages__item__title">Химчистка</div>
+                        <pre class="font-segoe advantages__item__text">
+Химчистка ковролина
+Химчистка штор
+Химчистка матрасов на дому
+Химчистка диванов и мягкой мебели</pre>
+                    </div>
+                    <div class="wow animate__animated animate__fadeInUp advantages__item">
+                        <div class="advantages__item__img"><img src="./assets/img/advantages/1.svg" alt="1"></div>
+                        <div class="title_grid advantages__item__title">Сложная уборка</div>
+                        <pre class="font-segoe advantages__item__text">
+Уборка после ремонта
+Уборка после пожара
+Уборка после смерти</pre>
+                    </div>
+                    <div class="wow animate__animated animate__fadeInUp advantages__item">
+                        <div class="advantages__item__img"><img src="./assets/img/advantages/4.svg" alt="4"></div>
+                        <div class="title_grid advantages__item__title">Промальпинизм</div>
+                        <pre class="font-segoe advantages__item__text">
+Мойка окон, витрин, фасадов
+Чистка и мойка рекламных баннеров, 
+вывесок</pre>
+                    </div>
+                    <div class="wow animate__animated animate__fadeInUp advantages__item">
+                        <div class="advantages__item__img"><img src="./assets/img/advantages/5.svg" alt="5"></div>
+                        <div class="title_grid advantages__item__title">Озонирование, дезинфекция помещений</div>
+                        <pre class="font-segoe advantages__item__text">
+Удаление запахов, бактерий, грибка,
+уничтожение грызунов и насекомых
+дератизация</pre>
+                    </div>
+                    <div class="wow animate__animated animate__fadeInUp advantages__item">
+                        <div class="advantages__item__img"><img src="./assets/img/advantages/6.svg" alt="6"></div>
+                        <div class="title_grid advantages__item__title">Дополнительно</div>
+                        <pre class="font-segoe advantages__item__text">
+Техническое обслуживание 
+инженерных сетей здания,
+ремонт.</pre>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- !Advantages -->
+
+        <!-- Sale banner section -->
+        <section id="sale" class="sale">
+            <div class="container">
+
+                <div class="sale__body">
+                    <div class="sale__title">Закажи уборку сейчас и получи скидку</div>
+                    <div class="sale__num">
+                        <span class="sale__num_text">5%</span>
+                        <img src="./assets/img/sale/sale.svg" class="sale__num_img" alt="На все">
+                    </div>
+
+                    <div class="sale__btn_grid">
+                        <button onclick="modalApp.openModal()" class="btn btn__center sale__btn">Заказать уборку</button>    
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- !Sale banner section -->
+
+        <!-- More -->
+        <section id="more" class="more">
+            <div class="container">
+                <div class="more__wrapper">
+                    <div class="more__main">
+
+                        <div class="more__item">
+                            <div class="title_grid more__item__title">профессиональная бытовая химия</div>
+                            <div class="more__item__divider"></div>
+                            <div class="font-segoe more__item__text">
+                                Только сертифицированная по европейским стандартам химия. Отдаем предпочтение антиаллергенным средствам без запаха с противовирусными и антибактериальными свойствами.
+                            </div>
+                        </div>
+                        <div class="more__item">
+                            <div class="more__item__img"><img src="./assets/img/more/1.webp" alt="1"></div>
+                        </div>
+
+                        <div class="more__item">
+                            <div class="more__item__img"><img src="./assets/img/more/2.webp" alt="2"></div>
+                        </div>
+
+                        <div class="more__item">
+                            <div class="title_grid more__item__title">Профессиональное оборудование</div>
+                            <div class="more__item__divider"></div>    
+                            <div class="font-segoe more__item__text">
+                                В наличии не менее 10 единиц техники: моющие пылесосы, парогенераторы, антистатические установки и многое другое. Работаем только с проверенными марками.
+                            </div>
+                        </div>
+
+
+
+                        <div class="more__item">
+                            <div class="title_grid more__item__title">Более 8 на рынке</div>
+                            <div class="more__item__divider"></div>
+                            <div class="font-segoe more__item__text">
+                                Имеем все необходимые сертификаты и допуски. В штате трудятся только опытные и квалифицированные специалисты. Более 1000 положительных отзывов о нашей работе.
+                            </div>
+                        </div>
+
+                        <div class="more__item">
+                            <div class="more__item__img"><img src="./assets/img/more/3.jpg" alt="3"></div>
+                        </div>
+
+                    </div>
+
+                    <button onclick="modalApp.openModal()" class="btn btn__center more__btn">Заказать звонок</button>
+                </div>
+            </div>
+        </section>
+        <!-- !More -->
+
+        <!-- roadmap -->
+        <section id="roadmap" class="roadmap">
+            <div class="container">
+                <h2 class="title">Этапы работы</h2>
+                <div data-wow-offset="20" class="wow animate__animated animate__fadeIn roadmap__body">
+                    <div class="roadmap__item">
+                        <div class="roadmap__item__img"><img src="./assets/img/roadmap/1.svg" alt="1"></div>
+                        <div class="title_grid roadmap__item__title">Заявка</div>
+                    </div>
+                    <div class="roadmap__item">
+                        <span></span>
+                    </div>
+                    <div class="roadmap__item">
+                        <div class="roadmap__item__img"><img src="./assets/img/roadmap/2.svg" alt="2"></div>
+                        <div class="title_grid roadmap__item__title">Выезд менеджера</div>
+                    </div>
+                    <div class="roadmap__item">
+                        <span></span>
+                    </div>
+                    <div class="roadmap__item">
+                        <div class="roadmap__item__img"><img src="./assets/img/roadmap/3.svg" alt="3"></div>
+                        <div class="title_grid roadmap__item__title">Заключение договора</div>
+                    </div>
+                    <div class="roadmap__item">
+                        <span></span>
+                    </div>
+                    <div class="roadmap__item">
+                        <div class="roadmap__item__img"><img src="./assets/img/roadmap/4.svg" alt="4"></div>
+                        <div class="title_grid roadmap__item__title">Выполнение работ</div>
+                    </div>
+                    <div class="roadmap__item">
+                        <span></span>
+                    </div>
+                    <div class="roadmap__item">
+                        <div class="roadmap__item__img"><img src="./assets/img/roadmap/5.svg" alt="5"></div>
+                        <div class="title_grid roadmap__item__title">Приём работ</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- !roadmap -->
+
+
+        <!-- answers -->
+        <section id="answers" class="answers">
+            <div class="container">
+
+                <div class="answers__body">
+
+                    <h2 class="title">Нас часто спрашивают</h2>
+
+                    <!-- Accordion -->
+                    <div class="accordion">
+                        <div class="accordion__header">
+                            <p class="accordion__title">Где вы работаете территориально?</p>
+                            <i class="accordion__arrow" data-feather="chevron-down"></i>
+                        </div>
+                     
+                        <div class="accordion__content">
+                            <p class="font-segoe accordion__text">
+                                Мы работаем в Уфе, но при необходимости готовы выехать в любую точку Республики Башкортостан. Условия обсуждаются индивидуально с каждым клиентом.                            
+                            </p>
+                        </div>
+                    </div>
+                     
+                    <div class="accordion">
+                        <div class="accordion__header">
+                            <p class="accordion__title">Как мне оплатить заказ?</p>
+                            <i class="accordion__arrow" data-feather="chevron-down"></i>
+                        </div>
+                     
+                        <div class="accordion__content">
+                            <p class="font-segoe accordion__text">
+                                Принимаем наличные и безналичные платежи. Работаем как с физическими, так и с юридическими лицами.                       
+                            </p>
+                        </div>
+                    </div>
+                     
+                    <div class="accordion">
+                        <div class="accordion__header">
+                            <p class="accordion__title">Что, если меня не устроит качество уборки?</p>
+                            <i class="accordion__arrow" data-feather="chevron-down"></i>
+                        </div>
+                     
+                        <div class="accordion__content">
+                            <p class="font-segoe accordion__text">
+                                Такой вариант практически полностью исключен. Но мы всегда составляем договор, регламентирующий наши гарантии и нашу ответственность. Мы всегда открыты к диалогу и не стесняемся признавать свои ошибки.                          
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="accordion">
+                        <div class="accordion__header">
+                            <p class="accordion__title">Что будет, если клинер что-то сломает? </p>
+                            <i class="accordion__arrow" data-feather="chevron-down"></i>
+                        </div>
+                     
+                        <div class="accordion__content">
+                            <p class="font-segoe accordion__text">
+                                В нашей команде трудятся не случайные люди, а настоящие профессионалы с многолетним стажем работы. Однако, даже в таком маловероятном случае, мы несем полную ответственность за действия наших сотрудников и готовы возместить материальный ущерб.                       
+                            </p>
+                        </div>
+                    </div>
+    
+                    <!-- !Accordion -->
+
+
+                </div>
+
+            </div>
+        </section>
+        <!-- !answers -->
+
+    </main>
+    <!-- !Main section -->
+
+    <script>
+        function jump(beacon) {
+            $('html, body').animate({scrollTop: $(beacon).offset().top + 'px'});
+            return false;
+        }
+    </script>
+
+        <!-- Footer -->
+        <footer id="footer" class="footer">
+            <div class="container">
+    
+                <div class="footer__aside">
+                    <!-- Logo section -->
+                    <div class="logo"><img src="./assets/img/logo.svg" alt="logo-img" class="logo__img"></div>
+                    <!-- !Logo section -->
+                </div>
+    
+                <div class="footer__body">                
+                    <!-- navigation menu -->
+                    <nav class="header-nav">
+                        <ul class="header-nav__list">
+                            <li class="header-nav__item">
+                                <a href="#hero" class="header-nav__link">О нас</a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a href="#cost" class="header-nav__link">Калькулятор</a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a href="#advantages" class="header-nav__link">Преимущества</a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a href="#roadmap" class="header-nav__link">Схема работы</a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a href="#answers" class="header-nav__link">Вопросы</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- !navigation menu -->
+    
+                    <div class="footer__info">
+    
+                        <!-- social-nav links -->
+                        <div class="social-nav">
+                            <div class="social-nav__item" style="display: none;">
+                                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="social-nav__link"><img src="./assets/img/social/yt.svg" alt="yt"></a>
+                            </div>
+                            <div class="social-nav__item">
+                                <a href="https://www.instagram.com/urbancleaning.rf/" target="_blank" rel="noopener noreferrer" class="social-nav__link"><img src="./assets/img/social/ig.svg" alt="ig"></a>
+                            </div>
+                        </div>
+                        <!-- !social-nav links -->
+    
+                        <!-- phone block -->
+                        <div class="phone">
+                            <a href="#" id="phone_link" class="phone__link">+7(999)-999-99-99</a>
+                            <div class="phone__text">Выезд в день обращения</div>
+                            <div class="phone__address">Уфа. Проспект Октября 111/1</div>
+                        </div>
+                        <!-- !phone block -->
+    
+                    </div>
+    
+                </div>
+                
+            </div>
+        </footer>
+        <!-- !Footer -->
+    
+        <div id="slider-modal" class="slider-modal" style="display: none;">
+            <img v-if="imageUrl" :src="imageUrl" alt="" class="slider-modal__modal">
+        </div>
+    
+        <div id="modal-app" class="modal-app" style="display: none;">
+            <div class="modal-app__wrapper">
+                <div class="font-segoe form__input-wrapper">
+                    <input v-model="name" id="m-name" type="text" class="form__input" placeholder="Семён">
+                    <label for="m-name" class="form__label">Ваше имя</label>
+                </div>
+                <div class="font-segoe form__input-wrapper">
+                    <the-mask id="m-phone" v-model="phone" mask="+7 (###) ###-##-##" :masked="true" class="form__input" placeholder="+7 (000) 000-00-00"></the-mask>
+                    <label for="m-phone" class="form__label">Номер телефона*</label>
+                </div>
+                <button class="btn form__btn modal-app__btn" v-on:click="submitForm()" :disabled="!formIsValid">
+                    <span v-if="!sending">Заказать уборку</span>
+                    <span v-else>Отправка...</span>
+                </button>
+                <a href="#" class="font-segoe form__policy modal-app__policy">Нажимая на кнопку вы даёте согласие на использование своих <span>персональных данных</span></a>
+            </div>
+        </div>
+    
+        <div id="modal-app-success" class="modal-app" style="display: none;">
+            <div class="modal-app__wrapper">
+                <div disabled class="font-segoe form__input-wrapper">
+                    <input v-model="name" type="text" class="form__input" placeholder="Иван" disabled>
+                    <label class="form__label">Ваше имя</label>
+                </div>
+                <div disabled class="font-segoe form__input-wrapper">
+                    <input mask="+7 (###) ###-##-##" :masked="true" class="form__input" placeholder="+7 (000) 000-00-00" disabled>
+                    <label class="form__label">Номер телефона*</label>
+                </div>
+                <button disabled class="btn form__btn modal-app__btn modal-app__btn_success">
+                    <span>Отправлено!</span>
+                </button>
+                <div class="font-segoe form__policy modal-app__policy modal-app__policy_success">Спасибо! Ваша заявка принята. Менеджер свяжется с вами в течение 5 минут</div>
+            </div>
+        </div>
+    
+        <div id="modal-app-error" class="modal-app" style="display: none;">
+            <div class="modal-app__wrapper">
+                <div class="font-segoe form__input-wrapper">
+                    <input v-model="name" type="text" class="form__input" placeholder="Иван" disabled>
+                    <label class="form__label">Ваше имя</label>
+                </div>
+                <div class="font-segoe form__input-wrapper">
+                    <input mask="+7 (###) ###-##-##" :masked="true" class="form__input" placeholder="+7 (000) 000-00-00" disabled>
+                    <label class="form__label">Номер телефона*</label>
+                </div>
+                <button disabled class="btn form__btn modal-app__btn modal-app__btn_error">
+                    <span>Отправка...</span>
+                </button>
+                <div class="font-segoe form__policy modal-app__policy modal-app__policy_error">Ошибка при отправке. Пожалуйста, повторите отправку позже</div>
+            </div>
+        </div>
+    
+        <div id="cost-app-modal" class="modal-app" style="display: none;">
+            <div class="modal-app__wrapper">
+                <div class="font-segoe form__input-wrapper">
+                    <input v-model="name" type="text" class="form__input" placeholder="Иван">
+                    <label class="form__label">Ваше имя</label>
+                </div>
+                <div class="font-segoe form__input-wrapper">
+                    <the-mask id="c-phone" v-model="phone" mask="+7 (###) ###-##-##" :masked="true" class="form__input" placeholder="+7 (000) 000-00-00"></the-mask>
+                    <label for="c-phone" class="form__label">Номер телефона*</label>
+                </div>
+                <button class="btn form__btn modal-app__btn" v-on:click="fetchForm()" :disabled="!formIsValid">
+                    <span v-if="!sending">Заказать уборку</span>
+                    <span v-else>Отправка...</span>
+                </button>
+                <a href="#" class="font-segoe form__policy modal-app__policy">Нажимая на кнопку вы даёте согласие на использование своих <span>персональных данных</span></a>
+            </div>
+        </div>
+    
+        <div id="cost-app-success" class="modal-app" style="display: none;">
+            <div class="modal-app__wrapper">
+                <div class="font-segoe form__input-wrapper cost-app__input">
+                    <input v-model="name" type="text" class="form__input" placeholder="Иван" disabled>
+                    <label class="form__label">Ваше имя</label>
+                </div>
+                <div class="font-segoe form__input-wrapper cost-app__input">
+                    <input mask="+7 (###) ###-##-##" :masked="true" class="form__input" placeholder="+7 (000) 000-00-00" disabled>
+                    <label class="form__label">Номер телефона*</label>
+                </div>
+                <button disabled class="btn form__btn modal-app__btn modal-app__btn_error cost-app__btn">
+                    <span>Отправлено!</span>
+                </button>
+                <div class="font-segoe form__policy modal-app__policy cost-app__success">Спасибо! Ваша заявка принята, менеджер перезвонит вам в течении 10 минут</div>
+            </div>
+        </div>
+    
+        <div id="cost-app-error" class="modal-app" style="display: none;">
+            <div class="modal-app__wrapper">
+            <div class="font-segoe form__input-wrapper">
+                    <input v-model="name" type="text" class="form__input" placeholder="Иван" disabled>
+                    <label class="form__label">Ваше имя</label>
+                </div>
+                <div class="font-segoe form__input-wrapper">
+                    <input mask="+7 (###) ###-##-##" :masked="true" class="form__input" placeholder="+7 (000) 000-00-00" disabled>
+                    <label class="form__label">Номер телефона*</label>
+                </div>
+                <button disabled class="btn form__btn modal-app__btn modal-app__btn_error">
+                    <span>Отправка...</span>
+                </button>
+                <div class="font-segoe form__policy modal-app__policy">Произошла ошибка, повторите отправку позже!</div>
+            </div>
+        </div>  
+        <script src="./assets/js/jquery.min.js"></script>
+        <script src="./assets/js/wow.min.js"></script>
+        <script src="./assets/js/vue.min.js"></script>
+        <script src="./assets/js/axios.min.js"></script>
+        <script src="./assets/js/vue-the-mask.min.js"></script>
+        <script src="./assets/js/jquery.fancybox.min.js"></script>
+        <script src="./assets/js/owl.carousel.min.js"></script>
+        <script src="./assets/js/sender.js"></script>
+        <script src="./assets/js/common.js"></script>
+
+        
+    </body>
+    </html>

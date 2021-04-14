@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+
+// 1. Settings - global variables, most high-level configurations 
+@import 
+    "utils/1-settings/global";
+
+
+
+// 2. Design Tokens - define variables for typography, color, spacing, media-queries 
+@import
+    "utils/2-design-tokens/colors",
+    "utils/2-design-tokens/fonts",
+    "utils/2-design-tokens/media-queries",
+    "utils/2-design-tokens/spacing";
+
+
+
+// 3. Tools - global Scss mixins and funtions
+@import 
+    "utils/3-tools/adaptive-hint",
+    "utils/3-tools/append-attr",
+    "utils/3-tools/aspect-ratio",
+    "utils/3-tools/blend-modes",
+    "utils/3-tools/size",
+    "utils/3-tools/center",
+    "utils/3-tools/clearfix",
+    "utils/3-tools/gradients",
+    "utils/3-tools/placeholder";
+
+
+
+
+
+// Starting point of CSS styles output
+
+
+// 4. Libs
+@import
+    "utils/4-libs/libs";
+
+
+
+// 5. Generic - global box-sizing rules, CSS resets, print styles etc. 
+// @import 
+    // "utils/5-generic/bootstrap-reboot",
+    // "utils/5-generic/normalize",
+    // "utils/5-generic/adaptive-reset",
+    // "utils/5-generic/reset",
+    // "utils/5-generic/font-face";
+    // "utils/5-generic/print";
+
+
+
+// 6. HTML base elements style (button, input, form, ul, li and etc)
+// @import
+//     "utils/6-elements/links";
+
+
+
+// 7. Skeleton
+// @import
+    // "utils/7-skeleton/grid",
+    // "utils/7-skeleton/layouts",
+    // "utils/7-skeleton/objects";
+
+
+
+// 8. Modules
+// @import 
+//     "modules/header/header",
+//     "modules/footer/footer";
+
+
+
+// 9. Utilities
+// @import 
+    // "utils/8-utilities/modifiers",
+    // "utils/8-utilities/states";
+
+
+
+// 10. Shame
+@import "utils/shame";

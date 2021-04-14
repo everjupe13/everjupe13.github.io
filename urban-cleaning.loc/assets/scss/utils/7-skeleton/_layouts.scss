@@ -1,0 +1,76 @@
+section, .section {
+
+    position: relative;
+    
+    padding: 40px 0;
+
+    @include laptop-sm {
+
+        padding: 36px 0;
+
+    }
+
+    @include tablet {
+
+        padding: 28px 0;
+
+    }
+
+    @include phone {
+
+        padding: 20px 0;
+
+    }
+
+}
+
+.wrapper {
+
+    display: flex;
+    flex-direction: column;
+
+    max-width: 100vw;
+    min-width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+
+}
+
+.content-wrapper {
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+
+}
+
+.container {
+
+    position: relative;
+    
+    flex: 0 0 auto;
+    
+    width: 100%;
+    max-width: $laptopW;
+    margin: 0 auto;
+    
+    @include laptop-sm {
+
+        max-width: $tabletW;
+
+    }
+
+    @include tablet {
+
+        max-width: $phoneW;
+
+    }
+
+    @include phone {
+
+        max-width: $smPhoneW;
+
+    }
+
+}
