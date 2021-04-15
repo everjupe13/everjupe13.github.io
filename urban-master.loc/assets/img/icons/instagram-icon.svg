@@ -1,0 +1,12 @@
+<svg id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23.333" height="23.333" viewBox="0 0 23.333 23.333">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffc107"/>
+      <stop offset="0.507" stop-color="#f44336"/>
+      <stop offset="0.99" stop-color="#9c27b0"/>
+    </linearGradient>
+  </defs>
+  <path id="Контур_303" data-name="Контур 303" d="M16.042,0H7.292A7.292,7.292,0,0,0,0,7.292v8.75a7.292,7.292,0,0,0,7.292,7.292h8.75a7.292,7.292,0,0,0,7.292-7.292V7.292A7.292,7.292,0,0,0,16.042,0Zm5.1,16.042a5.11,5.11,0,0,1-5.1,5.1H7.292a5.11,5.11,0,0,1-5.1-5.1V7.292a5.11,5.11,0,0,1,5.1-5.1h8.75a5.11,5.11,0,0,1,5.1,5.1Z" fill="url(#linear-gradient)"/>
+  <path id="Контур_304" data-name="Контур 304" d="M133.833,128a5.833,5.833,0,1,0,5.833,5.833A5.834,5.834,0,0,0,133.833,128Zm0,9.479a3.646,3.646,0,1,1,3.646-3.646A3.651,3.651,0,0,1,133.833,137.479Z" transform="translate(-122.167 -122.167)" fill="url(#linear-gradient)"/>
+  <circle id="Эллипс_97" data-name="Эллипс 97" cx="0.777" cy="0.777" r="0.777" transform="translate(17.16 4.619)" fill="url(#linear-gradient)"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="23" viewBox="0 0 31 23">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Прямоугольник_360" data-name="Прямоугольник 360" width="31" height="23" transform="translate(-0.086 0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Сгруппировать_423" data-name="Сгруппировать 423" transform="translate(0.086 0)">
+    <g id="Сгруппировать_422" data-name="Сгруппировать 422" transform="translate(0 0)">
+      <g id="Сгруппировать_421" data-name="Сгруппировать 421" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <path id="Контур_299" data-name="Контур 299" d="M340.188,675.486a4.062,4.062,0,0,0-2.716-2.976c-2.412-.723-12.06-.723-12.06-.723s-9.648,0-12.06.7a4.149,4.149,0,0,0-2.717,3,52.253,52.253,0,0,0,0,16.24,4.063,4.063,0,0,0,2.717,2.976c2.437.723,12.06.723,12.06.723s9.648,0,12.06-.7a4.063,4.063,0,0,0,2.717-2.975,48.726,48.726,0,0,0,.635-8.12,46.24,46.24,0,0,0-.635-8.148Zm0,0" transform="translate(-309.774 -672.08)" fill="red"/>
+      </g>
+    </g>
+    <path id="Контур_300" data-name="Контур 300" d="M514.969,784.393l8.787-5.061-8.787-5.061Zm0,0" transform="translate(-502.816 -767.807)" fill="#fff"/>
+  </g>
+</svg>
