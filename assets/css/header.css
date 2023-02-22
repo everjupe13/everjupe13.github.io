@@ -1,0 +1,26 @@
+.header {
+  height: 60px;
+  padding: 10px 0;
+  
+  background: rgb(var(--white));
+  box-shadow: 0 1px 1px rgba(var(--black), 0.1);
+}
+
+.header .container {
+  height: 100%;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  width: 60px;
+}
+
+.logo__img {
+  display: block;
+  width: 100%;
+}

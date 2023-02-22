@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ilya Bakirov | ITMO.Portfolio</title>
+
+  <meta name="description" content="bkrv's another project 🦾 🥷🏻" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="author" content="bkrv | tg: @toomoresouls | email: bkrv.working.diary@gmail.com | 370619" />
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../../assets/css/main.css">
+
+</head>
+
+<body>
+
+  <div id="app">
+    <div class="layout-main">
+      <header class="header">
+        <div class="container header__container">
+          <a href="https://everjupe13.github.io/" class="logo">
+            <img src="../../assets/img/logo.svg" alt="" class="logo__img">
+          </a>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="container">
+          <article class="content-overflow">
+            <h1>Лабораторная работа 1</h1>
+            <p>10.02.2023</p>
+
+            <a href="">mathMl</a>
+            <a href="">svg</a>
+
+            <div class="content"></div>
+          </article>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <h4 id="author" title="GossJS">Бакиров Илья</h4>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script id="mathml-source" type="text/xml">
+    <строка>
+      <операнд>σ</операнд>
+      <оператор>=</оператор>
+      <корень>
+        <строка>
+          <дробь>
+            <строка>
+              <число>1</число>
+            </строка>
+            <строка>
+              <операнд>N</операнд>
+            </строка>
+          </дробь>
+          <строка>
+            <низверх>
+              <строка>
+                <оператор>∑</оператор>
+              </строка>
+              <строка>
+                <операнд>i</операнд>
+                <оператор>=</оператор>
+                <число>1</число>
+              </строка>
+              <строка>
+                <операнд>N</операнд>
+              </строка>
+            </низверх>
+            <строка>
+              <верх>
+                <строка>
+                  <оператор >(</оператор>
+                  <низ>
+                    <строка>
+                      <операнд>x</операнд>
+                    </строка>
+                    <строка>
+                      <операнд>i</операнд>
+                    </строка>
+                  </низ>
+                  <оператор>−</оператор>
+                  <операнд>μ</операнд>
+                  <оператор >)</оператор>
+                </строка>
+                <строка>
+                  <число>2</число>
+                </строка>
+              </верх>
+            </строка>
+          </строка>
+        </строка>
+      </корень>
+      <оператор>.</оператор>
+    </строка>
+  </script>
+  <script id="svg-source" type="text/xml">
+    <root>
+      <графика ширина="640" высота="480">
+        <эллипс id="графика_1" заливка="rgba(255,0,0,0.5)" ободок="white" ширина-ободка="5" cx="206" cy="139" rx="100" ry="100"/>
+        <эллипс id="графика_2" заливка="rgba(0,0,255,0.5)" ободок="white" ширина-ободка="5" cx="108" cy="111" rx="100" ry="100"/>
+        <эллипс id="графика_3" заливка="rgba(0,255,0,0.5)" ободок="white" ширина-ободка="5" cx="134" cy="215" rx="100" ry="100"/>
+      </графика>
+    </root>
+  </script>
+
+
+  <script id="mathml-schema" type="text/xsl">
+    <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+      <xsl:output method="xml" indent="yes"/>
+
+      <xsl:template match="/">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <xsl:apply-templates />
+        </math>
+      </xsl:template>
+
+      <xsl:template match="строка">
+        <mrow>
+          <xsl:apply-templates select="*"/>
+        </mrow>
+      </xsl:template>
+
+      <xsl:template match="корень">
+        <msqrt>
+          <xsl:apply-templates select="*"/>
+        </msqrt>
+      </xsl:template>
+
+      <xsl:template match="оператор">
+        <mo>
+          <xsl:value-of select="." />
+        </mo>
+      </xsl:template>
+
+      <xsl:template match="операнд">
+        <mi>
+          <xsl:value-of select="." />
+        </mi>
+      </xsl:template>
+
+      <xsl:template match="дробь">
+        <mfrac>
+          <xsl:apply-templates select="*"/>
+        </mfrac>
+      </xsl:template>
+
+      <xsl:template match="число">
+        <mn>
+          <xsl:value-of select="." />
+        </mn>
+      </xsl:template>
+
+      <xsl:template match="низверх">
+        <munderover>
+          <xsl:apply-templates select="*"/>
+        </munderover>
+      </xsl:template>
+
+      <xsl:template match="верх">
+        <msup>
+          <xsl:apply-templates select="*"/>
+        </msup>
+      </xsl:template>
+
+      <xsl:template match="низ">
+        <msub>
+          <xsl:apply-templates select="*"/>
+        </msub>
+      </xsl:template>
+
+    </xsl:stylesheet>
+  </script>
+  <script id="svg-schema" type="text/xsl">
+    <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+      <xsl:output method="xml" indent="yes"/>
+
+      <xsl:template match="root">
+        <svg width="{графика/@ширина}" height="{графика/@высота}">
+          <xsl:apply-templates select="графика/эллипс"/>
+        </svg>
+      </xsl:template>
+
+      <xsl:template match="эллипс">
+        <ellipse id="{@id}" fill="{@заливка}" stroke="{@ободок}" stroke-width="{@ширина-ободка}" cx="{@cx}" cy="{@cy}" rx="{@rx}" ry="{@ry}"/>
+      </xsl:template>
+    </xsl:stylesheet>
+  </script>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./lab.js" type="module"></script>
+
+</body>
+
+</html>
