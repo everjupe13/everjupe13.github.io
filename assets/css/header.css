@@ -6,13 +6,22 @@
   box-shadow: 0 1px 1px rgba(var(--black), 0.1);
 }
 
-.header .container {
-  height: 100%;
-}
-
 .header__container {
   display: flex;
   align-items: center;
+
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 16px;
+}
+
+.header__logo-wrapper {
+  display: flex;
+  justify-content: center;
+  
+  width: 80px;
 }
 
 .logo {
@@ -22,5 +31,7 @@
 
 .logo__img {
   display: block;
-  width: 100%;
+  
+  width: 60px;
+  margin: 0 auto;
 }

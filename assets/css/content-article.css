@@ -1,0 +1,36 @@
+.content-overflow {
+  width: 100%;
+  max-width: 800px;
+
+  overflow: hidden;
+}
+
+.content-article__header-content {
+  padding: 30px 60px 15px;
+}
+
+.content-article__glass {
+  width: 100%;
+  aspect-ratio: calc(900/300);
+}
+
+.content-article__cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.content-article__body {
+  padding: 15px 60px 30px;
+}
+
+.content-article__timestamp {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.content-article__block {
+  margin-bottom: 40px;
+}

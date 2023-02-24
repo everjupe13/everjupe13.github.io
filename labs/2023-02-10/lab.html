@@ -11,9 +11,6 @@
   <meta name="robots" content="noindex, nofollow" />
   <meta name="author" content="bkrv | tg: @toomoresouls | email: bkrv.working.diary@gmail.com | 370619" />
 
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
     integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -23,37 +20,64 @@
 
 <body>
 
-  <div id="app">
+  <h4 id="author" title="GossJS" style="display: none;">Илья Бакиров</h4>
+
+  <div id="app" v-cloak>
     <div class="layout-main">
       <header class="header">
-        <div class="container header__container">
-          <a href="https://everjupe13.github.io/" class="logo">
-            <img src="../../assets/img/logo.svg" alt="" class="logo__img">
-          </a>
+        <div class="header__container">
+          <div class="header__logo-wrapper">
+            <a href="/" class="logo">
+              <img src="../../assets/img/logo.svg" alt="" class="logo__img">
+            </a>
+          </div>
         </div>
       </header>
 
       <main class="main">
-        <div class="container">
-          <article class="content-overflow">
-            <h1>Лабораторная работа 1</h1>
-            <p>10.02.2023</p>
+        <aside class="sidebar-left" aria-label="Article actions" title="Article actions">
+          <left-navbar />
+        </aside>
 
-            <a href="">mathMl</a>
-            <a href="">svg</a>
+        <article class="content-styles content-overflow">
+          <header class="content-article__header">
+            <div class="content-article__glass">
+              <img src="/assets/img/github_poster.png" alt="poster" class="content-article__cover">
+            </div>
+            <div class="content-article__header-content">
+              <h1 class="title">Лабораторная работа 1</h1>
+              <p class="content-article__timestamp">10.02.2023</p>
+            </div>
+          </header>
+          <div class="content-article__body">
+            <div id="labApp">
+              <div class="content-article__block">
+                <h5>MathML</h5>
+                <div id="mathml-result"></div>
+              </div>
+              <div class="content-article__block">
+                <h5>SVG</h5>
+                <div id="svg-result"></div>
+              </div>
+            </div>
+          </div>
+        </article>
 
-            <div class="content"></div>
-          </article>
-        </div>
+        <aside class="sidebar-right" aria-label="Author details" title="Author details">
+          <div class="content-styles author-card">
+            <author-card :author-link="'https://github.com/everjupe13/everjupe13.github.io/'" />
+          </div>
+        </aside>
       </main>
 
       <footer class="footer">
         <div class="container">
-          <h4 id="author" title="GossJS">Бакиров Илья</h4>
+
         </div>
       </footer>
     </div>
   </div>
+
 
   <script id="mathml-source" type="text/xml">
     <строка>
@@ -123,7 +147,7 @@
 
   <script id="mathml-schema" type="text/xsl">
     <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-      <xsl:output method="xml" indent="yes"/>
+      <xsl:output method="xml" indent="yes" />
 
       <xsl:template match="/">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -131,22 +155,16 @@
         </math>
       </xsl:template>
 
-      <xsl:template match="строка">
-        <mrow>
-          <xsl:apply-templates select="*"/>
-        </mrow>
-      </xsl:template>
-
       <xsl:template match="корень">
         <msqrt>
-          <xsl:apply-templates select="*"/>
+          <xsl:apply-templates select="*" />
         </msqrt>
       </xsl:template>
 
-      <xsl:template match="оператор">
-        <mo>
-          <xsl:value-of select="." />
-        </mo>
+      <xsl:template match="строка">
+        <mrow>
+          <xsl:apply-templates select="*" />
+        </mrow>
       </xsl:template>
 
       <xsl:template match="операнд">
@@ -155,10 +173,10 @@
         </mi>
       </xsl:template>
 
-      <xsl:template match="дробь">
-        <mfrac>
-          <xsl:apply-templates select="*"/>
-        </mfrac>
+      <xsl:template match="оператор">
+        <mo>
+          <xsl:value-of select="." />
+        </mo>
       </xsl:template>
 
       <xsl:template match="число">
@@ -167,21 +185,27 @@
         </mn>
       </xsl:template>
 
+      <xsl:template match="дробь">
+        <mfrac>
+          <xsl:apply-templates select="*" />
+        </mfrac>
+      </xsl:template>
+
       <xsl:template match="низверх">
         <munderover>
-          <xsl:apply-templates select="*"/>
+          <xsl:apply-templates select="*" />
         </munderover>
       </xsl:template>
 
       <xsl:template match="верх">
         <msup>
-          <xsl:apply-templates select="*"/>
+          <xsl:apply-templates select="*" />
         </msup>
       </xsl:template>
 
       <xsl:template match="низ">
         <msub>
-          <xsl:apply-templates select="*"/>
+          <xsl:apply-templates select="*" />
         </msub>
       </xsl:template>
 
@@ -203,8 +227,67 @@
     </xsl:stylesheet>
   </script>
 
+
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <script src="./lab.js" type="module"></script>
+  <script src="../../assets/js/main.js" type="module"></script>
+
+  <script>
+    const labApp = Vue.createApp({
+      template: ``,
+      data() {
+        return {
+          mathml: {
+            source: '#mathml-source',
+            schema: '#mathml-schema',
+            insertNode: '#mathml-result'
+          },
+          svg: {
+            source: '#svg-source',
+            schema: '#svg-schema',
+            insertNode: '#svg-result'
+          }
+        }
+      },
+
+      computed: {
+        getMathmlSource() {
+          return document.querySelector(this.mathml.source).textContent
+        },
+        getSVGSource() {
+          return document.querySelector(this.svg.source).textContent
+        }
+      },
+
+      mounted() {
+        this.renderXMLContent(this.mathml)
+        this.renderXMLContent(this.svg)
+      },
+
+      methods: {
+        renderXMLContent(targetObject) {
+          const domParser = new DOMParser()
+          const xsltProcessor = new XSLTProcessor()
+          const xmlSerializer = new XMLSerializer()
+
+          const schema = document.querySelector(targetObject.schema).textContent
+          const domSchema = domParser.parseFromString(schema, 'text/xml')
+
+          const source = document.querySelector(targetObject.source).textContent
+          const domSource = domParser.parseFromString(source, 'text/xml')
+
+          xsltProcessor.importStylesheet(domSchema)
+
+          const domResult = xsltProcessor.transformToDocument(domSource)
+          const renderedXML = xmlSerializer.serializeToString(domResult)
+
+          document.querySelector(targetObject.insertNode).innerHTML = renderedXML
+          
+        }
+      }
+    })
+
+    labApp.mount('#labApp')
+  </script>
 
 </body>
 

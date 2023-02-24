@@ -20,30 +20,52 @@
 
 <body>
 
-  <div id="app">
+  <h4 id="author" title="GossJS" style="display: none;">Илья Бакиров</h4>
+
+  <div id="app" v-cloak>
     <div class="layout-main">
       <header class="header">
-        <div class="container header__container">
-          <a href="https://everjupe13.github.io/" class="logo">
-            <img src="./assets/img/logo.svg" alt="" class="logo__img">
-          </a>
+        <div class="header__container">
+          <div class="header__logo-wrapper">
+            <a href="/" class="logo">
+              <img src="./assets/img/logo.svg" alt="" class="logo__img">
+            </a>
+          </div>
         </div>
       </header>
 
       <main class="main">
-        <div class="container">
-          <article class="content-overflow">
-            <h1>Лабораторные работы</h1>
+        <aside class="sidebar-left" aria-label="Article actions" title="Article actions">
+          <left-navbar />
+        </aside>
+
+        <article class="content-styles content-overflow">
+          <header class="content-article__header">
+            <div class="content-article__glass">
+              <img src="/assets/img/github_poster.png" alt="poster" class="content-article__cover">
+            </div>
+            <div class="content-article__header-content">
+              <h1 class="title">Лабораторные работы</h1>
+            </div>
+          </header>
+          <div class="content-article__body">
             <ul>
-              <li><a href="/labs/2023-02-10/lab.html">Lab1</a></li>
+              <li><a href="/labs/2023-02-10/lab.html">🔥 Практическое задание по преобразованию в SVG</a></li>
             </ul>
-          </article>
-        </div>
+          </div>
+          
+        </article>
+
+        <aside class="sidebar-right" aria-label="Author details" title="Author details">
+          <div class="content-styles author-card">
+            <author-card :author-link="'https://github.com/everjupe13/everjupe13.github.io/'" />
+          </div>
+        </aside>
       </main>
 
       <footer class="footer">
         <div class="container">
-          <h4 id="author" title="GossJS">Бакиров Илья</h4>
+
         </div>
       </footer>
     </div>

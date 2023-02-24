@@ -1,0 +1,14 @@
+.content-styles {
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+
+  background: var(--card-bg);
+  color: var(--card-color);
+}
+
+.title {
+  margin: 0;
+  
+  font-weight: 800;
+  font-size: 48px;
+}
